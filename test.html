@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idradi - Backend Developer Portfolio</title>
+    <meta name="description"
+        content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure">
+    <meta name="author" content="Idradi">
+
+    <meta property="og:title" content="Idradi - Backend Developer Portfolio">
+    <meta property="og:description"
+        content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/output.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white font-inter">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div
+                    class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    Idradi
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home"
+                            class="text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#skills"
+                            class="text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects"
+                            class="text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#experience"
+                            class="text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#contact"
+                            class="text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 gradient-bg opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span
+                        class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        Backend Developer
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Building scalable systems, optimizing databases, and architecting cloud infrastructure
+                    that powers modern applications.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects"
+                        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
+                        View My Work
+                    </a>
+                    <a href="#contact"
+                        class="inline-flex items-center px-6 py-3 border border-gray-600 text-base font-medium rounded-md text-gray-300 hover:text-white hover:border-gray-500 transition-colors">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2
+                class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                About Me
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm Ahmed, a passionate Backend developer specializing in creating robust web applications.
+                        With a strong foundation in server-side technologies and database management, I craft
+                        solutions that are both efficient and scalable.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        In my portfolio, you'll find a showcase of my work, highlighting the projects I've
+                        contributed to and the technologies I've mastered. I invite you to explore and witness
+                        firsthand the dedication and creativity that I bring to every endeavor.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm open to job opportunities where I can contribute, learn and grow. If you have a
+                        great opportunity that matches my skills and experience, don't hesitate to reach out.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                        <div class="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-blue-500/20 text-center">
+                            <div class="text-3xl font-bold text-blue-400 mb-2">3+</div>
+                            <div class="text-gray-400">Years Experience</div>
+                        </div>
+                        <div
+                            class="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-purple-500/20 text-center">
+                            <div class="text-3xl font-bold text-purple-400 mb-2">10+</div>
+                            <div class="text-gray-400">Projects Completed</div>
+                        </div>
+                        <div
+                            class="bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-pink-500/20 text-center col-span-2 md:col-span-1">
+                            <div class="text-3xl font-bold text-pink-400 mb-2">∞</div>
+                            <div class="text-gray-400">Lines of Code</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image Placeholder -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div
+                            class="w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full border-4 border-blue-400/30 flex items-center justify-center backdrop-blur-sm">
+                            <div class="text-8xl">👨‍💻</div>
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center animate-bounce">
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold mb-4">Technical Skills</h2>
+                <p class="text-gray-400 text-lg">Technologies I work with to build robust backend systems</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Languages -->
+                <div class="glass rounded-lg p-6 animate-slide-up">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400">Languages</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Python</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full w-14"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Java</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full w-12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Go</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full w-10"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Node.js</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full w-11"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="glass rounded-lg p-6 animate-slide-up">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Frameworks</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Django</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full w-13"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>FastAPI</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full w-14"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Spring Boot</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full w-10"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Express.js</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full w-11"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="glass rounded-lg p-6 animate-slide-up">
+                    <h3 class="text-xl font-semibold mb-4 text-green-400">Databases</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>PostgreSQL</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full w-14"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>MongoDB</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full w-12"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Redis</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full w-13"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>MySQL</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full w-11"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="glass rounded-lg p-6 animate-slide-up">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-400">Cloud & DevOps</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>AWS</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full w-13"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Docker</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full w-14"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Kubernetes</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full w-10"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>CI/CD</span>
+                            <div class="w-16 bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full w-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold mb-4">Featured Projects</h2>
+                <p class="text-gray-400 text-lg">Some of the backend systems I've built</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="glass rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300 animate-slide-up">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-xl font-bold">API</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Microservices API Gateway</h3>
+                        <p class="text-gray-400 mb-4">
+                            Built a scalable API gateway handling 10M+ requests/day with rate limiting,
+                            authentication, and service discovery.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Go</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-sm">Redis</span>
+                            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-sm">Docker</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="glass rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300 animate-slide-up">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-xl font-bold">DB</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Real-time Analytics Platform</h3>
+                        <p class="text-gray-400 mb-4">
+                            Designed and implemented a real-time data processing pipeline
+                            handling millions of events with sub-second latency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Python</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-sm">Kafka</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-sm">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="glass rounded-lg overflow-hidden group hover:scale-105 transition-transform duration-300 animate-slide-up">
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-xl font-bold">ML</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">ML Model Serving Infrastructure</h3>
+                        <p class="text-gray-400 mb-4">
+                            Built auto-scaling ML inference infrastructure supporting
+                            A/B testing and model versioning.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Python</span>
+                            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-sm">AWS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-sm">Kubernetes</span>
+                        </div>
+                        <a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl font-bold mb-4">Experience</h2>
+                <p class="text-gray-400 text-lg">My professional journey in backend development</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Experience Item 1 -->
+                <div class="relative pl-8 pb-12 animate-slide-up">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
+                    <div class="absolute left-2 top-4 w-0.5 h-full bg-gray-700"></div>
+                    <div class="glass rounded-lg p-6 ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold">Senior Backend Engineer</h3>
+                            <span class="text-blue-400 font-medium">2022 - Present</span>
+                        </div>
+                        <p class="text-purple-400 mb-3">TechCorp Inc.</p>
+                        <p class="text-gray-400 mb-4">
+                            Leading backend architecture for high-traffic applications. Designed and implemented
+                            microservices handling 50M+ daily active users with 99.9% uptime.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Python</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-sm">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-sm">AWS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-sm">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="relative pl-8 pb-12 animate-slide-up">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-green-500 rounded-full"></div>
+                    <div class="absolute left-2 top-4 w-0.5 h-full bg-gray-700"></div>
+                    <div class="glass rounded-lg p-6 ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold">Backend Developer</h3>
+                            <span class="text-green-400 font-medium">2020 - 2022</span>
+                        </div>
+                        <p class="text-purple-400 mb-3">StartupXYZ</p>
+                        <p class="text-gray-400 mb-4">
+                            Built scalable APIs and data pipelines from scratch. Optimized database queries
+                            resulting in 60% performance improvement and reduced infrastructure costs by 40%.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Node.js</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-sm">MongoDB</span>
+                            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded text-sm">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="relative pl-8 animate-slide-up">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-purple-500 rounded-full"></div>
+                    <div class="glass rounded-lg p-6 ml-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                            <h3 class="text-xl font-semibold">Junior Software Engineer</h3>
+                            <span class="text-purple-400 font-medium">2019 - 2020</span>
+                        </div>
+                        <p class="text-purple-400 mb-3">DevCompany</p>
+                        <p class="text-gray-400 mb-4">
+                            Started my journey in backend development. Worked on REST API development,
+                            database design, and learned best practices in software engineering.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">Java</span>
+                            <span class="px-2 py-1 bg-green-500/20 text-green-400 rounded text-sm">MySQL</span>
+                            <span class="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-sm">Spring Boot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-slide-up">
+                <h2 class="text-4xl font-bold mb-4">Let's Build Something Together</h2>
+                <p class="text-gray-400 text-lg mb-8">
+                    Have a project in mind? Let's discuss how we can bring your backend vision to life.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="mailto:hello@idradi.com"
+                        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-md hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105">
+                        Get In Touch
+                    </a>
+                    <a href="#"
+                        class="inline-flex items-center px-6 py-3 border border-gray-600 text-gray-300 font-medium rounded-md hover:text-white hover:border-gray-500 transition-colors">
+                        Download Resume
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/50 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2024 Idradi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation classes when elements come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
