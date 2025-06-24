@@ -1,795 +1,699 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Idradi - Backend Developer Portfolio</title>
-        <meta
-            content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure"
-            name="description"
-        />
-        <meta content="Idradi" name="author" />
 
-        <meta content="Idradi - Backend Developer Portfolio" property="og:title" />
-        <meta
-            content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure"
-            property="og:description"
-        />
-        <meta content="website" property="og:type" />
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Idradi - Backend Developer Portfolio</title>
+    <meta content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure"
+        name="description" />
+    <meta content="Idradi" name="author" />
 
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <link href="./assets/styles/output.css" rel="stylesheet" />
-        <link href="./assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta content="Idradi - Backend Developer Portfolio" property="og:title" />
+    <meta content="Backend Developer specialized in scalable systems, databases, and cloud infrastructure"
+        property="og:description" />
+    <meta content="website" property="og:type" />
 
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="./assets/styles/output.css" rel="stylesheet" />
+    <link href="./assets/img/favicon.ico" rel="icon" type="image/x-icon" />
 
-            .gradient-bg {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            }
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-            .glass {
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-            }
-        </style>
-    </head>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
 
-    <body class="font-inter bg-gray-900 text-white">
-        <!-- Navigation -->
-        <nav
-            class="fixed top-0 z-50 w-full border-b border-gray-800 bg-gray-900/90 backdrop-blur-sm"
-        >
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="flex h-16 items-center justify-between">
-                    <div
-                        class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent"
-                    >
-                        Idradi
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 z-50 w-full border-b border-gray-800 bg-gray-900/90 backdrop-blur-sm">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div
+                    class="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-xl font-bold text-transparent">
+                    Idradi
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#home">Home</a>
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#about">About</a>
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#skills">Skills</a>
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#projects">Projects</a>
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#experience">Experience</a>
+                        <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+                            href="#contact">Contact</a>
                     </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#home"
-                                >Home</a
-                            >
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#about"
-                                >About</a
-                            >
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#skills"
-                                >Skills</a
-                            >
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#projects"
-                                >Projects</a
-                            >
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#experience"
-                                >Experience</a
-                            >
-                            <a
-                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
-                                href="#contact"
-                                >Contact</a
-                            >
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative flex min-h-screen items-center justify-center overflow-hidden" id="home">
+        <div class="gradient-bg absolute inset-0 opacity-10"></div>
+        <div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <div class="animate-fade-in">
+                <h1 class="mb-6 text-5xl font-bold md:text-7xl">
+                    <span
+                        class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        Junior Backend Developer
+                    </span>
+                </h1>
+                <p class=" mx-auto mb-8 max-w-3xl text-xl text-gray-300 md:text-2xl">
+                    Exploring the endless possibilities of code.
+                    Let's build something great together! 💻✨
+
+                </p>
+                <div class="flex flex-col justify-center gap-4 sm:flex-row">
+                    <a class="inline-flex transform items-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-base font-medium text-white transition-all hover:scale-105 hover:from-blue-700 hover:to-purple-700"
+                        href="#projects">
+                        View My Work
+                    </a>
+                    <a class="inline-flex items-center rounded-md border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
+                        href="#contact">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="content-overlay px-6 py-20" id="about">
+        <div class="container mx-auto">
+            <h2 class="mb-16 text-center text-4xl font-bold">About Me</h2>
+            <div class="grid items-center gap-12 md:grid-cols-2">
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed text-slate-300">
+                        I'm Ahmed, a passionate Back-end developer with 1+ years of
+                        experience specializing in creating web applications.
+                    </p>
+                    <p class="text-lg leading-relaxed text-slate-300">
+                        In my portfolio, you will find a showcase of my work, highlighting
+                        the projects I have contributed to and the technologies I have
+                        mastered. I invite you to explore and witness firsthand the
+                        dedication and creativity that I bring to every endeavor. Thank you
+                        for visiting, and I look forward to the opportunity to collaborate
+                        and bring your vision to life.
+                    </p>
+                    <p>
+                        I'm open to Job opportunities where I can contribute, learn, and
+                        grow. If you have a good opportunity that matches my skills and
+                        experience, then don't hesitate to contact me.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="rounded-lg bg-blue-500/20 p-2">
+                                <svg class="h-5 w-5 text-blue-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="rounded-lg bg-purple-500/20 p-2">
+                                <svg class="h-5 w-5 text-purple-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <span>Database Design</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="rounded-lg bg-green-500/20 p-2">
+                                <svg class="h-5 w-5 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <span>REST API Development </span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="rounded-lg bg-cyan-500/20 p-2">
+                                <svg class="h-5 w-5 text-cyan-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <span>SQL & Data Modeling </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div
+                        class="profile-container flex h-80 w-80 items-center justify-center overflow-hidden rounded-2xl">
+                        <img alt="Idradi - Backend Developer" class="h-full w-full rounded-2xl object-cover"
+                            src="./assets/img/me.webp" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-gray-800/50 py-20" id="skills">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="animate-slide-up mb-16 text-center">
+                <h2 class="mb-4 text-4xl font-bold">Technical Skills</h2>
+                <p class="text-lg text-gray-400">
+                    Here are some of the technologies that I am working with
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Languages -->
+                <div class="glass animate-slide-up rounded-lg p-6">
+                    <h3 class="mb-4 text-xl font-semibold text-blue-400">Languages</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Python</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-14 rounded-full bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Javascript</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-11 rounded-full bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Node.js</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-11 rounded-full bg-blue-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Java</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-8 rounded-full bg-blue-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="glass animate-slide-up rounded-lg p-6">
+                    <h3 class="mb-4 text-xl font-semibold text-purple-400">Frameworks</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Django</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-13 rounded-full bg-purple-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>FastAPI</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-14 rounded-full bg-purple-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Express.js</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-11 rounded-full bg-purple-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>React/Next.js</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-8 rounded-full bg-purple-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="glass animate-slide-up rounded-lg p-6">
+                    <h3 class="mb-4 text-xl font-semibold text-green-400">Databases</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>PostgreSQL</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-14 rounded-full bg-green-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>MongoDB</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-10 rounded-full bg-green-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>MySQL</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-11 rounded-full bg-green-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Sqlite</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-11 rounded-full bg-green-500"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="glass animate-slide-up rounded-lg p-6">
+                    <h3 class="mb-4 text-xl font-semibold text-orange-400">
+                        Other & DevOps
+                    </h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span>Linux</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-13 rounded-full bg-orange-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Git</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-14 rounded-full bg-orange-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Github</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-14 rounded-full bg-orange-500"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Docker</span>
+                            <div class="h-2 w-16 rounded-full bg-gray-700">
+                                <div class="h-2 w-12 rounded-full bg-orange-500"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section
-            class="relative flex min-h-screen items-center justify-center overflow-hidden"
-            id="home"
-        >
-            <div class="gradient-bg absolute inset-0 opacity-10"></div>
-            <div class="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                <div class="animate-fade-in">
-                    <h1 class="mb-6 text-5xl font-bold md:text-7xl">
-                        <span
-                            class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"
-                        >
-                            Backend Developer
-                        </span>
-                    </h1>
-                    <p class="mx-auto mb-8 max-w-3xl text-xl text-gray-300 md:text-2xl">
-                        Exploring the endless possibilities of code. Let's build something
-                        great together! 💻✨
-                    </p>
-                    <div class="flex flex-col justify-center gap-4 sm:flex-row">
-                        <a
-                            class="inline-flex transform items-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 text-base font-medium text-white transition-all hover:scale-105 hover:from-blue-700 hover:to-purple-700"
-                            href="#projects"
-                        >
-                            View My Work
-                        </a>
-                        <a
-                            class="inline-flex items-center rounded-md border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
-                            href="#contact"
-                        >
-                            Get In Touch
-                        </a>
-                    </div>
-                </div>
+    <!-- Projects Section -->
+    <section class="py-20" id="projects">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="animate-slide-up mb-16 text-center">
+                <h2 class="mb-4 text-4xl font-bold">Featured Projects</h2>
+                <p class="text-lg text-gray-400">
+                    Web ventures: A journey through innovation.
+                </p>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section class="content-overlay px-6 py-20" id="about">
-            <div class="container mx-auto">
-                <h2 class="mb-16 text-center text-4xl font-bold">About Me</h2>
-                <div class="grid items-center gap-12 md:grid-cols-2">
-                    <div class="space-y-6">
-                        <p class="text-lg leading-relaxed text-slate-300">
-                            I'm Ahmed, a passionate Back-end developer with 1+ years of
-                            experience specializing in creating web applications.
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Project 1 -->
+                <div
+                    class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
+                    <div class="p-6">
+                        <div
+                            class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-blue-500 to-purple-600">
+                            <span class="text-xl font-bold">web</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-semibold">lebedouin.ma</h3>
+                        <p class="mb-4 text-gray-400">
+                            A reservation web app that streamlines the booking process for
+                            various industries, including restaurants, hotels, and event
+                            venues.
                         </p>
-                        <p class="text-lg leading-relaxed text-slate-300">
-                            In my portfolio, you will find a showcase of my work, highlighting
-                            the projects I have contributed to and the technologies I have
-                            mastered. I invite you to explore and witness firsthand the
-                            dedication and creativity that I bring to every endeavor. Thank you
-                            for visiting, and I look forward to the opportunity to collaborate
-                            and bring your vision to life.
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">Mysql</span>
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Tailwindcss</span>
+                        </div>
+                        <a class="text-blue-400 transition-colors hover:text-blue-300" href="https://lebedouin.ma"
+                            target="_blank">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
+                    <div class="p-6">
+                        <div
+                            class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-green-500 to-blue-600">
+                            <span class="text-xl font-bold">web</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-semibold">tourkech.com</h3>
+                        <p class="mb-4 text-gray-400">
+                            A web application designed to simplify the billing process and
+                            provide useful statistics.
                         </p>
-                        <p>
-                            I'm open to Job opportunities where I can contribute, learn, and
-                            grow. If you have a good opportunity that matches my skills and
-                            experience, then don't hesitate to contact me.
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">Mysql</span>
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Tailwindcss</span>
+                        </div>
+                        <a class="text-blue-400 transition-colors hover:text-blue-300"
+                            href="https://kasbah.tourkech.com" target="_blank">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
+                    <div class="p-6">
+                        <div
+                            class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-600">
+                            <span class="text-xl font-bold">web</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-semibold">Travel web app</h3>
+                        <p class="mb-4 text-gray-400">
+                            A travel web app With features such as personalized trip
+                            itineraries, virtual travel guides, and seamless booking
+                            capabilities.
                         </p>
-                        <div class="grid grid-cols-2 gap-4 pt-6">
-                            <div class="flex items-center space-x-3">
-                                <div class="rounded-lg bg-blue-500/20 p-2">
-                                    <svg
-                                        class="h-5 w-5 text-blue-400"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <span>Clean Code</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="rounded-lg bg-purple-500/20 p-2">
-                                    <svg
-                                        class="h-5 w-5 text-purple-400"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <span>Database Design</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="rounded-lg bg-green-500/20 p-2">
-                                    <svg
-                                        class="h-5 w-5 text-green-400"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <span>REST API Development </span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="rounded-lg bg-cyan-500/20 p-2">
-                                    <svg
-                                        class="h-5 w-5 text-cyan-400"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <span>SQL & Data Modeling </span>
-                            </div>
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">Mysql</span>
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Tailwindcss</span>
                         </div>
+                        <a class="text-blue-400 transition-colors hover:text-blue-300"
+                            href="https://travel-demo.netlify.app/" target="_blank">View Project →</a>
                     </div>
-                    <div class="relative flex justify-center">
+                </div>
+
+                <!-- Project 4 -->
+                <div
+                    class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105">
+                    <div class="p-6">
                         <div
-                            class="profile-container flex h-80 w-80 items-center justify-center overflow-hidden rounded-2xl"
-                        >
-                            <img
-                                alt="Idradi - Backend Developer"
-                                class="h-full w-full rounded-2xl object-cover"
-                                src="./assets/img/me.webp"
-                            />
+                            class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-600">
+                            <span class="text-xl font-bold">web</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-semibold">Fitness gym web app</h3>
+                        <p class="mb-4 text-gray-400">
+                            A fitness gym web app that empowers users From personalized
+                            workout plans and live workout sessions.
+                        </p>
+                        <div class="mb-4 flex flex-wrap gap-2">
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">Mysql</span>
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Tailwindcss</span>
+                        </div>
+                        <a class="text-blue-400 transition-colors hover:text-blue-300"
+                            href="https://lux-gym-website.netlify.app/" target="_blank">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="bg-gray-800/50 py-20" id="experience">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="animate-slide-up mb-16 text-center">
+                <h2 class="mb-4 text-4xl font-bold">Experience</h2>
+                <p class="text-lg text-gray-400">
+                    My professional journey in backend development
+                </p>
+            </div>
+
+            <div class="mx-auto max-w-4xl">
+                <!-- Experience Item 1 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-blue-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Backend Developer</h3>
+                            <span class="font-medium text-blue-400">Nov 2024 - Present</span>
+                        </div>
+                        <p class="mb-3 text-blue-400">Evoleo Maroc.</p>
+                        <p class="mb-4 text-gray-400">
+                            As a Backend Developer at Evoleo, I develop web applications and backend systems using
+                            cutting-edge technologies. My role involves designing scalable solutions that handle complex
+                            business logic and data processing requirements.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Python</span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">MySQL</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">JavaScript</span>
+                            <span class="rounded bg-teal-500/20 px-2 py-1 text-sm text-teal-400">PHP</span>
+                            <span class="rounded bg-fuchsia-500/20 px-2 py-1 text-sm text-fuchsia-400">Technical
+                                Support</span>
+                            <span class="rounded bg-emerald-500/20 px-2 py-1 text-sm text-emerald-400">Quality
+                                Assurance</span>
+                            <span class="rounded bg-purple-500/20 px-2 py-1 text-sm text-purple-400">Testing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-cyan-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Django Developer</h3>
+                            <span class="font-medium text-cyan-500 ">Apr 2024 – Oct 2024</span>
+                        </div>
+                        <p class="mb-3 text-cyan-400">GREENCOM AGENCY</p>
+                        <p class="mb-4 text-gray-400">
+                            Led full-stack development projects as a Django Developer, creating responsive and
+                            user-friendly web applications for diverse clients ranging from small businesses to
+                            enterprise solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Python </span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">MySQL</span>
+                            <span class="rounded bg-teal-500/20 px-2 py-1 text-sm text-teal-400">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-teal-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Assistant Accountant</h3>
+                            <span class="font-medium text-teal-500">Oct 2022 – Mar 2024</span>
+                        </div>
+                        <p class="mb-3 text-teal-400">ONSSA MARRAKECH</p>
+                        <p class="mb-4 text-gray-400">
+                            Transitioned into accounting operations while maintaining technical expertise, gaining
+                            valuable business acumen and financial management skills that enhance my understanding of
+                            business requirements in software development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-green-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Web Developer Intern</h3>
+                            <span class="font-medium text-green-400">Aug 2022 – Oct 2022</span>
+                        </div>
+                        <p class="mb-3 text-green-400">The Originals Creative Agency</p>
+                        <p class="mb-4 text-gray-400">
+                            Completed an intensive full-stack development internship focusing on modern JavaScript
+                            technologies, building single-page applications and RESTful APIs.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Express.js </span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Node.js </span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">React.js </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 5 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-emerald-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Django Developer Intern</h3>
+                            <span class="font-medium text-emerald-500">Jun 2021 – Oct 2021</span>
+                        </div>
+                        <p class="mb-3 text-emerald-400">GreenCom AGENCY</p>
+                        <p class="mb-4 text-gray-400">
+                            First professional Django development experience, establishing foundation in Python web
+                            development and database management.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">Python </span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">Django</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">MySQL</span>
+                            <span class="rounded bg-teal-500/20 px-2 py-1 text-sm text-teal-400">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 6 -->
+                <div class="animate-slide-up relative pb-12 pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-fuchsia-500"></div>
+                    <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Web Developer Intern</h3>
+                            <span class="font-medium text-fuchsia-400">Jun 2019</span>
+                        </div>
+                        <p class="mb-3 text-fuchsia-400">Weshore Agency</p>
+                        <p class="mb-4 text-gray-400">
+                            Focused on content management systems and custom web application development, working with
+                            both CMS platforms and custom PHP solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">PHP </span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">WordPress</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">JavaScript</span>
+                            <span class="rounded bg-teal-500/20 px-2 py-1 text-sm text-teal-400">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 7 -->
+                <div class="animate-slide-up relative pl-8">
+                    <div class="absolute top-0 left-0 h-4 w-4 rounded-full bg-purple-500"></div>
+                    <div class="glass ml-4 rounded-lg p-6">
+                        <div class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 class="text-xl font-semibold">Web Developer Intern</h3>
+                            <span class="font-medium text-purple-400">Jul 2018</span>
+                        </div>
+                        <p class="mb-3 text-purple-400">MARRAKECH PREFECTURE</p>
+                        <p class="mb-4 text-gray-400">
+                            First professional development experience, creating internal management systems for
+                            government operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400">PHP </span>
+                            <span class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400">JavaScript</span>
+                            <span class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400">MySQL</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="bg-gray-800/50 py-20" id="skills">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="animate-slide-up mb-16 text-center">
-                    <h2 class="mb-4 text-4xl font-bold">Technical Skills</h2>
-                    <p class="text-lg text-gray-400">
-                        Here are some of the technologies that I am working with
-                    </p>
+    <!-- Contact Section -->
+    <section class="py-20" id="contact">
+        <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <div class="animate-slide-up">
+                <h2 class="mb-4 text-4xl font-bold">Let's Build Something Together</h2>
+                <p class="mb-8 text-lg text-gray-400">
+                    Have a project in mind? Let's discuss how we can bring your backend
+                    vision to life.
+                </p>
+                <div class="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
+                    <a class="inline-flex transform items-center rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white transition-all hover:scale-105 hover:from-blue-700 hover:to-purple-700"
+                        href="mailto:idrissiradi@gmail.com">
+                        Get In Touch
+                    </a>
+                    <a class="inline-flex items-center rounded-md border border-gray-600 px-6 py-3 font-medium text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
+                        href="#projects">
+                        View My Work
+                    </a>
                 </div>
-
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-                    <!-- Languages -->
-                    <div class="glass animate-slide-up rounded-lg p-6">
-                        <h3 class="mb-4 text-xl font-semibold text-blue-400">Languages</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span>Python</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-14 rounded-full bg-blue-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Javascript</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-11 rounded-full bg-blue-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Node.js</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-11 rounded-full bg-blue-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Java</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-8 rounded-full bg-blue-500"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Frameworks -->
-                    <div class="glass animate-slide-up rounded-lg p-6">
-                        <h3 class="mb-4 text-xl font-semibold text-purple-400">Frameworks</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span>Django</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-13 rounded-full bg-purple-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>FastAPI</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-14 rounded-full bg-purple-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Express.js</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-11 rounded-full bg-purple-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>React/Next.js</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-8 rounded-full bg-purple-500"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Databases -->
-                    <div class="glass animate-slide-up rounded-lg p-6">
-                        <h3 class="mb-4 text-xl font-semibold text-green-400">Databases</h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span>PostgreSQL</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-14 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>MongoDB</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-10 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>MySQL</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-11 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Sqlite</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-11 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud & DevOps -->
-                    <div class="glass animate-slide-up rounded-lg p-6">
-                        <h3 class="mb-4 text-xl font-semibold text-orange-400">
-                            Other & DevOps
-                        </h3>
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span>Linux</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-13 rounded-full bg-orange-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Git</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-14 rounded-full bg-orange-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Github</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-14 rounded-full bg-orange-500"></div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Docker</span>
-                                <div class="h-2 w-16 rounded-full bg-gray-700">
-                                    <div class="h-2 w-12 rounded-full bg-orange-500"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex justify-center space-x-6">
+                    <a class="text-gray-400 transition-colors hover:text-white" href="https://github.com/idrissiradi"
+                        target="_blank">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 transition-colors hover:text-white"
+                        href="https://www.linkedin.com/in/idrissi-radi-ahmed/" target="_blank">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 transition-colors hover:text-white" href="https://twitter.com/idrissiradi"
+                        target="_blank">
+                        <span class="sr-only">Twitter</span>
+                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section class="py-20" id="projects">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="animate-slide-up mb-16 text-center">
-                    <h2 class="mb-4 text-4xl font-bold">Featured Projects</h2>
-                    <p class="text-lg text-gray-400">
-                        Web ventures: A journey through innovation.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Project 1 -->
-                    <div
-                        class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
-                    >
-                        <div class="p-6">
-                            <div
-                                class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-blue-500 to-purple-600"
-                            >
-                                <span class="text-xl font-bold">web</span>
-                            </div>
-                            <h3 class="mb-2 text-xl font-semibold">lebedouin.ma</h3>
-                            <p class="mb-4 text-gray-400">
-                                A reservation web app that streamlines the booking process for
-                                various industries, including restaurants, hotels, and event
-                                venues.
-                            </p>
-                            <div class="mb-4 flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >Django</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >Mysql</span
-                                >
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Tailwindcss</span
-                                >
-                            </div>
-                            <a
-                                class="text-blue-400 transition-colors hover:text-blue-300"
-                                href="https://lebedouin.ma"
-                                target="_blank"
-                                >View Project →</a
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div
-                        class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
-                    >
-                        <div class="p-6">
-                            <div
-                                class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-green-500 to-blue-600"
-                            >
-                                <span class="text-xl font-bold">web</span>
-                            </div>
-                            <h3 class="mb-2 text-xl font-semibold">tourkech.com</h3>
-                            <p class="mb-4 text-gray-400">
-                                A web application designed to simplify the billing process and
-                                provide useful statistics.
-                            </p>
-                            <div class="mb-4 flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >Django</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >Mysql</span
-                                >
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Tailwindcss</span
-                                >
-                            </div>
-                            <a
-                                class="text-blue-400 transition-colors hover:text-blue-300"
-                                href="https://kasbah.tourkech.com"
-                                target="_blank"
-                                >View Project →</a
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div
-                        class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
-                    >
-                        <div class="p-6">
-                            <div
-                                class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-600"
-                            >
-                                <span class="text-xl font-bold">web</span>
-                            </div>
-                            <h3 class="mb-2 text-xl font-semibold">Travel web app</h3>
-                            <p class="mb-4 text-gray-400">
-                                A travel web app With features such as personalized trip
-                                itineraries, virtual travel guides, and seamless booking
-                                capabilities.
-                            </p>
-                            <div class="mb-4 flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >Django</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >Mysql</span
-                                >
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Tailwindcss</span
-                                >
-                            </div>
-                            <a
-                                class="text-blue-400 transition-colors hover:text-blue-300"
-                                href="https://travel-demo.netlify.app/"
-                                target="_blank"
-                                >View Project →</a
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div
-                        class="glass group animate-slide-up overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
-                    >
-                        <div class="p-6">
-                            <div
-                                class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-600"
-                            >
-                                <span class="text-xl font-bold">web</span>
-                            </div>
-                            <h3 class="mb-2 text-xl font-semibold">Fitness gym web app</h3>
-                            <p class="mb-4 text-gray-400">
-                                A fitness gym web app that empowers users From personalized
-                                workout plans and live workout sessions.
-                            </p>
-                            <div class="mb-4 flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >Django</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >Mysql</span
-                                >
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Tailwindcss</span
-                                >
-                            </div>
-                            <a
-                                class="text-blue-400 transition-colors hover:text-blue-300"
-                                href="https://lux-gym-website.netlify.app/"
-                                target="_blank"
-                                >View Project →</a
-                            >
-                        </div>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800/50 py-8">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 Idradi. All rights reserved.</p>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <!-- Experience Section -->
-        <section class="bg-gray-800/50 py-20" id="experience">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="animate-slide-up mb-16 text-center">
-                    <h2 class="mb-4 text-4xl font-bold">Experience</h2>
-                    <p class="text-lg text-gray-400">
-                        My professional journey in backend development
-                    </p>
-                </div>
-
-                <div class="mx-auto max-w-4xl">
-                    <!-- Experience Item 1 -->
-                    <div class="animate-slide-up relative pb-12 pl-8">
-                        <div
-                            class="absolute top-0 left-0 h-4 w-4 rounded-full bg-blue-500"
-                        ></div>
-                        <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
-                        <div class="glass ml-4 rounded-lg p-6">
-                            <div
-                                class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between"
-                            >
-                                <h3 class="text-xl font-semibold">Senior Backend Engineer</h3>
-                                <span class="font-medium text-blue-400">2022 - Present</span>
-                            </div>
-                            <p class="mb-3 text-purple-400">TechCorp Inc.</p>
-                            <p class="mb-4 text-gray-400">
-                                Leading backend architecture for high-traffic applications.
-                                Designed and implemented microservices handling 50M+ daily
-                                active users with 99.9% uptime.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Python</span
-                                >
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >PostgreSQL</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >AWS</span
-                                >
-                                <span
-                                    class="rounded bg-purple-500/20 px-2 py-1 text-sm text-purple-400"
-                                    >Kubernetes</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 2 -->
-                    <div class="animate-slide-up relative pb-12 pl-8">
-                        <div
-                            class="absolute top-0 left-0 h-4 w-4 rounded-full bg-green-500"
-                        ></div>
-                        <div class="absolute top-4 left-2 h-full w-0.5 bg-gray-700"></div>
-                        <div class="glass ml-4 rounded-lg p-6">
-                            <div
-                                class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between"
-                            >
-                                <h3 class="text-xl font-semibold">Backend Developer</h3>
-                                <span class="font-medium text-green-400">2020 - 2022</span>
-                            </div>
-                            <p class="mb-3 text-purple-400">StartupXYZ</p>
-                            <p class="mb-4 text-gray-400">
-                                Built scalable APIs and data pipelines from scratch. Optimized
-                                database queries resulting in 60% performance improvement and
-                                reduced infrastructure costs by 40%.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Node.js</span
-                                >
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >MongoDB</span
-                                >
-                                <span
-                                    class="rounded bg-orange-500/20 px-2 py-1 text-sm text-orange-400"
-                                    >Docker</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 3 -->
-                    <div class="animate-slide-up relative pl-8">
-                        <div
-                            class="absolute top-0 left-0 h-4 w-4 rounded-full bg-purple-500"
-                        ></div>
-                        <div class="glass ml-4 rounded-lg p-6">
-                            <div
-                                class="mb-2 flex flex-col md:flex-row md:items-center md:justify-between"
-                            >
-                                <h3 class="text-xl font-semibold">Junior Software Engineer</h3>
-                                <span class="font-medium text-purple-400">2019 - 2020</span>
-                            </div>
-                            <p class="mb-3 text-purple-400">DevCompany</p>
-                            <p class="mb-4 text-gray-400">
-                                Started my journey in backend development. Worked on REST API
-                                development, database design, and learned best practices in
-                                software engineering.
-                            </p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="rounded bg-blue-500/20 px-2 py-1 text-sm text-blue-400"
-                                    >Java</span
-                                >
-                                <span
-                                    class="rounded bg-green-500/20 px-2 py-1 text-sm text-green-400"
-                                    >MySQL</span
-                                >
-                                <span
-                                    class="rounded bg-purple-500/20 px-2 py-1 text-sm text-purple-400"
-                                    >Spring Boot</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="py-20" id="contact">
-            <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-                <div class="animate-slide-up">
-                    <h2 class="mb-4 text-4xl font-bold">Let's Build Something Together</h2>
-                    <p class="mb-8 text-lg text-gray-400">
-                        Have a project in mind? Let's discuss how we can bring your backend
-                        vision to life.
-                    </p>
-                    <div class="mb-8 flex flex-col justify-center gap-4 sm:flex-row">
-                        <a
-                            class="inline-flex transform items-center rounded-md bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-medium text-white transition-all hover:scale-105 hover:from-blue-700 hover:to-purple-700"
-                            href="mailto:idrissiradi@gmail.com"
-                        >
-                            Get In Touch
-                        </a>
-                        <a
-                            class="inline-flex items-center rounded-md border border-gray-600 px-6 py-3 font-medium text-gray-300 transition-colors hover:border-gray-500 hover:text-white"
-                            href="./assets/pdf/resume.pdf"
-                        >
-                            Download Resume
-                        </a>
-                    </div>
-                    <div class="flex justify-center space-x-6">
-                        <a
-                            class="text-gray-400 transition-colors hover:text-white"
-                            href="https://github.com/idrissiradi"
-                            target="_blank"
-                        >
-                            <span class="sr-only">GitHub</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            class="text-gray-400 transition-colors hover:text-white"
-                            href="https://www.linkedin.com/in/idrissi-radi-ahmed/"
-                            target="_blank"
-                        >
-                            <span class="sr-only">LinkedIn</span>
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                                />
-                            </svg>
-                        </a>
-                        <a
-                            class="text-gray-400 transition-colors hover:text-white"
-                            href="https://twitter.com/idrissiradi"
-                            target="_blank"
-                        >
-                            <span class="sr-only">Twitter</span>
-                            <svg
-                                aria-hidden="true"
-                                class="h-6 w-6"
-                                fill="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M18.205 2.25h3.308l-7.227 8.26l8.502 11.24H16.13l-5.214-6.817L4.95 21.75H1.64l7.73-8.835L1.215 2.25H8.04l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"
-                                    fill="currentColor"
-                                />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800/50 py-8">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center text-gray-400">
-                    <p>&copy; 2025 Idradi. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-        <script>
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute("href"));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    }
-                });
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                    });
+                }
             });
+        });
 
-            // Add animation classes when elements come into view
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px",
-            };
+        // Add animation classes when elements come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+        };
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animationDelay = "0.1s";
-                        entry.target.classList.add("animate-fade-in");
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll(".animate-slide-up").forEach((el) => {
-                observer.observe(el);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = "0.1s";
+                    entry.target.classList.add("animate-fade-in");
+                }
             });
-        </script>
-    </body>
+        }, observerOptions);
+
+        document.querySelectorAll(".animate-slide-up").forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
 </html>
