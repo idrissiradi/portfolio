@@ -3,6 +3,7 @@
     src: url('/assets/fonts/Inter/inter-v19-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -12,4 +13,5 @@
     src: url('/assets/fonts/JetBrainsMono/jetbrains-mono-v23-latin-regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
