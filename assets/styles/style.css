@@ -1,0 +1,33 @@
+/* Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter/inter-v19-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter/inter-v19-latin-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Repeat for other weights you use (300, 600, 700) */
+
+/* JetBrains Mono */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/assets/fonts/JetBrainsMono/jetbrains-mono-v23-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/assets/fonts/JetBrainsMono/jetbrains-mono-v23-latin-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Repeat for other weights you use (600) */
