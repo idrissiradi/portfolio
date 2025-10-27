@@ -3,7 +3,7 @@ import { processSteps } from "@/constants/portfolio-data";
 
 export const ProcessSection = () => {
     return (
-        <section className="w-full py-32 px-4 bg-background">
+        <section id="experience" className="w-full py-32 px-4 bg-background">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-5xl md:text-7xl font-bold mb-4">Experience</h2>
                 <p className="text-muted-foreground text-xl mb-20 max-w-3xl">

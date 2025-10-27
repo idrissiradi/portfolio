@@ -57,7 +57,8 @@ export const HeroSection = () => {
 
             <button
                 onClick={() => scrollToSection("about")}
-                className="absolute bottom-12 animate-bounce cursor-pointer bg-transparent border-none"
+                className=" absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center animate-bounce cursor-pointer bg-transparent border-border w-12 h-12 rounded-full hover:bg-muted/30 transition
+  "
                 aria-label="Scroll to about section"
             >
                 <ChevronDown className="w-8 h-8 text-muted-foreground" />
