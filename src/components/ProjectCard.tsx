@@ -18,6 +18,8 @@ export const ProjectCard = memo(({ title, description, tags, image }: ProjectCar
                     alt={title}
                     loading="lazy"
                     decoding="async"
+                    width={640}
+                    height={360}
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
