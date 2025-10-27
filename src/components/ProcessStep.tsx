@@ -59,8 +59,9 @@ export const ProcessStep = memo(
         if (alignment === "right") {
             return (
                 <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+                    <div className="md:hidden shrink-0">{circle}</div>
                     <div className="md:text-left md:order-first">{content}</div>
-                    <div className="shrink-0 md:order-last">{circle}</div>
+                    <div className="hidden md:block shrink-0">{circle}</div>
                 </div>
             );
         }

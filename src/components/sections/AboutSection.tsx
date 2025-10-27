@@ -10,7 +10,7 @@ const highlights = [
 
 export const AboutSection = () => {
     return (
-        <section id="about" className="w-full py-32 bg-accent/20">
+        <section id="about" className="w-full py-32 px-4 bg-accent/20">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-5xl md:text-7xl font-bold mb-12">About Me</h2>
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
