@@ -15,19 +15,19 @@ export const AboutSection = () => {
                 <h2 className="text-5xl md:text-7xl font-bold mb-12">About Me</h2>
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                     <p>
-                        Hi, I'm Ahmed, a passionate Full Stack Developer with nearly 3 years of experience building modern web applications, RESTful APIs, and scalable backend systems.
+                        Hi, I'm Ahmed, a Full Stack Developer with 3 years of experience. I build web applications, APIs, and backend systems using Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel).
                     </p>
                     <p>
                         I specialize in Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel), combining solid backend logic with clean and intuitive front-end interfaces.
                     </p>
                     <p>
-                        Currently pursuing a Bachelor's in AI, Machine Learning & Big Data to expand my expertise in intelligent, data-driven solutions.
+                        Right now, I'm getting my Bachelor's degree in AI, Machine Learning & Big Data. This helps me build smarter, data-focused solutions.
                     </p>
                     <p>
-                        In my portfolio, you will find a showcase of my work, highlighting the projects I have contributed to and the technologies I have mastered. I invite you to explore and witness firsthand the dedication and creativity that I bring to every endeavor.
+                        In my portfolio, you will find a showcase of my work, highlighting the projects I have contributed to and the technologies I have mastered. Take a look and see what I can do.
                     </p>
                     <p>
-                        I'm open to opportunities where I can contribute, learn, and grow. If you're looking for a developer who delivers results and thrives in collaborative environments, then don't hesitate to contact me.
+                        I'm open to opportunities where I can contribute, learn, and grow.  If you need a reliable developer who works well with teams, then don't hesitate to contact me.
                     </p>
                 </div>
 
