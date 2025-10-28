@@ -21,6 +21,7 @@ export const BackToTop = () => {
     return (
         <Button
             onClick={scrollToTop}
+            aria-label="Open menu"
             size="icon"
             className={`fixed bottom-6 right-6 z-50 rounded-full transition-all duration-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
                 }`}
