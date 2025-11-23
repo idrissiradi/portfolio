@@ -8,30 +8,35 @@ import {
 	SiGithub,
 	SiHtml5,
 	SiJavascript,
+	SiJupyter,
 	SiLaravel,
 	SiLinux,
 	SiMongodb,
 	SiMysql,
 	SiNestjs,
-	SiNextdotjs,
 	SiNodedotjs,
+	SiNumpy,
+	SiPandas,
 	SiPhp,
 	SiPostgresql,
 	SiPostman,
 	SiPython,
 	SiReact,
 	SiRedis,
+	SiScikitlearn,
 	SiSqlite,
 	SiTailwindcss,
+	SiTensorflow,
 	SiTypescript,
 	SiVite,
 } from '@icons-pack/react-simple-icons';
 import { Code2 } from 'lucide-react';
+import { MatplotlibIcon } from '@/components/icons/MatplotlibIcon';
+import { SeabornIcon } from '@/components/icons/SeabornIcon';
 
 export const skillIcons = {
 	frontend: {
 		React: SiReact,
-		'Next.js': SiNextdotjs,
 		TypeScript: SiTypescript,
 		JavaScript: SiJavascript,
 		Tailwind: SiTailwindcss,
@@ -58,7 +63,15 @@ export const skillIcons = {
 		SQLite: SiSqlite,
 		Redis: SiRedis,
 	},
-
+	dataScience: {
+		NumPy: SiNumpy,
+		Pandas: SiPandas,
+		'Scikit-learn': SiScikitlearn,
+		Matplotlib: MatplotlibIcon,
+		Seaborn: SeabornIcon,
+		Jupyter: SiJupyter,
+		TensorFlow: SiTensorflow,
+	},
 	tools: {
 		Git: SiGit,
 		GitHub: SiGithub,
@@ -206,6 +219,58 @@ export const processSteps = [
 			'Created an internal management system using PHP and MySQL for administrative operations. Focused on backend logic and data management.',
 		technologies: ['PHP', 'MySQL'],
 		alignment: 'right' as const,
+	},
+];
+
+export const education = [
+	{
+		degree: "Bachelor's degree, Artificial Intelligence, Machine Learning & Big Data",
+		institution:
+			'National School of Applied Sciences of Khouribga (ENSA Khouribga)',
+		period: 'Oct 2025 – Present',
+		description:
+			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
+	},
+	{
+		degree: 'Advanced Technician Certificate (BTS) - Higher National Diploma, DEVELOPMENT OF INFORMATION SYSTEMS',
+		institution: 'Unknown Institution',
+		period: '2017 – 2019',
+		description:
+			'Completed advanced technician certificate in development of information systems.',
+	},
+	{
+		degree: 'High School Diploma, SCIENCE PHYSIQUE',
+		institution: 'Maghreb Al Arabi High School',
+		period: '2015 – 2016',
+		description:
+			'Completed secondary education with a focus on physical sciences.',
+	},
+];
+
+export const certificates = [
+	{
+		title: 'AWS Certified Cloud Practitioner',
+		issuer: 'Amazon Web Services',
+		date: '2024',
+		description:
+			'Demonstrated knowledge of AWS Cloud concepts, services, and terminology.',
+		link: 'https://aws.amazon.com/certification/certified-cloud-practitioner/',
+	},
+	{
+		title: 'Google Data Analytics Professional Certificate',
+		issuer: 'Google',
+		date: '2023',
+		description:
+			'Completed coursework in data analytics, including SQL, R, Tableau, and data visualization.',
+		link: 'https://www.coursera.org/professional-certificates/google-data-analytics',
+	},
+	{
+		title: 'Meta React Developer Certificate',
+		issuer: 'Meta',
+		date: '2023',
+		description:
+			'Learned to build dynamic and interactive web apps using React.',
+		link: 'https://www.coursera.org/professional-certificates/meta-react-developer',
 	},
 ];
 

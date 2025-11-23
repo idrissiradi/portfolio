@@ -32,6 +32,12 @@ export const SkillsSection = () => {
                             DATABASE & STORAGE
                         </TabsTrigger>
                         <TabsTrigger
+                            value="dataScience"
+                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
+                        >
+                            DATA SCIENCE
+                        </TabsTrigger>
+                        <TabsTrigger
                             value="tools"
                             className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
                         >
@@ -58,6 +64,14 @@ export const SkillsSection = () => {
                     <TabsContent value="database" className="mt-8">
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
                             {Object.entries(skillIcons.database).map(([ tech, Icon ]) => (
+                                <SkillCard key={tech} tech={tech} icon={Icon} />
+                            ))}
+                        </div>
+                    </TabsContent>
+
+                    <TabsContent value="dataScience" className="mt-8">
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+                            {Object.entries(skillIcons.dataScience).map(([ tech, Icon ]) => (
                                 <SkillCard key={tech} tech={tech} icon={Icon} />
                             ))}
                         </div>

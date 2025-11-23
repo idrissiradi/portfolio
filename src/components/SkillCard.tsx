@@ -1,10 +1,9 @@
 import { memo } from "react";
-import type { LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface SkillCardProps {
     tech: string;
-    icon: LucideIcon;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 export const SkillCard = memo(({ tech, icon: Icon }: SkillCardProps) => {
