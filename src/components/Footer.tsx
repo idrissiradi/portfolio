@@ -14,7 +14,7 @@ export const Footer = () => {
                             <div className="relative w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            BASED IN MOROCCO
+                            BASED IN MARRAKESH, MOROCCO 🇲🇦
                         </p>
                     </Badge>
                 </div>
@@ -23,7 +23,7 @@ export const Footer = () => {
                     © {new Date().getFullYear()} Idradi. All rights reserved.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                    FRONTEND DEVELOPER + BACKEND SPECIALIST
+                    FULL STACK DEVELOPER • AI & DATA SCIENCE
                 </p>
             </div>
         </footer>

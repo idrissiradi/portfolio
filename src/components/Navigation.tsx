@@ -7,11 +7,11 @@ export const Navigation = memo(() => {
 
     const navItems = [
         { name: "About", href: "#about" },
-        { name: "Education", href: "#education" },
-        { name: "Certificates", href: "#certificates" },
         { name: "Projects", href: "#projects" },
         { name: "Skills", href: "#skills" },
         { name: "Experience", href: "#experience" },
+        { name: "Education", href: "#education" },
+        // { name: "Certificates", href: "#certificates" },
         { name: "Contact", href: "#contact" },
     ];
 

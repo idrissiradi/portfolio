@@ -232,8 +232,9 @@ export const education = [
 			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
 	},
 	{
-		degree: 'Advanced Technician Certificate (BTS) - Higher National Diploma, DEVELOPMENT OF INFORMATION SYSTEMS',
-		institution: 'Unknown Institution',
+		degree: 'Higher National Diploma, DEVELOPMENT OF INFORMATION SYSTEMS',
+		institution:
+			'Advanced Technician Certificate (BTS) - Center BTS Hassan II Marrakesh',
 		period: '2017 – 2019',
 		description:
 			'Completed advanced technician certificate in development of information systems.',
