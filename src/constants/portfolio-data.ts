@@ -85,6 +85,21 @@ export const skillIcons = {
 export const projects = [
 	{
 		id: 1,
+		title: 'ficogest.ma',
+		description:
+			'A complete web application designed to help accounting offices efficiently manage their clients, services, payments, and expenses. The system provides an intuitive dashboard, detailed service tracking, payment management, and easy-to-read financial insights.',
+		tags: [
+			'Laravel',
+			'React',
+			'MySQL',
+			'shadcn UI',
+			'Tailwind CSS',
+			'inertiajs',
+		],
+		image: 'ficogest.avif',
+	},
+	{
+		id: 2,
 		title: 'lebedouin.ma',
 		description:
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
@@ -92,7 +107,7 @@ export const projects = [
 		image: 'lebedouin.avif',
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Travel Planning Platform',
 		description:
 			'A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.',
@@ -100,7 +115,7 @@ export const projects = [
 		image: 'travel_planning.avif',
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Fitness Management System',
 		description:
 			'A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.',
@@ -108,7 +123,7 @@ export const projects = [
 		image: 'fitness_management.avif',
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Pizza Online Ordering System',
 		description:
 			'An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.',
