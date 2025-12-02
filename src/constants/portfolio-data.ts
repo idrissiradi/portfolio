@@ -85,7 +85,7 @@ export const skillIcons = {
 export const projects = [
 	{
 		id: 1,
-		title: 'ficogest.ma',
+		title: 'Accounting Firm Management System',
 		description:
 			'A complete web application designed to help accounting offices efficiently manage their clients, services, payments, and expenses. The system provides an intuitive dashboard, detailed service tracking, payment management, and easy-to-read financial insights.',
 		tags: [
@@ -100,7 +100,7 @@ export const projects = [
 	},
 	{
 		id: 2,
-		title: 'lebedouin.ma',
+		title: 'Restaurant & Hotel Booking App',
 		description:
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
 		tags: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
