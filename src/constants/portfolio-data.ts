@@ -13,7 +13,6 @@ import {
 	SiLinux,
 	SiMongodb,
 	SiMysql,
-	SiNestjs,
 	SiNodedotjs,
 	SiNumpy,
 	SiPandas,
@@ -53,7 +52,6 @@ export const skillIcons = {
 		PHP: SiPhp,
 		'Node.js': SiNodedotjs,
 		'Express.js': SiExpress,
-		NestJS: SiNestjs,
 	},
 
 	database: {
@@ -132,25 +130,14 @@ export const projects = [
 	},
 ];
 
-export const processSteps = [
+export const experiences = [
 	{
-		number: '01',
-		title: 'Back End Developer',
-		companyName: 'Mafazaa',
-		period: 'May 2025 – Present · Part-time · Remote',
-		description:
-			'Develop backend APIs and services using NestJS, Express.js, and MongoDB. Collaborate with a remote team to deliver scalable and secure backend systems following clean architecture principles.',
-		technologies: ['NestJS', 'TypeScript', 'Express.js', 'MongoDB'],
-		alignment: 'left' as const,
-	},
-	{
-		number: '02',
 		title: 'Full Stack Developer',
-		companyName: 'Evoleo Maroc',
+		company: 'Evoleo Maroc',
 		period: 'Nov 2024 – Oct 2025 · Full-time · Marrakesh, Morocco',
 		description:
 			'Developed and maintained full-stack web applications using FastAPI, Laravel, and React.js. Designed RESTful APIs, ensured technical support, and conducted quality assurance testing.',
-		technologies: [
+		tech: [
 			'FastAPI',
 			'Laravel',
 			'React.js',
@@ -159,16 +146,15 @@ export const processSteps = [
 			'PHP',
 			'JavaScript',
 		],
-		alignment: 'right' as const,
+		current: false,
 	},
 	{
-		number: '03',
 		title: 'Django Developer',
-		companyName: 'GreenCommunication',
+		company: 'GreenCommunication',
 		period: 'Apr 2024 – Oct 2024 · Full-time · Marrakesh, Morocco',
 		description:
 			'Built and maintained web applications using Django, Tailwind CSS, JavaScript, and MySQL. Focused on backend logic, UI integration, and improving overall system performance.',
-		technologies: [
+		tech: [
 			'Django',
 			'MySQL',
 			'Tailwind CSS',
@@ -177,86 +163,68 @@ export const processSteps = [
 			'JavaScript',
 			'Python',
 		],
-		alignment: 'left' as const,
 	},
 	{
-		number: '04',
 		title: 'Assistant Accountant',
-		companyName: 'ONSSA Marrakech',
+		company: 'ONSSA Marrakech',
 		period: 'Oct 2022 – Mar 2024 · Full-time · Marrakesh, Morocco',
 		description:
 			'Handled accounting tasks including financial data entry, reporting, and reconciliation. Strengthened attention to detail and analytical thinking applicable to software development.',
-		technologies: ['Excel', 'Accounting Systems'],
-		alignment: 'right' as const,
+		tech: ['Excel', 'Accounting Systems'],
 	},
 	{
-		number: '05',
 		title: 'Web Developer Intern',
-		companyName: 'The Originals Creative Agency',
+		company: 'The Originals Creative Agency',
 		period: 'Aug 2022 – Oct 2022 · Internship · Marrakesh, Morocco',
 		description:
 			'Worked on full-stack development tasks using Node.js, Express.js, and React.js. Contributed to internal tools and client projects under supervision.',
-		technologies: ['Node.js', 'Express.js', 'React.js', 'JavaScript'],
-		alignment: 'left' as const,
+		tech: ['Node.js', 'Express.js', 'React.js', 'JavaScript'],
 	},
 	{
-		number: '06',
 		title: 'Django Developer Intern',
-		companyName: 'GreenCommunication',
+		company: 'GreenCommunication',
 		period: 'Jun 2021 – Oct 2021 · Internship · Marrakesh, Morocco',
 		description:
 			'Built internal web platforms using Django, MySQL, and Tailwind CSS. Assisted in backend development, database modeling, and UI improvements.',
-		technologies: [
-			'Django',
-			'MySQL',
-			'Tailwind CSS',
-			'JavaScript',
-			'Python',
-		],
-		alignment: 'right' as const,
+		tech: ['Django', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Python'],
 	},
 	{
-		number: '07',
 		title: 'Web Developer Intern',
-		companyName: 'Weshore Agency',
+		company: 'Weshore Agency',
 		period: 'May 2019 – May 2019 · Internship · Marrakesh, Morocco',
 		description:
 			'Developed a management web application using PHP and MySQL. Integrated WordPress components and contributed to improving workflow automation.',
-		technologies: ['PHP', 'MySQL', 'WordPress', 'JavaScript'],
-		alignment: 'left' as const,
+		tech: ['PHP', 'MySQL', 'WordPress', 'JavaScript'],
 	},
 	{
-		number: '08',
 		title: 'Web Developer Intern',
-		companyName: 'Prefecture of Marrakesh',
+		company: 'Prefecture of Marrakesh',
 		period: 'Jul 2018 – Jul 2018 · Internship · Marrakesh, Morocco',
 		description:
 			'Created an internal management system using PHP and MySQL for administrative operations. Focused on backend logic and data management.',
-		technologies: ['PHP', 'MySQL'],
-		alignment: 'right' as const,
+		tech: ['PHP', 'MySQL'],
 	},
 ];
 
 export const education = [
 	{
 		degree: "Bachelor's degree, Artificial Intelligence, Machine Learning & Big Data",
-		institution:
-			'National School of Applied Sciences of Khouribga (ENSA Khouribga)',
+		school: 'National School of Applied Sciences of Khouribga (ENSA Khouribga)',
 		period: 'Oct 2025 – Present',
 		description:
 			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
+		current: true,
 	},
 	{
 		degree: 'Higher National Diploma, DEVELOPMENT OF INFORMATION SYSTEMS',
-		institution:
-			'Advanced Technician Certificate (BTS) - Center BTS Hassan II Marrakesh',
+		school: 'Advanced Technician Certificate (BTS) - Center BTS Hassan II Marrakesh',
 		period: '2017 – 2019',
 		description:
 			'Completed advanced technician certificate in development of information systems.',
 	},
 	{
 		degree: 'High School Diploma, SCIENCE PHYSIQUE',
-		institution: 'Maghreb Al Arabi High School',
+		school: 'Maghreb Al Arabi High School',
 		period: '2015 – 2016',
 		description:
 			'Completed secondary education with a focus on physical sciences.',

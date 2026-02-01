@@ -1,32 +1,30 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/sections/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 
 import { SkillsSection } from "@/components/sections/SkillsSection";
-import { ProcessSection } from "@/components/sections/ProcessSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { BackToTop } from "@/components/BackToTop";
-import { Navigation } from "@/components/Navigation";
+import { Navigation } from "@/components/sections/Navigation";
 
 const Index = () => {
     return (
-        <div className="min-h-screen bg-background text-foreground dark scroll-smooth">
-            <Header />
+        <main className="min-h-screen bg-background">
             <Navigation />
             <HeroSection />
             <AboutSection />
             <ProjectsSection />
             <SkillsSection />
-            <ProcessSection />
+            <ExperienceSection />
             <EducationSection />
             {/* <CertificateSection /> */}
             <ContactSection />
             <Footer />
             <BackToTop />
-        </div>
+        </main>
     );
 };
 

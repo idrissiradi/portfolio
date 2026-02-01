@@ -1,68 +1,101 @@
-import { ChevronDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { ChevronDown, Mail, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export const HeroSection = () => {
-    const scrollToSection = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    };
+
 
     return (
-        <section className="min-h-screen flex flex-col items-center justify-center px-4 relative">
-            <div className="mb-8 animate-fade-in">
-                <Badge
-                    variant="outline"
-                    className="text-sm px-4 py-2 rounded-full border-white/25 inline-flex items-center gap-2 hover:bg-accent transition-colors"
-                >
-                    <div className="relative flex items-center justify-center">
-                        <div className="absolute w-3 h-3 bg-green-400 rounded-full animate-ping opacity-75" />
-                        <div className="relative w-2.5 h-2.5 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
-                    </div>
-                    <span>Available for freelance & full-time opportunities</span>
-                </Badge>
+        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+            {/* Background gradient orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-1/4 -left-1/4 w-150 h-150 rounded-full bg-primary/5 blur-[120px] animate-float" />
+                <div className="absolute bottom-1/4 -right-1/4 w-125 h-125 rounded-full bg-accent/5 blur-[100px] animate-float" style={{ animationDelay: '-3s' }} />
             </div>
 
-            <h1 className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-black leading-none text-center mb-8 animate-fade-in">
-                <div>AHMED</div>
-                <div>IDRISSI RADI</div>
-            </h1>
-
-            <div className="text-center space-y-4 max-w-2xl animate-fade-in">
-                <p className="text-2xl md:text-3xl font-bold">Full Stack Developer</p>
-                <p className="text-muted-foreground text-lg">
-                    I speak three languages fluently: Python, JavaScript, and possibility.
-                </p>
-                <p className="text-muted-foreground text-lg">
-                    Building solutions that turn "what if" into "watch this".
-                </p>
-            </div>
-
-            <div className="flex gap-4 mt-12 animate-fade-in">
-                <Button
-                    size="lg"
-                    className="rounded-full hover-scale"
-                    onClick={() => scrollToSection("projects")}
-                >
-                    View My Work
-                </Button>
-                <Button
-                    size="lg"
-                    variant="outline"
-                    className="rounded-full hover-scale"
-                    onClick={() => scrollToSection("contact")}
-                >
-                    Get In Touch
-                </Button>
-            </div>
-
-            <button
-                onClick={() => scrollToSection("about")}
-                className=" absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center justify-center animate-bounce cursor-pointer bg-transparent border-border w-12 h-12 rounded-full hover:bg-muted/30 transition
-  "
-                aria-label="Scroll to about section"
+            {/* Availability badge */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8"
             >
-                <ChevronDown className="w-8 h-8 text-muted-foreground" />
-            </button>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+                    <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
+                    <span className="text-sm text-foreground/80">Available for freelance & full-time opportunities</span>
+                </div>
+            </motion.div>
+
+            {/* Main name */}
+            <div className="text-center">
+                <motion.h1
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="font-display text-[clamp(3rem,15vw,12rem)] leading-[0.85] tracking-tight"
+                >
+                    <span className="block">AHMED</span>
+                    <span className="block text-gradient-primary">IDRISSI RADI</span>
+                </motion.h1>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    className="mt-6 space-y-4"
+                >
+                    <h2 className="text-2xl md:text-3xl font-sans font-light text-foreground/90">
+                        Full Stack Developer
+                    </h2>
+                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                        I speak three languages fluently: <span className="text-primary">Python</span>, <span className="text-primary">JavaScript</span>, and <span className="text-accent">possibility</span>.
+                    </p>
+                    <p className="text-base text-muted-foreground/70">
+                        Building solutions that turn "what if" into "watch this".
+                    </p>
+                </motion.div>
+
+                {/* CTA Buttons */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    className="mt-10 flex flex-wrap gap-4 justify-center"
+                >
+                    <Button
+                        size="lg"
+                        className="group bg-primary text-primary-foreground hover:bg-primary/90 glow-primary"
+                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        <Briefcase className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                        View My Work
+                    </Button>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="border-foreground/20 hover:bg-foreground/5 hover:border-primary/50"
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Get In Touch
+                    </Button>
+                </motion.div>
+            </div>
+
+            {/* Scroll indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 1.4 }}
+                className="absolute bottom-8"
+            >
+                <motion.div
+                    animate={{ y: [ 0, 8, 0 ] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                    <ChevronDown className="h-6 w-6 text-muted-foreground" />
+                </motion.div>
+            </motion.div>
         </section>
     );
 };

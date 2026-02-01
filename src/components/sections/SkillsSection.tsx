@@ -1,90 +1,75 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SkillCard } from "@/components/SkillCard";
-import { skillIcons } from "@/constants/portfolio-data";
+import { motion } from "framer-motion";
+
+const skillCategories = [
+    {
+        title: "Frontend Development",
+        skills: [ "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Vite" ],
+    },
+    {
+        title: "Backend Development",
+        skills: [ "Python", "Django", "FastAPI", "Node.js", "Express.js", "Laravel", "PHP" ],
+    },
+    {
+        title: "Database & Storage",
+        skills: [ "PostgreSQL", "MySQL", "MongoDB", "Redis" ],
+    },
+    {
+        title: "Data Science",
+        skills: [ "Machine Learning", "Data Analysis", "Big Data" ],
+    },
+    {
+        title: "Development Tools",
+        skills: [ "Git", "Docker", "Linux", "VS Code" ],
+    },
+];
 
 export const SkillsSection = () => {
     return (
-        <section id="skills" className="w-full py-32  bg-accent/20">
-            <div className="max-w-6xl mx-auto px-4">
-                <h2 className="text-5xl md:text-7xl font-bold mb-4">Technical Skills</h2>
-                <p className="text-muted-foreground text-xl mb-16">
-                    Here are some of the technologies that I am working with
-                </p>
+        <section id="skills" className="py-24 px-4 md:px-8">
+            <div className="max-w-6xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-16"
+                >
+                    <h2 className="font-display text-5xl md:text-7xl mb-4">
+                        Technical <span className="text-gradient-primary">Skills</span>
+                    </h2>
+                    <p className="text-muted-foreground text-lg">
+                        Here are some of the technologies that I work with
+                    </p>
+                </motion.div>
 
-                <Tabs defaultValue="frontend" className="w-full">
-                    <TabsList className="mb-12 h-auto p-0 bg-transparent border-b border-border rounded-none w-full justify-start flex-wrap">
-                        <TabsTrigger
-                            value="frontend"
-                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {skillCategories.map((category, catIndex) => (
+                        <motion.div
+                            key={category.title}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+                            className="glass-card rounded-2xl p-6 hover:border-primary/30 transition-all duration-300"
                         >
-                            FRONTEND DEVELOPMENT
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="backend"
-                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
-                        >
-                            BACKEND DEVELOPMENT
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="database"
-                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
-                        >
-                            DATABASE & STORAGE
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="dataScience"
-                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
-                        >
-                            DATA SCIENCE
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="tools"
-                            className="rounded-none border-b-2 border-transparent data-[state=active]:border-foreground data-[state=active]:bg-transparent px-6 py-3 font-bold transition-all"
-                        >
-                            DEVELOPMENT TOOLS
-                        </TabsTrigger>
-                    </TabsList>
-
-                    <TabsContent value="frontend" className="mt-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                            {Object.entries(skillIcons.frontend).map(([ tech, Icon ]) => (
-                                <SkillCard key={tech} tech={tech} icon={Icon} />
-                            ))}
-                        </div>
-                    </TabsContent>
-
-                    <TabsContent value="backend" className="mt-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                            {Object.entries(skillIcons.backend).map(([ tech, Icon ]) => (
-                                <SkillCard key={tech} tech={tech} icon={Icon} />
-                            ))}
-                        </div>
-                    </TabsContent>
-
-                    <TabsContent value="database" className="mt-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                            {Object.entries(skillIcons.database).map(([ tech, Icon ]) => (
-                                <SkillCard key={tech} tech={tech} icon={Icon} />
-                            ))}
-                        </div>
-                    </TabsContent>
-
-                    <TabsContent value="dataScience" className="mt-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                            {Object.entries(skillIcons.dataScience).map(([ tech, Icon ]) => (
-                                <SkillCard key={tech} tech={tech} icon={Icon} />
-                            ))}
-                        </div>
-                    </TabsContent>
-
-                    <TabsContent value="tools" className="mt-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-                            {Object.entries(skillIcons.tools).map(([ tech, Icon ]) => (
-                                <SkillCard key={tech} tech={tech} icon={Icon} />
-                            ))}
-                        </div>
-                    </TabsContent>
-                </Tabs>
+                            <h3 className="font-display text-xl text-primary mb-4">{category.title}</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {category.skills.map((skill, skillIndex) => (
+                                    <motion.span
+                                        key={skill}
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3, delay: catIndex * 0.1 + skillIndex * 0.05 }}
+                                        className="px-3 py-1.5 text-sm rounded-lg bg-secondary/50 text-foreground border border-border/30 hover:border-primary/50 hover:bg-primary/10 transition-all cursor-default"
+                                    >
+                                        {skill}
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );

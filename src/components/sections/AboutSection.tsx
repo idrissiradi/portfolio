@@ -1,46 +1,64 @@
-import { Code2, Database, Terminal, SquareTerminal } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { Code2, Database, Server, Layers } from "lucide-react";
 
-const highlights = [
-    { icon: Code2, label: "Clean Code & Best Practices" },
-    { icon: Database, label: "Database Design & SQL Modeling" },
-    { icon: Terminal, label: "REST API Development" },
-    { icon: SquareTerminal, label: "Full-Stack Architecture" },
+const skills = [
+    { icon: Code2, title: "Clean Code & Best Practices", color: "primary" },
+    { icon: Database, title: "Database Design & SQL Modeling", color: "accent" },
+    { icon: Server, title: "REST API Development", color: "primary" },
+    { icon: Layers, title: "Full-Stack Architecture", color: "accent" },
 ];
 
 export const AboutSection = () => {
     return (
-        <section id="about" className="w-full py-32 px-4 bg-accent/20">
+        <section id="about" className="py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-5xl md:text-7xl font-bold mb-12">About Me</h2>
-                <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                    <p>
-                        Hi, I'm Ahmed, a Full Stack Developer with 3 years of experience. I build web applications, APIs, and backend systems using Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel).
-                    </p>
-                    <p>
-                        I specialize in Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel), combining solid backend logic with clean and intuitive front-end interfaces.
-                    </p>
-                    <p>
-                        Right now, I'm getting my Bachelor's degree in AI, Machine Learning & Big Data. This helps me build smarter, data-focused solutions.
-                    </p>
-                    <p>
-                        In my portfolio, you will find a showcase of my work, highlighting the projects I have contributed to and the technologies I have mastered. Take a look and see what I can do.
-                    </p>
-                    <p>
-                        I'm open to opportunities where I can contribute, learn, and grow.  If you need a reliable developer who works well with teams, then don't hesitate to contact me.
-                    </p>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h2 className="font-display text-5xl md:text-7xl mb-12">
+                        About <span className="text-gradient-primary">Me</span>
+                    </h2>
+                </motion.div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-                    {highlights.map((item) => (
-                        <Card
-                            key={item.label}
-                            className="p-6 text-center border-border20 hover:bg-accent hover:border-foreground transition-all hover-scale"
-                        >
-                            <item.icon className="w-10 h-10 mx-auto mb-3 text-foreground" />
-                            <p className="text-sm font-medium">{item.label}</p>
-                        </Card>
-                    ))}
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                    {/* Text content */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-6 text-lg text-secondary-foreground leading-relaxed"
+                    >
+                        <p>
+                            Hi, I'm Ahmed, a <span className="text-primary font-medium">Full Stack Developer</span> with 3 years of experience. I build web applications, APIs, and backend systems using Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel).
+                        </p>
+                        <p>
+                            I specialize in combining solid backend logic with clean and intuitive front-end interfaces. Right now, I'm pursuing my Bachelor's degree in <span className="text-accent font-medium">AI, Machine Learning & Big Data</span>, which helps me build smarter, data-focused solutions.
+                        </p>
+                        <p className="text-muted-foreground">
+                            I'm open to opportunities where I can contribute, learn, and grow. If you need a reliable developer who works well with teams, don't hesitate to contact me.
+                        </p>
+                    </motion.div>
+
+                    {/* Skills grid */}
+                    <div className="grid grid-cols-2 gap-4">
+                        {skills.map((skill, index) => (
+                            <motion.div
+                                key={skill.title}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                className="group glass-card rounded-xl p-6 hover:border-primary/30 transition-all duration-300"
+                            >
+                                <skill.icon className={`h-8 w-8 mb-4 ${skill.color === 'primary' ? 'text-primary' : 'text-accent'} group-hover:scale-110 transition-transform`} />
+                                <h3 className="font-medium text-foreground">{skill.title}</h3>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
