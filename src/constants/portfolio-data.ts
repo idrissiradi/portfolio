@@ -109,7 +109,9 @@ export const experiences = [
 	{
 		title: 'Full Stack Developer',
 		company: 'Evoleo Maroc',
-		period: 'Nov 2024 – Oct 2025 · Full-time · Marrakesh, Morocco',
+		period: 'Nov 2024 – Oct 2025',
+		type: 'Full-time',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Developed and maintained full-stack web applications using FastAPI, Laravel, and React.js. Designed RESTful APIs, ensured technical support, and conducted quality assurance testing.',
 		tech: [
@@ -126,7 +128,9 @@ export const experiences = [
 	{
 		title: 'Django Developer',
 		company: 'GreenCommunication',
-		period: 'Apr 2024 – Oct 2024 · Full-time · Marrakesh, Morocco',
+		period: 'Apr 2024 – Oct 2024',
+		type: 'Full-time',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Built and maintained web applications using Django, Tailwind CSS, JavaScript, and MySQL. Focused on backend logic, UI integration, and improving overall system performance.',
 		tech: [
@@ -142,7 +146,9 @@ export const experiences = [
 	{
 		title: 'Assistant Accountant',
 		company: 'ONSSA Marrakech',
-		period: 'Oct 2022 – Mar 2024 · Full-time · Marrakesh, Morocco',
+		period: 'Oct 2022 – Mar 2024',
+		type: 'Full-time',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Handled accounting tasks including financial data entry, reporting, and reconciliation. Strengthened attention to detail and analytical thinking applicable to software development.',
 		tech: ['Excel', 'Accounting Systems'],
@@ -150,7 +156,9 @@ export const experiences = [
 	{
 		title: 'Web Developer Intern',
 		company: 'The Originals Creative Agency',
-		period: 'Aug 2022 – Oct 2022 · Internship · Marrakesh, Morocco',
+		period: 'Aug 2022 – Oct 2022',
+		type: 'Internship',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Worked on full-stack development tasks using Node.js, Express.js, and React.js. Contributed to internal tools and client projects under supervision.',
 		tech: ['Node.js', 'Express.js', 'React.js', 'JavaScript'],
@@ -158,7 +166,9 @@ export const experiences = [
 	{
 		title: 'Django Developer Intern',
 		company: 'GreenCommunication',
-		period: 'Jun 2021 – Oct 2021 · Internship · Marrakesh, Morocco',
+		period: 'Jun 2021 – Oct 2021',
+		type: 'Internship',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Built internal web platforms using Django, MySQL, and Tailwind CSS. Assisted in backend development, database modeling, and UI improvements.',
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Python'],
@@ -166,7 +176,9 @@ export const experiences = [
 	{
 		title: 'Web Developer Intern',
 		company: 'Weshore Agency',
-		period: 'May 2019 – May 2019 · Internship · Marrakesh, Morocco',
+		period: 'May 2019 – May 2019',
+		type: 'Internship',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Developed a management web application using PHP and MySQL. Integrated WordPress components and contributed to improving workflow automation.',
 		tech: ['PHP', 'MySQL', 'WordPress', 'JavaScript'],
@@ -174,7 +186,9 @@ export const experiences = [
 	{
 		title: 'Web Developer Intern',
 		company: 'Prefecture of Marrakesh',
-		period: 'Jul 2018 – Jul 2018 · Internship · Marrakesh, Morocco',
+		period: 'Jul 2018 – Jul 2018',
+		type: 'Internship',
+		location: 'Marrakesh, Morocco',
 		description:
 			'Created an internal management system using PHP and MySQL for administrative operations. Focused on backend logic and data management.',
 		tech: ['PHP', 'MySQL'],

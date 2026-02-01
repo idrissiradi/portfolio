@@ -44,7 +44,8 @@ export const ExperienceSection = () => {
                                 )}
                                 <h3 className="font-display text-2xl text-foreground">{exp.title}</h3>
                                 <p className="text-primary font-medium">{exp.company}</p>
-                                <p className="text-sm text-muted-foreground mt-1">{exp.period}</p>
+                                <p className="text-sm text-muted-foreground mt-1">{exp.period} . {exp.type}</p>
+                                <p className="text-sm text-muted-foreground mt-1">{exp.location}</p>
                                 <p className="text-secondary-foreground mt-3 text-sm leading-relaxed">{exp.description}</p>
                                 <div className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                                     {exp.tech.map((tech) => (
