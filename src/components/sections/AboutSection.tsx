@@ -1,12 +1,6 @@
+import { skills } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
-import { Code2, Database, Server, Layers } from "lucide-react";
 
-const skills = [
-    { icon: Code2, title: "Clean Code & Best Practices", color: "primary" },
-    { icon: Database, title: "Database Design & SQL Modeling", color: "accent" },
-    { icon: Server, title: "REST API Development", color: "primary" },
-    { icon: Layers, title: "Full-Stack Architecture", color: "accent" },
-];
 
 export const AboutSection = () => {
     return (

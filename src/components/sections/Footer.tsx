@@ -1,23 +1,23 @@
-import { Badge } from "../ui/badge";
+import { motion } from "framer-motion";
+
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
         <footer className="py-8 px-4 border-t border-border/50">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-                <Badge
-                    variant="outline"
-                    className="text-sm px-4 py-2 rounded-full border-white/25 inline-flex items-center gap-2 hover:bg-accent transition-colors"
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2 text-sm text-muted-foreground">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+
                 >
-                    <span className="relative flex items-center justify-center">
-                        <span className="absolute w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-75" />
-                        <span className="relative w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                        BASED IN MARRAKESH, MOROCCO 🇲🇦
-                    </span>
-                </Badge>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+                        <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
+                        <span className="text-sm text-foreground/80">BASED IN MARRAKESH, MOROCCO 🇲🇦</span>
+                    </div>
+                </motion.div>
 
                 <p>© {currentYear} IDradi. All rights reserved.</p>
                 <p>Built with passion and a lot of coffee ☕</p>

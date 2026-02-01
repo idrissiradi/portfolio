@@ -3,8 +3,6 @@ import { ChevronDown, Mail, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
-
-
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4">
             {/* Background gradient orbs */}

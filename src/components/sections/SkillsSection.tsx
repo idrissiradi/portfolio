@@ -1,27 +1,6 @@
+import { skillCategories } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
 
-const skillCategories = [
-    {
-        title: "Frontend Development",
-        skills: [ "React", "TypeScript", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Vite" ],
-    },
-    {
-        title: "Backend Development",
-        skills: [ "Python", "Django", "FastAPI", "Node.js", "Express.js", "Laravel", "PHP" ],
-    },
-    {
-        title: "Database & Storage",
-        skills: [ "PostgreSQL", "MySQL", "MongoDB", "Redis" ],
-    },
-    {
-        title: "Data Science",
-        skills: [ "Machine Learning", "Data Analysis", "Big Data" ],
-    },
-    {
-        title: "Development Tools",
-        skills: [ "Git", "Docker", "Linux", "VS Code" ],
-    },
-];
 
 export const SkillsSection = () => {
     return (

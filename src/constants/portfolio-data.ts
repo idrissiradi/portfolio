@@ -1,132 +1,107 @@
-import {
-	SiCss,
-	SiDjango,
-	SiDocker,
-	SiExpress,
-	SiFastapi,
-	SiGit,
-	SiGithub,
-	SiHtml5,
-	SiJavascript,
-	SiJupyter,
-	SiLaravel,
-	SiLinux,
-	SiMongodb,
-	SiMysql,
-	SiNodedotjs,
-	SiNumpy,
-	SiPandas,
-	SiPhp,
-	SiPostgresql,
-	SiPostman,
-	SiPython,
-	SiReact,
-	SiRedis,
-	SiScikitlearn,
-	SiSqlite,
-	SiTailwindcss,
-	SiTensorflow,
-	SiTypescript,
-	SiVite,
-} from '@icons-pack/react-simple-icons';
-import { Code2 } from 'lucide-react';
-import { MatplotlibIcon } from '@/components/icons/MatplotlibIcon';
-import { SeabornIcon } from '@/components/icons/SeabornIcon';
+import { Code2, Server, Brain, BarChart3 } from 'lucide-react';
 
-export const skillIcons = {
-	frontend: {
-		React: SiReact,
-		TypeScript: SiTypescript,
-		JavaScript: SiJavascript,
-		Tailwind: SiTailwindcss,
-		HTML5: SiHtml5,
-		CSS3: SiCss,
-		Vite: SiVite,
+export const skills = [
+	{ icon: Code2, title: 'Full-Stack Development', color: 'primary' },
+	{ icon: Brain, title: 'AI & Machine Learning', color: 'accent' },
+	{ icon: Server, title: 'REST API Development', color: 'primary' },
+	{
+		icon: BarChart3,
+		title: 'Data Analysis & Visualization',
+		color: 'accent',
 	},
+];
 
-	backend: {
-		Python: SiPython,
-		Django: SiDjango,
-		FastAPI: SiFastapi,
-		Laravel: SiLaravel,
-		PHP: SiPhp,
-		'Node.js': SiNodedotjs,
-		'Express.js': SiExpress,
-	},
-
-	database: {
-		PostgreSQL: SiPostgresql,
-		MongoDB: SiMongodb,
-		MySQL: SiMysql,
-		SQLite: SiSqlite,
-		Redis: SiRedis,
-	},
-	dataScience: {
-		NumPy: SiNumpy,
-		Pandas: SiPandas,
-		'Scikit-learn': SiScikitlearn,
-		Matplotlib: MatplotlibIcon,
-		Seaborn: SeabornIcon,
-		Jupyter: SiJupyter,
-		TensorFlow: SiTensorflow,
-	},
-	tools: {
-		Git: SiGit,
-		GitHub: SiGithub,
-		Docker: SiDocker,
-		Linux: SiLinux,
-		Postman: SiPostman,
-		'VS Code': Code2,
-	},
-};
+export const navLinks = [
+	{ label: 'About', href: '#about' },
+	{ label: 'Projects', href: '#projects' },
+	{ label: 'Skills', href: '#skills' },
+	{ label: 'Experience', href: '#experience' },
+	{ label: 'Education', href: '#education' },
+	// { label: "Certificates", href: "#certificates" },
+	{ label: 'Contact', href: '#contact' },
+];
 
 export const projects = [
 	{
-		id: 1,
-		title: 'ficogest.ma',
+		title: 'Accounting Firm Management System',
 		description:
 			'A complete web application designed to help accounting offices efficiently manage their clients, services, payments, and expenses. The system provides an intuitive dashboard, detailed service tracking, payment management, and easy-to-read financial insights.',
-		tags: [
+		image: 'https://idradi.com/img/ficogest.avif',
+		tech: [
 			'Laravel',
 			'React',
 			'MySQL',
 			'shadcn UI',
 			'Tailwind CSS',
-			'inertiajs',
+			'Inertia.js',
 		],
-		image: 'ficogest.avif',
 	},
 	{
-		id: 2,
-		title: 'lebedouin.ma',
+		title: 'Restaurant & Hotel Booking App',
 		description:
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
-		tags: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
-		image: 'lebedouin.avif',
+		image: 'https://idradi.com/img/lebedouin.avif',
+		tech: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
 	},
 	{
-		id: 3,
 		title: 'Travel Planning Platform',
 		description:
 			'A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.',
-		tags: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
-		image: 'travel_planning.avif',
+		image: 'https://idradi.com/img/travel_planning.avif',
+		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
 	},
 	{
-		id: 4,
 		title: 'Fitness Management System',
 		description:
 			'A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.',
-		tags: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
-		image: 'fitness_management.avif',
+		image: 'https://idradi.com/img/fitness_management.avif',
+		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
 	},
 	{
-		id: 5,
 		title: 'Pizza Online Ordering System',
 		description:
 			'An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.',
-		tags: ['Django', 'React', 'PostgreSQL', 'Redis'],
-		image: 'pizza_ordering.avif',
+		image: 'https://idradi.com/img/pizza_ordering.avif',
+		tech: ['Django', 'React', 'PostgreSQL', 'Redis'],
+	},
+];
+
+export const skillCategories = [
+	{
+		title: 'Frontend Development',
+		skills: [
+			'React',
+			'TypeScript',
+			'JavaScript',
+			'Tailwind CSS',
+			'HTML5',
+			'CSS3',
+			'Vite',
+		],
+	},
+	{
+		title: 'Backend Development',
+		skills: [
+			'Python',
+			'Django',
+			'FastAPI',
+			'Node.js',
+			'Express.js',
+			'Laravel',
+			'PHP',
+		],
+	},
+	{
+		title: 'Database & Storage',
+		skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+	},
+	{
+		title: 'Data Science',
+		skills: ['Machine Learning', 'Data Analysis', 'Big Data'],
+	},
+	{
+		title: 'Development Tools',
+		skills: ['Git', 'Docker', 'Linux', 'VS Code'],
 	},
 ];
 

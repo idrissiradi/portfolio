@@ -6,7 +6,7 @@ export const ContactSection = () => {
     return (
         <section id="contact" className="py-24 px-4 md:px-8 bg-card/30 relative overflow-hidden">
             {/* Background accent */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
 
             <div className="max-w-4xl mx-auto relative">
                 <motion.div

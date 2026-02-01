@@ -1,38 +1,7 @@
+import { projects } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
-const projects = [
-    {
-        title: "Accounting Firm Management System",
-        description: "A complete web application designed to help accounting offices efficiently manage their clients, services, payments, and expenses. The system provides an intuitive dashboard, detailed service tracking, payment management, and easy-to-read financial insights.",
-        image: "https://idradi.com/img/ficogest.avif",
-        tech: [ "Laravel", "React", "MySQL", "shadcn UI", "Tailwind CSS", "Inertia.js" ],
-    },
-    {
-        title: "Restaurant & Hotel Booking App",
-        description: "A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.",
-        image: "https://idradi.com/img/lebedouin.avif",
-        tech: [ "Django", "Tailwind CSS", "PostgreSQL", "HTMX", "Alpine.js" ],
-    },
-    {
-        title: "Travel Planning Platform",
-        description: "A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.",
-        image: "https://idradi.com/img/travel_planning.avif",
-        tech: [ "Django", "MySQL", "Tailwind CSS", "HTMX", "Alpine.js" ],
-    },
-    {
-        title: "Fitness Management System",
-        description: "A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.",
-        image: "https://idradi.com/img/fitness_management.avif",
-        tech: [ "Django", "MySQL", "Tailwind CSS", "HTMX", "Alpine.js" ],
-    },
-    {
-        title: "Pizza Online Ordering System",
-        description: "An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.",
-        image: "https://idradi.com/img/pizza_ordering.avif",
-        tech: [ "Django", "React", "PostgreSQL", "Redis" ],
-    },
-];
 
 export const ProjectsSection = () => {
     return (

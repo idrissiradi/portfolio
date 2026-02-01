@@ -4,18 +4,9 @@ import { Button } from "@/components/ui/button";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { LiveClock } from "../LiveClock";
+import { navLinks } from "@/constants/portfolio-data";
 
 
-
-const navLinks = [
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Skills", href: "#skills" },
-    { label: "Experience", href: "#experience" },
-    { label: "Education", href: "#education" },
-    // { label: "Certificates", href: "#certificates" },
-    { label: "Contact", href: "#contact" },
-];
 
 export const Navigation = () => {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -34,8 +25,6 @@ export const Navigation = () => {
         element?.scrollIntoView({ behavior: "smooth" });
         setIsOpen(false);
     };
-
-
 
     return (
         <>
