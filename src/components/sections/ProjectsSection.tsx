@@ -86,10 +86,14 @@ export const ProjectsSection = () => {
                                         {/* Hover overlay */}
                                         {project.github &&
                                             <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                                                <span className="flex items-center gap-2 text-sm text-foreground">
+                                                <a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 text-sm text-foreground">
                                                     <ExternalLink className="h-4 w-4" />
                                                     View Project
-                                                </span>
+                                                </a>
                                             </div>
                                         }
                                     </div>

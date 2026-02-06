@@ -64,7 +64,6 @@ export const projects = [
 		tech: ['Python', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
 		github: '#',
 		category: 'data-science',
-		inProgress: true,
 	},
 
 	// ==================== WEB DEVELOPMENT PROJECTS ====================
@@ -81,6 +80,7 @@ export const projects = [
 			'Tailwind CSS',
 			'shadcn/ui',
 		],
+		github: 'https://github.com/idrissiradi/moujoud_app',
 		category: 'web-development',
 	},
 	{
@@ -96,7 +96,7 @@ export const projects = [
 			'Tailwind CSS',
 			'Inertia.js',
 		],
-		github: '#',
+		github: 'https://github.com/idrissiradi/cabinet_management',
 		category: 'web-development',
 	},
 	{
