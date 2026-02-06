@@ -1,4 +1,12 @@
 import { Code2, Server, Brain, BarChart3 } from 'lucide-react';
+import heartDiseaseImg from '../assets/images/heart-disease-classification-project.avif';
+import titanicMlImg from '../assets/images/titanic_project.avif';
+import accountingFirmImg from '../assets/images/ficogest.avif';
+import butcherShopImg from '../assets/images/butcher_shop.avif';
+import restaurantImg from '../assets/images/lebedouin.avif';
+import travelImg from '../assets/images/travel_planning.avif';
+import fitnessImg from '../assets/images/fitness_management.avif';
+import pizzaImg from '../assets/images/pizza_ordering.avif';
 
 export const skills = [
 	{ icon: Code2, title: 'Full-Stack Development', color: 'primary' },
@@ -27,7 +35,7 @@ export const projects = [
 		title: 'Heart Disease Prediction Model',
 		description:
 			'Built an end-to-end machine learning classification model to predict heart disease risk using patient medical data. Performed exploratory data analysis, feature engineering, and compared multiple ML algorithms including Logistic Regression, KNN, and Random Forest to achieve optimal performance.',
-		image: 'https://idradi.com/img/heart-disease-classification-project.avif',
+		image: heartDiseaseImg,
 		tech: [
 			'Python',
 			'scikit-learn',
@@ -44,7 +52,7 @@ export const projects = [
 		title: 'Titanic Survival Prediction (Kaggle)',
 		description:
 			'Developed a machine learning model to predict passenger survival on the Titanic using the famous Kaggle dataset. Implemented data preprocessing, feature engineering (family_size, is_alone), handled missing values, and achieved 81% accuracy with Random Forest Classifier.',
-		image: 'https://idradi.com/img/titanic_project.avif',
+		image: titanicMlImg,
 		tech: [
 			'Python',
 			'scikit-learn',
@@ -52,16 +60,25 @@ export const projects = [
 			'NumPy',
 			'Matplotlib',
 			'Seaborn',
+			'Google colab',
 		],
 		github: 'https://github.com/idrissiradi/titanic_ml',
 		category: 'data-science',
 	},
+
 	{
 		title: 'House Price Prediction Model',
 		description:
 			'Building a regression model to predict house prices based on features like location, size, and amenities. Applying feature selection, data normalization, and model evaluation techniques to optimize prediction accuracy.',
-		image: 'https://idradi.com/img/heart-disease-classification-project.avif',
-		tech: ['Python', 'scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+		image: titanicMlImg,
+		tech: [
+			'Python',
+			'scikit-learn',
+			'Pandas',
+			'NumPy',
+			'Matplotlib',
+			'Google colab',
+		],
 		github: '#',
 		category: 'data-science',
 	},
@@ -71,7 +88,7 @@ export const projects = [
 		title: 'Butcher Shop Management System',
 		description:
 			'A complete management solution for butcher shops featuring real-time inventory tracking, sales and purchase management, supplier relationships, and profit monitoring. Provides comprehensive dashboards for business insights, automated stock alerts, and detailed financial reporting.',
-		image: 'https://idradi.com/img/butcher_shop.avif',
+		image: butcherShopImg,
 		tech: [
 			'Laravel',
 			'React',
@@ -87,7 +104,7 @@ export const projects = [
 		title: 'Accounting Firm Management System',
 		description:
 			'A complete web application designed to help accounting offices efficiently manage their clients, services, payments, and expenses. The system provides an intuitive dashboard, detailed service tracking, payment management, and easy-to-read financial insights.',
-		image: 'https://idradi.com/img/ficogest.avif',
+		image: accountingFirmImg,
 		tech: [
 			'Laravel',
 			'React',
@@ -103,7 +120,7 @@ export const projects = [
 		title: 'Restaurant & Hotel Booking App',
 		description:
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
-		image: 'https://idradi.com/img/lebedouin.avif',
+		image: restaurantImg,
 		tech: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
 		github: '#',
 		category: 'web-development',
@@ -112,7 +129,7 @@ export const projects = [
 		title: 'Travel Planning Platform',
 		description:
 			'A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.',
-		image: 'https://idradi.com/img/travel_planning.avif',
+		image: travelImg,
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
 		github: '#',
 		category: 'web-development',
@@ -121,7 +138,7 @@ export const projects = [
 		title: 'Fitness Management System',
 		description:
 			'A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.',
-		image: 'https://idradi.com/img/fitness_management.avif',
+		image: fitnessImg,
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
 		github: '#',
 		category: 'web-development',
@@ -130,7 +147,7 @@ export const projects = [
 		title: 'Pizza Online Ordering System',
 		description:
 			'An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.',
-		image: 'https://idradi.com/img/pizza_ordering.avif',
+		image: pizzaImg,
 		tech: ['Django', 'React', 'PostgreSQL', 'Redis'],
 		github: '#',
 		category: 'web-development',
