@@ -27,13 +27,13 @@ export const AboutSection = () => {
                         className="space-y-6 text-lg text-secondary-foreground leading-relaxed"
                     >
                         <p>
-                            Hi, I'm Ahmed, a <span className="text-primary font-medium">Full Stack Developer</span> with 3 years of experience. I build web applications, APIs, and backend systems using Python (Django, FastAPI), Node.js (Express, NestJS, React), and PHP (Laravel).
+                            Hi, I'm Ahmed, a <span className="text-primary font-medium">Full Stack Developer</span> with 2+ years of combined experience. I build web applications and REST APIs and machine learning solutions. My tech stack includes Python (Django, FastAPI), JavaScript (React, Node.js), and PHP (Laravel), with a growing focus on data science and ML.
                         </p>
                         <p>
-                            I specialize in combining solid backend logic with clean and intuitive front-end interfaces. Right now, I'm pursuing my Bachelor's degree in <span className="text-accent font-medium">AI, Machine Learning & Big Data</span>, which helps me build smarter, data-focused solutions.
+                            Currently pursuing my Bachelor's degree in <span className="text-accent font-medium">AI Engineering, Machine Learning & Big Data</span> at ENSA Khouribga. I'm combining my software development background with machine learning to build intelligent, data-focused solutions. I've already built predictive models for heart disease classification and Titanic survival prediction using scikit-learn and Python.
                         </p>
                         <p className="text-muted-foreground">
-                            I'm open to opportunities where I can contribute, learn, and grow. If you need a reliable developer who works well with teams, don't hesitate to contact me.
+                            I'm actively seeking opportunities in Marrakech or remote positions where I can contribute as a full-stack developer while continuing to grow my data science skills. Let's build something great together.
                         </p>
                     </motion.div>
 
