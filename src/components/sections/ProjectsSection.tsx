@@ -45,6 +45,8 @@ export const ProjectsSection = () => {
                 >
                     {categories.map((category) => (
                         <button
+                            aria-label="category filter"
+
                             key={category}
                             onClick={() => setActiveCategory(category)}
                             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
@@ -74,6 +76,8 @@ export const ProjectsSection = () => {
                                     <div className={`relative overflow-hidden rounded-2xl ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                                         <div className="aspect-video overflow-hidden rounded-2xl border border-border/50">
                                             <img
+                                                loading="lazy"
+                                                decoding="async"
                                                 src={project.image}
                                                 alt={project.title}
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -61,6 +61,7 @@ export const HeroSection = () => {
                     className="mt-10 flex flex-wrap gap-4 justify-center"
                 >
                     <Button
+                        aria-label="View My Work"
                         size="lg"
                         className="group bg-primary text-primary-foreground hover:bg-primary/90 glow-primary"
                         onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -71,6 +72,8 @@ export const HeroSection = () => {
                     <Button
                         size="lg"
                         variant="outline"
+                        aria-label="Get In Touch"
+
                         className="border-foreground/20 hover:bg-foreground/5 hover:border-primary/50"
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     >

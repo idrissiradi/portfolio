@@ -55,6 +55,9 @@ export const Navigation = () => {
                         {navLinks.map((link) => (
                             <button
                                 key={link.href}
+                                aria-label="Open navigation menu"
+
+
                                 onClick={() => scrollToSection(link.href)}
                                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                             >
@@ -88,6 +91,7 @@ export const Navigation = () => {
                             {navLinks.map((link, index) => (
                                 <motion.button
                                     key={link.href}
+                                    aria-label="navigation menu"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}

@@ -31,6 +31,8 @@ export const ContactSection = () => {
                     >
                         <Button
                             size="lg"
+                            aria-label="Send Email"
+
                             className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary group"
                             asChild
                         >
