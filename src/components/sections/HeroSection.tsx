@@ -43,13 +43,13 @@ export const HeroSection = () => {
                     className="mt-6 space-y-4"
                 >
                     <h2 className="text-2xl md:text-3xl font-sans font-light text-foreground/90">
-                        Full Stack Developer
+                        Full Stack Developer | Data Science Enthusiast
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                        I speak three languages fluently: <span className="text-primary">Python</span>, <span className="text-primary">JavaScript</span>, and <span className="text-accent">possibility</span>.
+                        Building <span className="text-accent">web applications </span> and <span className="text-primary">machine learning solutions</span>.
                     </p>
                     <p className="text-base text-muted-foreground/70">
-                        Building solutions that turn "what if" into "watch this".
+                       <span className="text-accent">Turning</span> data into decisions, <span className="text-primary">ideas</span> into code.
                     </p>
                 </motion.div>
 
