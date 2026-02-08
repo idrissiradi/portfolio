@@ -51,7 +51,7 @@ export const projects = [
 	{
 		title: 'Titanic Survival Prediction (Kaggle)',
 		description:
-			'Developed a machine learning model to predict passenger survival on the Titanic using the famous Kaggle dataset. Implemented data preprocessing, feature engineering (family_size, is_alone), handled missing values, and achieved 81% accuracy with Random Forest Classifier.',
+			'Developed a machine learning model to predict passenger survival on the Titanic using the famous Kaggle dataset. Implemented data preprocessing, feature engineering, handled missing values, and achieved 81% accuracy with Random Forest Classifier.',
 		image: titanicMlImg,
 		tech: [
 			'Python',
