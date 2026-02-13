@@ -43,7 +43,7 @@ export const HeroSection = () => {
                     className="mt-6 space-y-4"
                 >
                     <h2 className="text-2xl md:text-3xl font-sans font-light text-foreground/90">
-                        Full Stack Developer | Data Science Enthusiast
+                        Full Stack Developer | Data Science & Engineering
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                         Building <span className="text-accent">web applications </span> and <span className="text-primary">machine learning solutions</span>.
