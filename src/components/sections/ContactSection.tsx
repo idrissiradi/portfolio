@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { socialLinks } from "@/constants/portfolio-data";
 
 export const ContactSection = () => {
     return (
@@ -36,7 +37,7 @@ export const ContactSection = () => {
                             className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary group"
                             asChild
                         >
-                            <a href="mailto:idrissiradi@gmail.com">
+                            <a href={`mailto:${socialLinks.email}`} className="flex items-center">
                                 <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                 Send Me an Email
                             </a>
@@ -52,14 +53,14 @@ export const ContactSection = () => {
                         className="flex justify-center gap-4 mt-12"
                     >
                         <a
-                            href="mailto:idrissiradi@gmail.com"
+                            href={`mailto:${socialLinks.email}`}
                             className="p-3 rounded-full border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
                             aria-label="Email"
                         >
                             <Mail className="h-5 w-5" />
                         </a>
                         <a
-                            href="https://github.com/ahmedidradi"
+                            href={socialLinks.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 rounded-full border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
@@ -68,7 +69,7 @@ export const ContactSection = () => {
                             <Github className="h-5 w-5" />
                         </a>
                         <a
-                            href="https://linkedin.com/in/idradi"
+                            href={socialLinks.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-3 rounded-full border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
