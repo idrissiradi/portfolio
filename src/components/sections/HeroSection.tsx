@@ -20,7 +20,8 @@ export const HeroSection = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-                    <span className="text-sm text-foreground/80">Available for freelance & full-time opportunities</span>
+                    <span className="text-sm text-foreground/80">Open to PFE Internship · May–July 2026
+                    </span>
                 </div>
             </motion.div>
 
@@ -43,13 +44,13 @@ export const HeroSection = () => {
                     className="mt-6 space-y-4"
                 >
                     <h2 className="text-2xl md:text-3xl font-sans font-light text-foreground/90">
-                        Full Stack Developer | Data Science & Engineering
+                        ML Engineer · Data Engineer · Data Scientist
                     </h2>
                     <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Building <span className="text-accent">web applications </span> and <span className="text-primary">machine learning solutions</span>.
+                        From <span className="text-accent">messy data </span> to <span className="text-primary">trained models. </span>From <span className="text-accent">notebooks </span> to <span className="text-primary">production APIs.</span>
                     </p>
                     <p className="text-base text-muted-foreground/70">
-                       <span className="text-accent">Turning</span> data into decisions, <span className="text-primary">ideas</span> into code.
+                        Obsessed with the gap between a <span className="text-accent">working model</span> and a <span className="text-primary">working system.</span>
                     </p>
                 </motion.div>
 

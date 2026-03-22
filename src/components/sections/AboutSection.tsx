@@ -27,13 +27,13 @@ export const AboutSection = () => {
                         className="space-y-6 text-lg text-secondary-foreground leading-relaxed"
                     >
                         <p>
-                            Hi, I'm Ahmed, a <span className="text-primary font-medium">Full Stack Developer</span> with 2+ years of combined experience. I build web applications and REST APIs and machine learning solutions. My tech stack includes Python (Django, FastAPI), JavaScript (React, Node.js), and PHP (Laravel), with a growing focus on data science and ML.
+                            Hi, I'm Ahmed, a <span className="text-primary font-medium">ML Engineer and Data Engineer</span> based in Marrakech, Morocco. I build end-to-end machine learning systems: data ingestion, feature engineering, model training, experiment tracking with MLflow, and containerized API deployment with FastAPI and Docker.
                         </p>
                         <p>
-                            Currently pursuing my Bachelor's degree in <span className="text-accent font-medium">AI Engineering, Machine Learning & Big Data</span> at ENSA Khouribga. I'm combining my software development background with machine learning to build intelligent, data-focused solutions. I've already built predictive models for heart disease classification and Titanic survival prediction using scikit-learn and Python.
+                            Final-year student in the Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga. I've built classification pipelines achieving <span className="text-primary font-medium">88.5% accuracy and 92% recall</span> on medical data, engineered features that drove a <span className="text-accent font-medium">77% Kaggle score</span>, and PySpark MLlib pipelines on a real Hadoop/YARN cluster comparing three classifiers at scale.
                         </p>
                         <p className="text-muted-foreground">
-                            I'm actively seeking opportunities in Marrakech or remote positions where I can contribute as a full-stack developer while continuing to grow my data science skills. Let's build something great together.
+                            Seeking a PFE internship in Data Science, ML Engineering, or Data Engineering — May–July 2026. Open to remote and on-site opportunities in Morocco and internationally. If you're building data-driven products, <span className="text-primary font-medium">let's connect.</span>
                         </p>
                     </motion.div>
 

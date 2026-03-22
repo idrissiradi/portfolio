@@ -9,14 +9,10 @@ import fitnessImg from '../assets/images/fitness_management.avif';
 import pizzaImg from '../assets/images/pizza_ordering.avif';
 
 export const skills = [
-	{ icon: Code2, title: 'Full-Stack Development', color: 'primary' },
 	{ icon: Brain, title: 'Machine Learning & Data Science', color: 'accent' },
-	{ icon: Server, title: 'REST API Development', color: 'primary' },
-	{
-		icon: BarChart3,
-		title: 'Data Analysis & Visualization',
-		color: 'accent',
-	},
+	{ icon: BarChart3, title: 'Big Data & Data Engineering', color: 'accent' },
+	{ icon: Server, title: 'MLOps & API Deployment', color: 'primary' },
+	{ icon: Code2, title: 'Full-Stack Engineering', color: 'primary' },
 ];
 
 export const navLinks = [
@@ -34,7 +30,7 @@ export const projects = [
 	{
 		title: 'Heart Disease Prediction Model',
 		description:
-			'Built an end-to-end machine learning classification model to predict heart disease risk using patient medical data. Performed exploratory data analysis, feature engineering, and compared multiple ML algorithms including Logistic Regression, KNN, and Random Forest to achieve optimal performance.',
+			'End-to-end binary classification comparing Logistic Regression, KNN, and Random Forest with hyperparameter tuning (RandomizedSearchCV + GridSearchCV). Best model: 88.5% test accuracy, 92% recall, 86.7% F1 on 5-fold cross-validation. High recall was the target metric — in medical screening, missing a positive is more costly than a false alarm.',
 		image: heartDiseaseImg,
 		tech: [
 			'Python',
@@ -45,13 +41,15 @@ export const projects = [
 			'Seaborn',
 			'Jupyter',
 		],
+
 		github: 'https://github.com/idrissiradi/heart-disease-project',
 		category: 'data-science',
+		metrics: { accuracy: '88.5%', recall: '92%', f1: '86.7%' },
 	},
 	{
 		title: 'Titanic Survival Prediction (Kaggle)',
 		description:
-			'Developed a machine learning model to predict passenger survival on the Titanic using the famous Kaggle dataset. Implemented data preprocessing, feature engineering, handled missing values, and achieved 81% accuracy with Random Forest Classifier.',
+			'Logistic regression with structured feature engineering from raw fields: title extraction from passenger names (Mr/Mrs/Miss/Master), family size construction, cabin deck encoding, age binning. Used sklearn Pipeline to prevent data leakage. Result: 81% local accuracy, 77% Kaggle public leaderboard score.',
 		image: titanicMlImg,
 		tech: [
 			'Python',
@@ -60,27 +58,23 @@ export const projects = [
 			'NumPy',
 			'Matplotlib',
 			'Seaborn',
-			'Google colab',
 		],
+
 		github: 'https://github.com/idrissiradi/titanic_ml',
 		category: 'data-science',
+		metrics: { local: '81%', kaggle: '77%' },
 	},
 
 	{
-		title: 'House Price Prediction Model',
+		title: 'Telco Customer Churn — Distributed ML',
 		description:
-			'Building a regression model to predict house prices based on features like location, size, and amenities. Applying feature selection, data normalization, and model evaluation techniques to optimize prediction accuracy.',
+			'End-to-end PySpark MLlib classification pipeline on a Hadoop/YARN distributed cluster. Full pipeline: data cleaning, StringIndexer → OneHotEncoder → Imputer → VectorAssembler, then three classifiers (Logistic Regression, Decision Tree, Random Forest) trained and evaluated on AUC-ROC, F1, and Accuracy. Models and predictions persisted to HDFS as Parquet.',
 		image: titanicMlImg,
-		tech: [
-			'Python',
-			'scikit-learn',
-			'Pandas',
-			'NumPy',
-			'Matplotlib',
-			'Google colab',
-		],
-		github: '#',
+		tech: ['PySpark', 'Hadoop', 'YARN', 'MLlib', 'HDFS', 'Python'],
+
+		github: 'https://github.com/idrissiradi/telco_churn_prediction',
 		category: 'data-science',
+		metrics: { engine: 'PySpark', cluster: 'Hadoop/YARN', models: '3' },
 	},
 
 	// ==================== WEB DEVELOPMENT PROJECTS ====================
@@ -156,35 +150,7 @@ export const projects = [
 
 export const skillCategories = [
 	{
-		title: 'Frontend Development',
-		skills: [
-			'React',
-			'TypeScript',
-			'JavaScript',
-			'Tailwind CSS',
-			'HTML5',
-			'CSS3',
-			'Vite',
-		],
-	},
-	{
-		title: 'Backend Development',
-		skills: [
-			'Python',
-			'Django',
-			'FastAPI',
-			'Node.js',
-			'Express.js',
-			'Laravel',
-			'PHP',
-		],
-	},
-	{
-		title: 'Database & Storage',
-		skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
-	},
-	{
-		title: 'Data Science & Machine Learning',
+		title: 'Machine Learning & Data Science',
 		skills: [
 			'Python',
 			'scikit-learn',
@@ -196,8 +162,38 @@ export const skillCategories = [
 		],
 	},
 	{
-		title: 'Development Tools',
-		skills: ['Git', 'GitHub', 'Docker', 'Linux', 'VS Code', 'Postman'],
+		title: 'Data Engineering & Big Data',
+		skills: [
+			'PySpark',
+			'Apache Spark',
+			'Hadoop / HDFS',
+			'YARN',
+			'Apache Airflow',
+			'SQL',
+			'MongoDB',
+		],
+	},
+	{
+		title: 'MLOps & Deployment',
+		skills: ['MLflow', 'Docker', 'FastAPI', 'Git', 'Linux', 'REST APIs'],
+	},
+	{
+		title: 'Backend Development',
+		skills: ['Python', 'Django', 'FastAPI', 'Laravel', 'Node.js', 'PHP'],
+	},
+	{
+		title: 'Frontend Development',
+		skills: [
+			'React',
+			'TypeScript',
+			'JavaScript',
+			'Tailwind CSS',
+			'HTML5 / CSS3',
+		],
+	},
+	{
+		title: 'Database & Storage',
+		skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
 	},
 ];
 
@@ -323,38 +319,64 @@ export const education = [
 ];
 
 export const certificates = [
+	// ── DataCamp — Engineering tracks ────────────────────────────
+	{
+		title: 'Professional Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Advanced data engineering track covering pipeline architecture, cloud data platforms, workflow orchestration, and production-grade data infrastructure.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+	},
+	{
+		title: 'Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Data engineering track covering ETL pipelines, data warehousing, database management, and scalable data processing with Python.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+	},
+	{
+		title: 'Associate Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Foundational data engineering track covering SQL, database design, data pipelines, and cloud storage fundamentals.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+	},
+
+	// ── DataCamp — Science tracks ─────────────────────────────────
+	{
+		title: 'Data Scientist',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Comprehensive data science track covering Python, statistical modeling, machine learning, and data storytelling.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+	},
 	{
 		title: 'Associate Data Scientist in Python',
 		issuer: 'DataCamp',
 		date: '2026',
 		description:
-			'Comprehensive data science track covering Python programming, data manipulation with Pandas, statistical analysis, machine learning with scikit-learn, and data visualization.',
-		credentialUrl:
-			'https://www.datacamp.com/tracks/associate-data-scientist-in-python',
+			'Data science track covering Python, data manipulation with Pandas, statistical analysis, machine learning with scikit-learn, and data visualization. Projects include Airbnb Market Trends, NYC School Test Results, and Students Mental Health analysis.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
 	},
 	{
-		title: 'Git & GitHub Essentials',
-		issuer: 'Amigoscode',
-		date: '2024',
+		title: 'Data Analyst',
+		issuer: 'DataCamp',
+		date: '2026',
 		description:
-			'Completed certification covering version control fundamentals, Git workflows, GitHub collaboration, branching strategies, and best practices for software development.',
-		credentialUrl: 'https://amigoscode.com',
+			'Data analysis track covering exploratory data analysis, data cleaning, statistical thinking, and visualization with Python.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
 	},
 	{
-		title: 'Python Programming Certificate',
-		issuer: 'Udemy',
-		date: '2023',
+		title: 'Python Data Fundamentals',
+		issuer: 'DataCamp',
+		date: '2025',
 		description:
-			'Completed comprehensive Python programming course covering fundamentals, object-oriented programming, data structures, and practical application development.',
-		credentialUrl: '#',
-	},
-	{
-		title: 'Java Programming Certificate',
-		issuer: 'Udemy',
-		date: '2023',
-		description:
-			'Completed Java programming certification covering core Java concepts, OOP principles, data structures, and software development practices.',
-		credentialUrl: '#',
+			'Foundational Python track for data science: NumPy, Pandas, Matplotlib, and core data manipulation techniques.',
+		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
 	},
 ];
 
