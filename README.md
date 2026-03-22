@@ -1,7 +1,8 @@
 # Portfolio
 
-ML Engineer & Data Engineer portfolio — built with React, TypeScript, Vite, and Tailwind CSS.
-
+Personal portfolio of a Data Scientist, Machine Learning Engineer, and Data Engineer.
+Live at [idradi.com](https://idradi.com)
+---
 ## 🚀 Tech Stack
 
 - **[Bun](https://bun.sh/)** - Lightning-fast JavaScript runtime and package manager
