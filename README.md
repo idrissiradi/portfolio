@@ -1,6 +1,6 @@
 # Portfolio
 
-A modern, responsive portfolio website showcasing my work as a Full Stack Developer. Built with cutting-edge technologies for optimal performance and user experience.
+ML Engineer & Data Engineer portfolio — built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## 🚀 Tech Stack
 
