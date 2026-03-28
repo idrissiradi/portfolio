@@ -6,8 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LiveClock } from "../LiveClock";
 import { navLinks } from "@/constants/portfolio-data";
 
-
-
 export const Navigation = () => {
     const [ isOpen, setIsOpen ] = useState(false);
     const [ isScrolled, setIsScrolled ] = useState(false);
@@ -28,45 +26,38 @@ export const Navigation = () => {
 
     return (
         <>
-            {/* Desktop navigation */}
             <motion.header
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.6 }}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-border/50" : ""
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-xl border-b border-border/50" : ""
                     }`}
             >
-                <nav className="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-                    {/* Logo */}
+                <nav className="max-w-6xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
                     <a
                         href="#"
                         onClick={(e) => {
                             e.preventDefault();
                             window.scrollTo({ top: 0, behavior: "smooth" });
                         }}
-                        className="font-display text-xl tracking-tight text-foreground hover:text-primary transition-colors"
+                        className="font-mono text-sm text-primary tracking-[0.05em] hover:opacity-80 transition-opacity"
                     >
                         <span className="text-sm font-medium">LOCAL/ </span>
                         <LiveClock />
                     </a>
 
-                    {/* Desktop links */}
                     <div className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
                             <button
                                 key={link.href}
-                                aria-label="Open navigation menu"
-
-
                                 onClick={() => scrollToSection(link.href)}
-                                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                                className="font-mono text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
                             >
                                 {link.label}
                             </button>
                         ))}
                     </div>
 
-                    {/* Mobile menu button */}
                     <Button
                         variant="ghost"
                         size="icon"
@@ -78,7 +69,6 @@ export const Navigation = () => {
                 </nav>
             </motion.header>
 
-            {/* Mobile menu */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -91,7 +81,6 @@ export const Navigation = () => {
                             {navLinks.map((link, index) => (
                                 <motion.button
                                     key={link.href}
-                                    aria-label="navigation menu"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: index * 0.1 }}

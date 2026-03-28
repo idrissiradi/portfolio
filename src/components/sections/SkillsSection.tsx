@@ -1,11 +1,13 @@
 import { skillCategories } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
+import SectionTag from "../SectionTag";
 
 
 export const SkillsSection = () => {
     return (
         <section id="skills" className="py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
+                <SectionTag label="Capabilities" />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -14,11 +16,8 @@ export const SkillsSection = () => {
                     className="mb-16"
                 >
                     <h2 className="font-display text-5xl md:text-7xl mb-4">
-                        Technical <span className="text-gradient-primary">Skills</span>
+                        Technical<br /><span className="text-gradient-primary">Proficiency</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg">
-                        Here are some of the technologies that I work with
-                    </p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -40,7 +39,7 @@ export const SkillsSection = () => {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.3, delay: catIndex * 0.1 + skillIndex * 0.05 }}
-                                        className="px-3 py-1.5 text-sm rounded-lg bg-secondary/50 text-foreground border border-border/30 hover:border-primary/50 hover:bg-primary/10 transition-all cursor-default"
+                                        className="px-3 py-1.5 text-sm font-mono rounded-lg bg-secondary/50 text-foreground border border-border/30 hover:border-primary/50 hover:bg-primary/10 transition-all cursor-default"
                                     >
                                         {skill}
                                     </motion.span>

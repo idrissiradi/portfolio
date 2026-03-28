@@ -1,11 +1,12 @@
-import { skills } from "@/constants/portfolio-data";
+import { stackGroups } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
-
+import SectionTag from "../SectionTag";
 
 export const AboutSection = () => {
     return (
         <section id="about" className="py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
+                <SectionTag label="About" />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -13,7 +14,7 @@ export const AboutSection = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="font-display text-5xl md:text-7xl mb-12">
-                        About <span className="text-gradient-primary">Me</span>
+                        I build ML systems<br /><span className="text-gradient-primary">end to end.</span>
                     </h2>
                 </motion.div>
 
@@ -24,35 +25,51 @@ export const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="space-y-6 text-lg text-secondary-foreground leading-relaxed"
+                        className="space-y-6 text-base text-secondary-foreground leading-relaxed"
                     >
                         <p>
-                            Hi, I'm Ahmed, a <span className="text-primary font-medium">ML Engineer and Data Engineer</span> based in Marrakech, Morocco. I build end-to-end machine learning systems: data ingestion, feature engineering, model training, experiment tracking with MLflow, and containerized API deployment with FastAPI and Docker.
+                            I'm an ML Engineering student and developer based in Marrakech, Morocco. With a background in full-stack development and a current focus on <span className="text-foreground font-semibold">machine learning pipelines, distributed data processing, and production model deployment.</span>
                         </p>
                         <p>
-                            Final-year student in the Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga. I've built classification pipelines achieving <span className="text-primary font-medium">88.5% accuracy and 92% recall</span> on medical data, engineered features that drove a <span className="text-accent font-medium">77% Kaggle score</span>, and PySpark MLlib pipelines on a real Hadoop/YARN cluster comparing three classifiers at scale.
+                            I don't just train models in notebooks. I build the full stack around them: feature engineering pipelines, experiment tracking with MLflow, REST API serving with FastAPI, and containerized deployment with Docker.
                         </p>
                         <p className="text-muted-foreground">
-                            Seeking a PFE internship in Data Science, ML Engineering, or Data Engineering — May–July 2026. Open to remote and on-site opportunities in Morocco and internationally. If you're building data-driven products, <span className="text-primary font-medium">let's connect.</span>
+                            I'm a final-year student in the Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">PFE internship in May–July 2026</span> in Data Science, ML Engineering, or Data Engineering.
                         </p>
                     </motion.div>
 
-                    {/* Skills grid */}
-                    <div className="grid grid-cols-2 gap-4">
-                        {skills.map((skill, index) => (
-                            <motion.div
-                                key={skill.title}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                                className="group glass-card rounded-xl p-6 hover:border-primary/30 transition-all duration-300"
-                            >
-                                <skill.icon className={`h-8 w-8 mb-4 ${skill.color === 'primary' ? 'text-primary' : 'text-accent'} group-hover:scale-110 transition-transform`} />
-                                <h3 className="font-medium text-foreground">{skill.title}</h3>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {/* Technical Stack Card */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="glass-card rounded-lg p-6"
+                    >
+                        <div className="font-mono text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4 pb-3 border-b border-border">
+                            Technical Stack
+                        </div>
+                        <div className="space-y-5">
+                            {stackGroups.map((group) => (
+                                <div key={group.name}>
+                                    <p className="font-mono text-xs text-primary/70 tracking-widest mb-2">{group.name}</p>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {group.pills.map((pill) => (
+                                            <span
+                                                key={pill.label}
+                                                className={`font-mono text-xs px-2.5 py-1 border rounded-sm transition-all ${pill.active
+                                                    ? "border-primary/50 text-primary bg-primary/5"
+                                                    : "border-border text-muted-foreground hover:border-primary/30 hover:text-primary"
+                                                    }`}
+                                            >
+                                                {pill.label}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Mail, Briefcase } from "lucide-react";
+import { ChevronDown, Mail, Briefcase, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
@@ -20,10 +20,21 @@ export const HeroSection = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-                    <span className="text-sm text-foreground/80">Open to PFE Internship · May–July 2026
-                    </span>
+                    <span className="text-sm text-foreground/80 font-mono">Available for PFE Internship · May–July 2026</span>
                 </div>
             </motion.div>
+
+            {/* Hero label */}
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="font-mono text-xs tracking-[0.25em] uppercase text-primary mb-6 text-center leading-relaxed"
+            >
+                <span className="text-muted-foreground">&gt; </span>ML Engineer & Data Science · Marrakech, Morocco.<br />
+                <span className="text-accent/90">open to remote and relocation.</span>
+
+            </motion.p>
 
             {/* Main name */}
             <div className="text-center">
@@ -43,14 +54,11 @@ export const HeroSection = () => {
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className="mt-6 space-y-4"
                 >
-                    <h2 className="text-2xl md:text-3xl font-sans font-light text-foreground/90">
-                        ML Engineer · Data Engineer · Data Scientist
-                    </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                        From <span className="text-accent">messy data </span> to <span className="text-primary">trained models. </span>From <span className="text-accent">notebooks </span> to <span className="text-primary">production APIs.</span>
+                    <p className="font-sans text-2xl text-muted-foreground max-w-2xl mx-auto">
+                        From <span className="text-accent">messy data </span> to <span className="text-primary">trained models. </span>
                     </p>
-                    <p className="text-base text-muted-foreground/70">
-                        Obsessed with the gap between a <span className="text-accent">working model</span> and a <span className="text-primary">working system.</span>
+                    <p className="font-sans text-xl text-muted-foreground/70">
+                        From <span className="text-primary">notebooks </span> to <span className="text-accent">production APIs.</span>
                     </p>
                 </motion.div>
 
@@ -62,24 +70,32 @@ export const HeroSection = () => {
                     className="mt-10 flex flex-wrap gap-4 justify-center"
                 >
                     <Button
-                        aria-label="View My Work"
                         size="lg"
-                        className="group bg-primary text-primary-foreground hover:bg-primary/90 glow-primary"
+                        className="group bg-primary text-primary-foreground hover:bg-primary/90 glow-primary font-mono text-xs tracking-widest uppercase"
                         onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                     >
                         <Briefcase className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                        View My Work
+                        View Projects
                     </Button>
                     <Button
                         size="lg"
                         variant="outline"
-                        aria-label="Get In Touch"
-
-                        className="border-foreground/20 hover:bg-foreground/5 hover:border-primary/50"
+                        className="border-border hover:border-primary/50 hover:text-chart-3 font-mono text-xs tracking-widest uppercase"
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     >
                         <Mail className="mr-2 h-4 w-4" />
-                        Get In Touch
+                        Contact Me
+                    </Button>
+                    <Button
+                        size="lg"
+                        variant="outline"
+                        className="border-border hover:border-primary/50 hover:text-chart-3 font-mono text-xs tracking-widest uppercase"
+                        asChild
+                    >
+                        <a href="#contact">
+                            <FileDown className="mr-2 h-4 w-4" />
+                            Resume ↓
+                        </a>
                     </Button>
                 </motion.div>
             </div>

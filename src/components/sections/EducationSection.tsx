@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
 import { education } from "@/constants/portfolio-data";
+import SectionTag from "../SectionTag";
 
 export const EducationSection = () => {
     return (
         <section id="education" className="py-24 px-4 md:px-8">
             <div className="max-w-4xl mx-auto">
+                <SectionTag label="Education" />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -14,11 +15,8 @@ export const EducationSection = () => {
                     className="mb-16"
                 >
                     <h2 className="font-display text-5xl md:text-7xl mb-4">
-                        <span className="text-gradient-primary">Education</span>
+                        Academic<br /><span className="text-gradient-primary">Background</span>
                     </h2>
-                    <p className="text-muted-foreground text-lg">
-                        My academic background and ongoing learning journey
-                    </p>
                 </motion.div>
 
                 <div className="space-y-6">
@@ -29,22 +27,28 @@ export const EducationSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="glass-card rounded-2xl p-6 hover:border-primary/30 transition-all"
+                            className="glass-card rounded-lg p-6"
                         >
-                            <div className="flex gap-4">
-                                <div className={`p-3 rounded-xl ${edu.current ? 'bg-primary/20' : 'bg-secondary'} h-fit`}>
-                                    <GraduationCap className={`h-6 w-6 ${edu.current ? 'text-primary' : 'text-muted-foreground'}`} />
-                                </div>
+                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                                 <div className="flex-1">
-                                    {edu.current && (
-                                        <span className="inline-block px-2 py-0.5 text-xs rounded-full bg-primary/20 text-primary mb-2">
-                                            Current
-                                        </span>
-                                    )}
+                                    <p className="font-mono text-xs text-primary tracking-[0.05em] mb-1">{edu.school}</p>
                                     <h3 className="font-display text-xl text-foreground">{edu.degree}</h3>
-                                    <p className="text-primary font-medium text-sm mt-1">{edu.school}</p>
-                                    <p className="text-xs text-muted-foreground mt-1">{edu.period}</p>
-                                    <p className="text-secondary-foreground mt-3 text-sm">{edu.description}</p>
+                                    <p className="text-muted-foreground text-sm leading-relaxed mt-2">{edu.description}</p>
+                                    {edu.tags && (
+                                        <div className="flex flex-wrap gap-1.5 mt-3">
+                                            {edu.tags.map((tag) => (
+                                                <span key={tag} className="font-mono text-[10px] px-2 py-0.5 bg-background/40 border border-border/30 rounded-sm text-foreground/70">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="font-mono text-xs text-muted-foreground md:text-right whitespace-nowrap">
+                                    {edu.period}
+                                    {edu.current && (
+                                        <span className="block mt-1 text-primary">Current</span>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

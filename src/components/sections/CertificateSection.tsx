@@ -1,12 +1,14 @@
 import { certificates } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
+import SectionTag from "../SectionTag";
 
 
 const CertificatesSection = () => {
     return (
         <section id="certificates" className="py-24 px-4 md:px-8 bg-secondary/30">
             <div className="max-w-4xl mx-auto">
+                <SectionTag label="Achievements" />
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -15,6 +15,48 @@ export const skills = [
 	{ icon: Code2, title: 'Full-Stack Engineering', color: 'primary' },
 ];
 
+export const stackGroups = [
+	{
+		name: 'ML & Data Science',
+		pills: [
+			{ label: 'Python', active: true },
+			{ label: 'scikit-learn', active: true },
+			{ label: 'pandas', active: true },
+			{ label: 'NumPy', active: true },
+			{ label: 'Matplotlib', active: true },
+			{ label: 'Seaborn', active: true },
+			{ label: 'TensorFlow', active: true },
+			{ label: 'PyTorch' },
+			{ label: 'NLP' },
+		],
+	},
+	{
+		name: 'Data Engineering & Big Data',
+		pills: [
+			{ label: 'PySpark', active: true },
+			{ label: 'Apache Airflow', active: true },
+			{ label: 'SQL', active: true },
+			{ label: 'MongoDB', active: true },
+			{ label: 'Hadoop / YARN' },
+			{ label: 'HDFS' },
+		],
+	},
+	{
+		name: 'MLOps & Deployment',
+		pills: [
+			{ label: 'MLflow', active: true },
+			{ label: 'Docker', active: true },
+			{ label: 'FastAPI', active: true },
+			{ label: 'Git', active: true },
+			{ label: 'Linux', active: true },
+		],
+	},
+	{
+		name: 'Web (supporting)',
+		pills: [{ label: 'Django' }, { label: 'Laravel' }, { label: 'React' }],
+	},
+];
+
 export const navLinks = [
 	{ label: 'About', href: '#about' },
 	{ label: 'Projects', href: '#projects' },
@@ -27,6 +69,52 @@ export const navLinks = [
 
 export const projects = [
 	// ==================== DATA SCIENCE PROJECTS ====================
+	{
+		title: 'Fraud Detection System',
+		description:
+			'Predicting fraudulent financial transactions using historical transaction data. Based on a Kaggle fraud detection dataset. The project involved extensive data preprocessing to handle class imbalance, feature engineering to extract meaningful patterns, and training multiple machine learning models (Logistic Regression, Random Forest, XGBoost) with hyperparameter tuning. The best model achieved a precision of TBD and recall of TBD on the test set.',
+		image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+		tech: [
+			'Python',
+			'scikit-learn',
+			'MLflow',
+			'Pandas',
+			'NumPy',
+			'Matplotlib',
+			'Seaborn',
+			'Kaggle',
+		],
+		category: 'data-science',
+		status: 'wip' as const,
+		metrics: [
+			{ value: 'TBD', key: 'Precision' },
+			{ value: 'TBD', key: 'Recall' },
+			{ value: 'Imbalanced', key: 'Dataset Type' },
+		],
+		featured: true,
+		architecture: [
+			{ from: 'Raw Data', to: 'Feature Eng.', highlight: true },
+			{ from: 'MLflow', to: 'Model Registry', highlight: true },
+			{ from: 'FastAPI', to: 'Docker', highlight: false },
+			{ label: 'REST Endpoint', accent: true },
+		],
+		link: 'https://github.com/idrissiradi/fraud-detection-ML',
+	},
+	{
+		title: 'Telco Customer Churn — Distributed ML',
+		description:
+			'End-to-end PySpark MLlib classification pipeline on a Hadoop/YARN distributed cluster. Full pipeline: data cleaning, StringIndexer → OneHotEncoder → Imputer → VectorAssembler, then three classifiers (Logistic Regression, Decision Tree, Random Forest) trained and evaluated on AUC-ROC, F1, and Accuracy. Models and predictions persisted to HDFS as Parquet.',
+		image: titanicMlImg,
+		tech: ['PySpark', 'Hadoop', 'YARN', 'MLlib', 'Python'],
+		category: 'data-science',
+		status: 'live' as const,
+		metrics: [
+			{ value: 'PySpark', key: 'Engine' },
+			{ value: 'YARN', key: 'Cluster' },
+			{ value: 'MLlib', key: 'Framework' },
+		],
+		link: 'https://github.com/idrissiradi/telco_churn_prediction',
+	},
 	{
 		title: 'Heart Disease Prediction Model',
 		description:
@@ -41,40 +129,28 @@ export const projects = [
 			'Seaborn',
 			'Jupyter',
 		],
-
-		github: 'https://github.com/idrissiradi/heart-disease-project',
 		category: 'data-science',
-		metrics: { accuracy: '88.5%', recall: '92%', f1: '86.7%' },
+		status: 'live' as const,
+		link: 'https://github.com/idrissiradi/heart-disease-project',
+		metrics: [
+			{ value: '88.5%', key: 'Accuracy' },
+			{ value: '92%', key: 'Recall' },
+			{ value: '86.7%', key: 'F1 Score' },
+		],
 	},
 	{
 		title: 'Titanic Survival Prediction (Kaggle)',
 		description:
 			'Logistic regression with structured feature engineering from raw fields: title extraction from passenger names (Mr/Mrs/Miss/Master), family size construction, cabin deck encoding, age binning. Used sklearn Pipeline to prevent data leakage. Result: 81% local accuracy, 77% Kaggle public leaderboard score.',
 		image: titanicMlImg,
-		tech: [
-			'Python',
-			'scikit-learn',
-			'Pandas',
-			'NumPy',
-			'Matplotlib',
-			'Seaborn',
+		tech: ['scikit-learn', 'pandas', 'Pipeline', 'Kaggle'],
+		category: 'data-science',
+		status: 'live' as const,
+		metrics: [
+			{ value: '81%', key: 'Local Acc.' },
+			{ value: '77%', key: 'Kaggle Score' },
 		],
-
-		github: 'https://github.com/idrissiradi/titanic_ml',
-		category: 'data-science',
-		metrics: { local: '81%', kaggle: '77%' },
-	},
-
-	{
-		title: 'Telco Customer Churn — Distributed ML',
-		description:
-			'End-to-end PySpark MLlib classification pipeline on a Hadoop/YARN distributed cluster. Full pipeline: data cleaning, StringIndexer → OneHotEncoder → Imputer → VectorAssembler, then three classifiers (Logistic Regression, Decision Tree, Random Forest) trained and evaluated on AUC-ROC, F1, and Accuracy. Models and predictions persisted to HDFS as Parquet.',
-		image: titanicMlImg,
-		tech: ['PySpark', 'Hadoop', 'YARN', 'MLlib', 'HDFS', 'Python'],
-
-		github: 'https://github.com/idrissiradi/telco_churn_prediction',
-		category: 'data-science',
-		metrics: { engine: 'PySpark', cluster: 'Hadoop/YARN', models: '3' },
+		link: 'https://github.com/idrissiradi/titanic_ml',
 	},
 
 	// ==================== WEB DEVELOPMENT PROJECTS ====================
@@ -87,12 +163,13 @@ export const projects = [
 			'Laravel',
 			'React',
 			'MySQL',
-			'Inertia.js',
+			'shadcn UI',
 			'Tailwind CSS',
-			'shadcn/ui',
+			'Inertia.js',
 		],
-		github: 'https://github.com/idrissiradi/moujoud_app',
+		link: 'https://github.com/idrissiradi/moujoud_app',
 		category: 'web-development',
+		status: 'live' as const,
 	},
 	{
 		title: 'Accounting Firm Management System',
@@ -107,8 +184,9 @@ export const projects = [
 			'Tailwind CSS',
 			'Inertia.js',
 		],
-		github: 'https://github.com/idrissiradi/cabinet_management',
 		category: 'web-development',
+		status: 'live' as const,
+		link: 'https://github.com/idrissiradi/cabinet_management',
 	},
 	{
 		title: 'Restaurant & Hotel Booking App',
@@ -116,8 +194,8 @@ export const projects = [
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
 		image: restaurantImg,
 		tech: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
-		github: '#',
 		category: 'web-development',
+		status: 'live' as const,
 	},
 	{
 		title: 'Travel Planning Platform',
@@ -125,8 +203,8 @@ export const projects = [
 			'A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.',
 		image: travelImg,
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
-		github: '#',
 		category: 'web-development',
+		status: 'live' as const,
 	},
 	{
 		title: 'Fitness Management System',
@@ -134,8 +212,8 @@ export const projects = [
 			'A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.',
 		image: fitnessImg,
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
-		github: '#',
 		category: 'web-development',
+		status: 'live' as const,
 	},
 	{
 		title: 'Pizza Online Ordering System',
@@ -143,8 +221,8 @@ export const projects = [
 			'An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.',
 		image: pizzaImg,
 		tech: ['Django', 'React', 'PostgreSQL', 'Redis'],
-		github: '#',
 		category: 'web-development',
+		status: 'live' as const,
 	},
 ];
 
@@ -164,18 +242,18 @@ export const skillCategories = [
 	{
 		title: 'Data Engineering & Big Data',
 		skills: [
-			'PySpark',
+			'PySpark / MLlib',
 			'Apache Spark',
-			'Hadoop / HDFS',
-			'YARN',
+			'Hadoop / YARN / HDFS',
+			'ETL Pipelines',
 			'Apache Airflow',
-			'SQL',
+			'SQL & NoSQL',
 			'MongoDB',
 		],
 	},
 	{
 		title: 'MLOps & Deployment',
-		skills: ['MLflow', 'Docker', 'FastAPI', 'Git', 'Linux', 'REST APIs'],
+		skills: ['MLflow', 'Docker', 'FastAPI', 'Git / GitHub', 'Linux / Bash'],
 	},
 	{
 		title: 'Backend Development',
@@ -300,6 +378,13 @@ export const education = [
 		period: 'Oct 2025 – Present',
 		description:
 			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
+		tags: [
+			'Deep Learning',
+			'Big Data Architecture',
+			'Data Warehouse',
+			'Machine Learning',
+			'Data Science',
+		],
 		current: true,
 	},
 	{
