@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Github, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/constants/portfolio-data";
 import SectionTag from "../SectionTag";
