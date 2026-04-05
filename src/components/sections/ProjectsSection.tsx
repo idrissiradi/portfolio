@@ -77,9 +77,12 @@ export const ProjectsSection = () => {
                                             <div className="space-y-4">
                                                 {/* Status */}
                                                 <div className="flex items-center gap-2 font-mono text-xs tracking-[0.15em] uppercase">
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'wip' ? 'bg-primary shadow-[0_0_6px] shadow-primary' : 'bg-accent shadow-[0_0_6px] shadow-accent'}`} />
-                                                    <span className={project.status === 'wip' ? 'text-primary' : 'text-accent'}>
-                                                        {project.status === 'wip' ? 'In Progress' : 'Complete'}
+                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'completed'
+                                                        ? 'bg-accent shadow-[0_0_6px] shadow-accent'
+                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'
+                                                        }`} />
+                                                    <span className={project.status === 'completed' ? 'text-accent' : 'text-primary'}>
+                                                        {project.status === 'completed' ? 'Complete' : 'Live'}
                                                     </span>
                                                 </div>
                                                 <h3 className="font-display text-2xl md:text-3xl text-foreground">{project.title}</h3>
@@ -157,9 +160,12 @@ export const ProjectsSection = () => {
                                             <div className={`space-y-4 p-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                                                 {/* Status */}
                                                 <div className="flex items-center gap-2 font-mono text-xs tracking-[0.15em] uppercase">
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'wip' ? 'bg-primary shadow-[0_0_6px] shadow-primary' : 'bg-accent shadow-[0_0_6px] shadow-accent'}`} />
-                                                    <span className={project.status === 'wip' ? 'text-primary' : 'text-accent'}>
-                                                        {project.status === 'wip' ? 'In Progress' : 'Complete'}
+                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'completed'
+                                                        ? 'bg-accent shadow-[0_0_6px] shadow-accent'
+                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'
+                                                        }`} />
+                                                    <span className={project.status === 'completed' ? 'text-accent' : 'text-primary'}>
+                                                        {project.status === 'completed' ? 'Complete' : 'Live'}
                                                     </span>
                                                 </div>
 

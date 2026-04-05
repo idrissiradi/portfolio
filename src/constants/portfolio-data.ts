@@ -10,9 +10,9 @@ import pizzaImg from '../assets/images/pizza_ordering.avif';
 
 export const skills = [
 	{ icon: Brain, title: 'Machine Learning & Data Science', color: 'accent' },
+	{ icon: Code2, title: 'Full-Stack Engineering', color: 'primary' },
 	{ icon: BarChart3, title: 'Big Data & Data Engineering', color: 'accent' },
 	{ icon: Server, title: 'MLOps & API Deployment', color: 'primary' },
-	{ icon: Code2, title: 'Full-Stack Engineering', color: 'primary' },
 ];
 
 export const stackGroups = [
@@ -34,26 +34,31 @@ export const stackGroups = [
 		name: 'Data Engineering & Big Data',
 		pills: [
 			{ label: 'PySpark', active: true },
-			{ label: 'Apache Airflow', active: true },
 			{ label: 'SQL', active: true },
 			{ label: 'MongoDB', active: true },
-			{ label: 'Hadoop / YARN' },
-			{ label: 'HDFS' },
+			{ label: 'Hadoop / YARN', active: true },
+			{ label: 'HDFS', active: true },
+			{ label: 'Apache Airflow', active: false },
 		],
 	},
 	{
 		name: 'MLOps & Deployment',
 		pills: [
-			{ label: 'MLflow', active: true },
 			{ label: 'Docker', active: true },
 			{ label: 'FastAPI', active: true },
+			{ label: 'Streamlit', active: true },
 			{ label: 'Git', active: true },
 			{ label: 'Linux', active: true },
+			{ label: 'MLflow', active: false },
 		],
 	},
 	{
-		name: 'Web (supporting)',
-		pills: [{ label: 'Django' }, { label: 'Laravel' }, { label: 'React' }],
+		name: 'Web Development & Frameworks',
+		pills: [
+			{ label: 'Django', active: true },
+			{ label: 'Laravel', active: true },
+			{ label: 'React', active: true },
+		],
 	},
 ];
 
@@ -72,12 +77,13 @@ export const projects = [
 	{
 		title: 'Fraud Detection System',
 		description:
-			'Predicting fraudulent financial transactions using historical transaction data. Based on a Kaggle fraud detection dataset. The project involved extensive data preprocessing to handle class imbalance, feature engineering to extract meaningful patterns, and training multiple machine learning models (Logistic Regression, Random Forest, XGBoost) with hyperparameter tuning. The best model achieved a precision of TBD and recall of TBD on the test set.',
+			'Binary classification pipeline on 6.3M+ financial transactions with severe class imbalance (0.3% fraud). Applied class_weight="balanced" to handle imbalance without oversampling. Built a full scikit-learn Pipeline with preprocessing (StandardScaler, OneHotEncoder) and Logistic Regression. Prioritized recall over precision to minimize missed fraud cases — a false negative is far more costly than a false positive in financial fraud. Deployed as an interactive Streamlit app for real-time transaction prediction.',
+
 		image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
 		tech: [
 			'Python',
 			'scikit-learn',
-			'MLflow',
+			'Streamlit',
 			'Pandas',
 			'NumPy',
 			'Matplotlib',
@@ -85,18 +91,23 @@ export const projects = [
 			'Kaggle',
 		],
 		category: 'data-science',
-		status: 'wip' as const,
+		status: 'completed' as const,
 		metrics: [
-			{ value: 'TBD', key: 'Precision' },
-			{ value: 'TBD', key: 'Recall' },
-			{ value: 'Imbalanced', key: 'Dataset Type' },
+			{ value: '0.94', key: 'Fraud Recall' },
+			{ value: '0.95', key: 'Accuracy' },
+			{ value: '6.3M+', key: 'Transactions' },
+			{ value: '0.3%', key: 'Fraud Rate' },
 		],
 		featured: true,
 		architecture: [
-			{ from: 'Raw Data', to: 'Feature Eng.', highlight: true },
-			{ from: 'MLflow', to: 'Model Registry', highlight: true },
-			{ from: 'FastAPI', to: 'Docker', highlight: false },
-			{ label: 'REST Endpoint', accent: true },
+			{ from: 'Raw Data', to: 'EDA & Cleaning', highlight: true },
+			{ from: 'EDA & Cleaning', to: 'sklearn Pipeline', highlight: true },
+			{
+				from: 'sklearn Pipeline',
+				to: 'Logistic Regression',
+				highlight: true,
+			},
+			{ label: 'Streamlit App', accent: true },
 		],
 		link: 'https://github.com/idrissiradi/fraud-detection-ML',
 	},
@@ -107,7 +118,7 @@ export const projects = [
 		image: titanicMlImg,
 		tech: ['PySpark', 'Hadoop', 'YARN', 'MLlib', 'Python'],
 		category: 'data-science',
-		status: 'live' as const,
+		status: 'completed' as const,
 		metrics: [
 			{ value: 'PySpark', key: 'Engine' },
 			{ value: 'YARN', key: 'Cluster' },
@@ -116,9 +127,32 @@ export const projects = [
 		link: 'https://github.com/idrissiradi/telco_churn_prediction',
 	},
 	{
+		title: 'Bulldozer Price Prediction (Kaggle Bluebook)',
+		description:
+			'Regression pipeline on 400,000+ heavy equipment auction records from Kaggle Bluebook. Handled complex temporal and categorical features: sale date decomposition, ordinal encoding of equipment specs, and imputation of 50+ columns with high missing rates. RandomForest regressor with time-based train/validation split to prevent data leakage. Optimized for RMSLE; the official Kaggle metric.',
+		image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+		tech: [
+			'Python',
+			'scikit-learn',
+			'Pandas',
+			'NumPy',
+			'Matplotlib',
+			'RandomForest',
+			'Kaggle',
+		],
+		category: 'data-science',
+		status: 'completed' as const,
+		metrics: [
+			{ value: '0.245', key: 'RMSLE Score' },
+			{ value: '400K+', key: 'Records' },
+			{ value: '50+', key: 'Features' },
+		],
+		link: 'https://github.com/idrissiradi/bulldozer-price-prediction',
+	},
+	{
 		title: 'Heart Disease Prediction Model',
 		description:
-			'End-to-end binary classification comparing Logistic Regression, KNN, and Random Forest with hyperparameter tuning (RandomizedSearchCV + GridSearchCV). Best model: 88.5% test accuracy, 92% recall, 86.7% F1 on 5-fold cross-validation. High recall was the target metric — in medical screening, missing a positive is more costly than a false alarm.',
+			'End-to-end binary classification comparing Logistic Regression, KNN, and Random Forest with hyperparameter tuning (RandomizedSearchCV + GridSearchCV). Best model: 88.5% test accuracy, 92% recall, 86.7% F1 on 5-fold cross-validation. High recall was the target metric; in medical screening, missing a positive is more costly than a false alarm.',
 		image: heartDiseaseImg,
 		tech: [
 			'Python',
@@ -130,7 +164,7 @@ export const projects = [
 			'Jupyter',
 		],
 		category: 'data-science',
-		status: 'live' as const,
+		status: 'completed' as const,
 		link: 'https://github.com/idrissiradi/heart-disease-project',
 		metrics: [
 			{ value: '88.5%', key: 'Accuracy' },
@@ -145,7 +179,7 @@ export const projects = [
 		image: titanicMlImg,
 		tech: ['scikit-learn', 'pandas', 'Pipeline', 'Kaggle'],
 		category: 'data-science',
-		status: 'live' as const,
+		status: 'completed' as const,
 		metrics: [
 			{ value: '81%', key: 'Local Acc.' },
 			{ value: '77%', key: 'Kaggle Score' },
@@ -232,6 +266,8 @@ export const skillCategories = [
 		skills: [
 			'Python',
 			'scikit-learn',
+			'TensorFlow',
+			'PyTorch',
 			'Pandas',
 			'NumPy',
 			'Matplotlib',
@@ -245,7 +281,6 @@ export const skillCategories = [
 			'PySpark / MLlib',
 			'Apache Spark',
 			'Hadoop / YARN / HDFS',
-			'ETL Pipelines',
 			'Apache Airflow',
 			'SQL & NoSQL',
 			'MongoDB',
@@ -253,11 +288,25 @@ export const skillCategories = [
 	},
 	{
 		title: 'MLOps & Deployment',
-		skills: ['MLflow', 'Docker', 'FastAPI', 'Git / GitHub', 'Linux / Bash'],
+		skills: [
+			'Docker',
+			'FastAPI',
+			'streamlit',
+			'Git / GitHub',
+			'Linux / Bash',
+		],
 	},
 	{
 		title: 'Backend Development',
-		skills: ['Python', 'Django', 'FastAPI', 'Laravel', 'Node.js', 'PHP'],
+		skills: [
+			'Python',
+			'Django',
+			'FastAPI',
+			'Laravel',
+			'Node.js',
+			'Express.js',
+			'PHP',
+		],
 	},
 	{
 		title: 'Frontend Development',
@@ -315,13 +364,13 @@ export const experiences = [
 		current: false,
 	},
 	{
-		title: 'Assistant Accountant',
+		title: 'Data & Reporting Analyst',
 		company: 'ONSSA Marrakech',
 		period: 'Oct 2022 – Mar 2024',
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Handled accounting tasks including financial data entry, reporting, and reconciliation. Strengthened attention to detail and analytical thinking applicable to software development.',
+			'Financial data processing and analysis; reporting and internal database management.',
 		tech: ['Excel', 'Accounting Systems'],
 		current: false,
 	},
@@ -345,28 +394,6 @@ export const experiences = [
 		description:
 			'Built internal web platforms using Django, MySQL, and Tailwind CSS. Assisted in backend development, database modeling, and UI improvements.',
 		tech: ['Django', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Python'],
-		current: false,
-	},
-	{
-		title: 'Web Developer Intern',
-		company: 'Weshore Agency',
-		period: 'May 2019 – May 2019',
-		type: 'Internship',
-		location: 'Marrakesh, Morocco',
-		description:
-			'Developed a management web application using PHP and MySQL. Integrated WordPress components and contributed to improving workflow automation.',
-		tech: ['PHP', 'MySQL', 'WordPress', 'JavaScript'],
-		current: false,
-	},
-	{
-		title: 'Web Developer Intern',
-		company: 'Prefecture of Marrakesh',
-		period: 'Jul 2018 – Jul 2018',
-		type: 'Internship',
-		location: 'Marrakesh, Morocco',
-		description:
-			'Created an internal management system using PHP and MySQL for administrative operations. Focused on backend logic and data management.',
-		tech: ['PHP', 'MySQL'],
 		current: false,
 	},
 ];

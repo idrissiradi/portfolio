@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Mail, Briefcase, FileDown } from "lucide-react";
+import { ChevronDown, Mail, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
@@ -20,7 +20,7 @@ export const HeroSection = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-                    <span className="text-sm text-foreground/80 font-mono">Available for PFE Internship · May–July 2026</span>
+                    <span className="text-sm text-foreground/80 font-mono">Available for PFE Internship · May–June 2026</span>
                 </div>
             </motion.div>
 
@@ -31,7 +31,7 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="font-mono text-xs tracking-[0.25em] uppercase text-primary mb-6 text-center leading-relaxed"
             >
-                <span className="text-muted-foreground">&gt; </span>ML Engineer & Data Science · Marrakech, Morocco.<br />
+                <span className="text-muted-foreground">&gt; </span>ML Engineer & Data Science student· Marrakech, Morocco.<br />
                 <span className="text-accent/90">open to remote and relocation.</span>
 
             </motion.p>
@@ -85,17 +85,6 @@ export const HeroSection = () => {
                     >
                         <Mail className="mr-2 h-4 w-4" />
                         Contact Me
-                    </Button>
-                    <Button
-                        size="lg"
-                        variant="outline"
-                        className="border-border hover:border-primary/50 hover:text-chart-3 font-mono text-xs tracking-widest uppercase"
-                        asChild
-                    >
-                        <a href="#contact">
-                            <FileDown className="mr-2 h-4 w-4" />
-                            Resume ↓
-                        </a>
                     </Button>
                 </motion.div>
             </div>

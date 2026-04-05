@@ -1,4 +1,4 @@
-import { stackGroups } from "@/constants/portfolio-data";
+import { skills, stackGroups } from "@/constants/portfolio-data";
 import { motion } from "framer-motion";
 import SectionTag from "../SectionTag";
 
@@ -28,14 +28,28 @@ export const AboutSection = () => {
                         className="space-y-6 text-base text-secondary-foreground leading-relaxed"
                     >
                         <p>
-                            I'm an ML Engineering student and developer based in Marrakech, Morocco. With a background in full-stack development and a current focus on <span className="text-foreground font-semibold">machine learning pipelines, distributed data processing, and production model deployment.</span>
-                        </p>
-                        <p>
-                            I don't just train models in notebooks. I build the full stack around them: feature engineering pipelines, experiment tracking with MLflow, REST API serving with FastAPI, and containerized deployment with Docker.
+                            I'm a Data Science & ML Engineering student and developer based in Marrakech, Morocco. Background in full-stack development, current focus on <span className="text-foreground font-semibold">machine learning pipelines, model development, and deep learning & NLP fundamentals.</span>
                         </p>
                         <p className="text-muted-foreground">
-                            I'm a final-year student in the Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">PFE internship in May–July 2026</span> in Data Science, ML Engineering, or Data Engineering.
+                            Currently completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">PFE internship from May 2026</span> in Data Science or ML Engineering. Based in Marrakech — open to remote or relocation.
+
                         </p>
+                        {/* Quick skills grid */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                            {skills.map((skill, index) => (
+                                <motion.div
+                                    key={skill.title}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                    className="group glass-card rounded-xl p-3 hover:border-primary/30 transition-all duration-300"
+                                >
+                                    <skill.icon className={`h-7 w-7 mb-3 ${skill.color === 'primary' ? 'text-primary' : 'text-accent'} group-hover:scale-110 transition-transform`} />
+                                    <h3 className="font-medium text-sm text-foreground">{skill.title}</h3>
+                                </motion.div>
+                            ))}
+                        </div>
                     </motion.div>
 
                     {/* Technical Stack Card */}
