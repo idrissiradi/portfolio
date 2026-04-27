@@ -31,7 +31,7 @@ export const AboutSection = () => {
                             I'm a Data Science & ML Engineering student and developer based in Marrakech, Morocco. Background in full-stack development, current focus on <span className="text-foreground font-semibold">machine learning pipelines, model development, and deep learning & NLP fundamentals.</span>
                         </p>
                         <p className="text-muted-foreground">
-                            Currently completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">PFE internship from May 2026</span> in Data Science or ML Engineering. Based in Marrakech — open to remote or relocation.
+                            Currently completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">internship from May 2026</span> in Data Science or ML Engineering. Based in Marrakech — open to remote or relocation.
 
                         </p>
                         {/* Quick skills grid */}
