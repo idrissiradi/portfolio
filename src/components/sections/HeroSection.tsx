@@ -20,7 +20,7 @@ export const HeroSection = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-                    <span className="text-sm text-foreground/80 font-mono">Available for PFE Internship · May–June 2026</span>
+                    <span className="text-sm text-foreground/80 font-mono">Available for Internship · May–June 2026</span>
                 </div>
             </motion.div>
 
