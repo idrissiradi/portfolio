@@ -19,7 +19,7 @@ export const ContactSection = () => {
                 >
                     <SectionTag label="Get in touch" />
                     <h2 className="font-display text-5xl md:text-7xl mb-2">
-                        Open to <span className="text-gradient-primary">PFE Internship</span>
+                        Open to <span className="text-gradient-primary">Internship</span>
                     </h2>
                     <p className="font-display text-3xl md:text-4xl text-muted-foreground mb-6">
                         May – July 2026
