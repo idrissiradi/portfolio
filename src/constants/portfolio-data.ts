@@ -422,17 +422,6 @@ export const experiences = [
 		current: false,
 	},
 	{
-<<<<<<< HEAD
-	    title: 'IT Technician & Data Management',
-	    company: 'ONSSA Marrakech',
-	    period: 'Oct 2022 – Mar 2024',
-	    type: 'Full-time',
-	    location: 'Marrakesh, Morocco',
-	    description:
-	        'Technical support, end-user training, data processing and Excel reporting.',
-	    tech: ['Excel', 'Windows', 'Microsoft Office', 'Technical Support'],
-	    current: false,
-=======
 		title: 'IT Technician & Data Management',
 		company: 'ONSSA Marrakech',
 		period: 'Oct 2022 – Mar 2024',
@@ -442,7 +431,7 @@ export const experiences = [
 			'Technical support, end-user training, data processing and Excel reporting.',
 		tech: [ 'Excel', 'Windows', 'Microsoft Office', 'Technical Support' ],
 		current: false,
->>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
+
 	},
 	{
 		title: 'Web Developer Intern',

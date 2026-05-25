@@ -19,11 +19,9 @@ export const ContactSection = () => {
                 >
                     <SectionTag label="Get in touch" />
                     <h2 className="font-display text-5xl md:text-7xl mb-2">
-<<<<<<< HEAD
-                        Open to <span className="text-gradient-primary">Internship</span>
-=======
+
                         Open to <span className="text-gradient-primary">Work</span>
->>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
+
                     </h2>
                     <p className="text-muted-foreground text-base max-w-xl mx-auto mb-10">
                         Looking for opportunities in Data Science, ML. Based in Marrakech — open to remote and relocation.

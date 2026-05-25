@@ -31,11 +31,8 @@ export const AboutSection = () => {
                             I'm a Data Science & ML Developer based in Marrakech, Morocco. Background in full-stack development, current focus on <span className="text-foreground font-semibold">machine learning pipelines, model development, and deep learning & NLP.</span>
                         </p>
                         <p className="text-muted-foreground">
-<<<<<<< HEAD
-                            Currently completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga, targeting a <span className="text-primary font-medium">internship from May 2026</span> in Data Science or ML Engineering. Based in Marrakech — open to remote or relocation.
-=======
+
                             Completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga. <span className="text-primary font-medium">Available for full-time roles</span> Based in Marrakech — open to on-site, remote, or relocation.
->>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
 
                         </p>
                         {/* Quick skills grid */}
