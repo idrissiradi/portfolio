@@ -1,6 +1,4 @@
 import { Code2, Server, Brain, BarChart3 } from 'lucide-react';
-import heartDiseaseImg from '../assets/images/heart-disease-classification-project.avif';
-import titanicMlImg from '../assets/images/titanic_project.avif';
 import accountingFirmImg from '../assets/images/ficogest.avif';
 import butcherShopImg from '../assets/images/butcher_shop.avif';
 import restaurantImg from '../assets/images/lebedouin.avif';
@@ -78,7 +76,6 @@ export const projects = [
 		title: 'VisioMark — Multimodal AI Ad Creative Analyzer',
 		description:
 			'PFE project: an end-to-end multimodal AI system that analyzes advertising creatives and generates captions. Uses PyTorch EfficientNet-B0 for content type and mood classification, HuggingFace MiniLM for text encoding, Flan-T5-base for caption generation, and cosine similarity for visual-text alignment scoring. K-Means extracts dominant colors. Built without any external APIs — all models trained and served locally. FastAPI backend, trilingual React frontend (EN/FR/AR + RTL), fully containerized with Docker.',
-		image: '',
 		tech: [
 			'PyTorch',
 			'EfficientNet-B0',
@@ -113,7 +110,6 @@ export const projects = [
 		title: 'Sentiment Classifier — GloVe + LSTM on SST-2',
 		description:
 			'NLP pipeline for binary sentiment classification on the Stanford Sentiment Treebank (SST-2). Pre-trained GloVe-100d embeddings loaded as a frozen embedding layer, passed into a bidirectional LSTM with dropout regularization. Trained with Adam optimizer and binary cross-entropy loss. Achieved ~81.8% accuracy on the SST-2 validation set, matching reported benchmarks for non-transformer LSTM baselines on this dataset.',
-		image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&auto=format&fit=crop',
 		tech: [
 			'PyTorch',
 			'GloVe-100d',
@@ -130,14 +126,19 @@ export const projects = [
 			{ value: 'GloVe-100d', key: 'Embeddings' },
 			{ value: 'BiLSTM', key: 'Architecture' },
 		],
+		featured: true,
+		architecture: [
+			{ from: 'Raw Text', to: 'GloVe-100d Embeddings', highlight: true },
+			{ from: 'GloVe-100d Embeddings', to: 'BiLSTM + Dropout', highlight: true },
+			{ from: 'BiLSTM + Dropout', to: 'Binary Classification', highlight: true },
+			{ label: 'SST-2 Dataset · Adam · BCE Loss', accent: true },
+		],
 		link: 'https://github.com/idrissiradi/glove-sentiment',
 	},
 	{
 		title: 'Fraud Detection System',
 		description:
 			'Binary classification pipeline on 6.3M+ financial transactions with severe class imbalance (0.3% fraud). Applied class_weight="balanced" to handle imbalance without oversampling. Built a full scikit-learn Pipeline with preprocessing (StandardScaler, OneHotEncoder) and Logistic Regression. Prioritized recall over precision to minimize missed fraud cases — a false negative is far more costly than a false positive in financial fraud. Deployed as an interactive Streamlit app for real-time transaction prediction.',
-
-		image: '',
 		tech: [
 			'Python',
 			'scikit-learn',
@@ -173,7 +174,6 @@ export const projects = [
 		title: 'Telco Customer Churn — Distributed ML',
 		description:
 			'End-to-end PySpark MLlib classification pipeline on a Hadoop/YARN distributed cluster. Full pipeline: data cleaning, StringIndexer → OneHotEncoder → Imputer → VectorAssembler, then three classifiers (Logistic Regression, Decision Tree, Random Forest) trained and evaluated on AUC-ROC, F1, and Accuracy. Models and predictions persisted to HDFS as Parquet.',
-		image: titanicMlImg,
 		tech: [ 'PySpark', 'Hadoop', 'YARN', 'MLlib', 'Python' ],
 		category: 'data-science',
 		status: 'completed' as const,
@@ -181,6 +181,13 @@ export const projects = [
 			{ value: 'PySpark', key: 'Engine' },
 			{ value: 'YARN', key: 'Cluster' },
 			{ value: 'MLlib', key: 'Framework' },
+		],
+		featured: true,
+		architecture: [
+			{ from: 'Raw CSV', to: 'PySpark Pipeline', highlight: true },
+			{ from: 'PySpark Pipeline', to: 'StringIndexer → OHE → VectorAssembler', highlight: true },
+			{ from: 'VectorAssembler', to: 'LR / DT / Random Forest', highlight: true },
+			{ label: 'Hadoop / YARN · HDFS Parquet output', accent: true },
 		],
 		link: 'https://github.com/idrissiradi/telco_churn_prediction',
 	},
@@ -205,13 +212,19 @@ export const projects = [
 			{ value: '400K+', key: 'Records' },
 			{ value: '50+', key: 'Features' },
 		],
+		featured: true,
+		architecture: [
+			{ from: 'Auction Records 400K+', to: 'Feature Engineering', highlight: true },
+			{ from: 'Feature Engineering', to: 'RandomForestRegressor', highlight: true },
+			{ from: 'RandomForestRegressor', to: 'RMSLE 0.245', highlight: true },
+			{ label: 'Time-based split · No data leakage', accent: true },
+		],
 		link: 'https://github.com/idrissiradi/bulldozer-price-prediction',
 	},
 	{
 		title: 'Heart Disease Prediction Model',
 		description:
 			'End-to-end binary classification comparing Logistic Regression, KNN, and Random Forest with hyperparameter tuning (RandomizedSearchCV + GridSearchCV). Best model: 88.5% test accuracy, 92% recall, 86.7% F1 on 5-fold cross-validation. High recall was the target metric; in medical screening, missing a positive is more costly than a false alarm.',
-		image: heartDiseaseImg,
 		tech: [
 			'Python',
 			'scikit-learn',
@@ -223,24 +236,37 @@ export const projects = [
 		],
 		category: 'data-science',
 		status: 'completed' as const,
-		link: 'https://github.com/idrissiradi/heart-disease-project',
 		metrics: [
 			{ value: '88.5%', key: 'Accuracy' },
 			{ value: '92%', key: 'Recall' },
 			{ value: '86.7%', key: 'F1 Score' },
 		],
+		featured: true,
+		architecture: [
+			{ from: 'Clinical Features', to: 'sklearn Pipeline', highlight: true },
+			{ from: 'sklearn Pipeline', to: 'LR / KNN / Random Forest', highlight: true },
+			{ from: 'Random Forest', to: '88.5% Acc · 92% Recall', highlight: true },
+			{ label: 'RandomizedSearchCV + GridSearchCV · 5-fold CV', accent: true },
+		],
+		link: 'https://github.com/idrissiradi/heart-disease-project',
 	},
 	{
 		title: 'Titanic Survival Prediction (Kaggle)',
 		description:
 			'Logistic regression with structured feature engineering from raw fields: title extraction from passenger names (Mr/Mrs/Miss/Master), family size construction, cabin deck encoding, age binning. Used sklearn Pipeline to prevent data leakage. Result: 81% local accuracy, 77% Kaggle public leaderboard score.',
-		image: titanicMlImg,
 		tech: [ 'scikit-learn', 'pandas', 'Pipeline', 'Kaggle' ],
 		category: 'data-science',
 		status: 'completed' as const,
 		metrics: [
 			{ value: '81%', key: 'Local Acc.' },
 			{ value: '77%', key: 'Kaggle Score' },
+		],
+		featured: true,
+		architecture: [
+			{ from: 'Raw Passenger Data', to: 'Feature Engineering', highlight: true },
+			{ from: 'Feature Engineering', to: 'sklearn Pipeline', highlight: true },
+			{ from: 'sklearn Pipeline', to: 'Logistic Regression', highlight: true },
+			{ label: '81% local · 77% Kaggle leaderboard', accent: true },
 		],
 		link: 'https://github.com/idrissiradi/titanic_ml',
 	},
@@ -259,9 +285,9 @@ export const projects = [
 			'Tailwind CSS',
 			'Inertia.js',
 		],
-		link: 'https://github.com/idrissiradi/moujoud_app',
 		category: 'web-development',
 		status: 'live' as const,
+		link: 'https://github.com/idrissiradi/moujoud_app',
 	},
 	{
 		title: 'Accounting Firm Management System',
@@ -320,11 +346,13 @@ export const projects = [
 
 export const skillCategories = [
 	{
-		title: 'Machine Learning & Data Science',
+		title: 'ML / Deep Learning',
 		skills: [
 			'Python',
 			'scikit-learn',
 			'PyTorch',
+			'NLP',
+			'Computer Vision',
 			'HuggingFace',
 			'Pandas',
 			'NumPy',
@@ -489,32 +517,6 @@ export const education = [
 ];
 
 export const certificates = [
-	// ── DataCamp — Engineering tracks ────────────────────────────
-	{
-		title: 'Professional Data Engineer',
-		issuer: 'DataCamp',
-		date: '2026',
-		description:
-			'Advanced data engineering track covering pipeline architecture, cloud data platforms, workflow orchestration, and production-grade data infrastructure.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
-	},
-	{
-		title: 'Data Engineer',
-		issuer: 'DataCamp',
-		date: '2026',
-		description:
-			'Data engineering track covering ETL pipelines, data warehousing, database management, and scalable data processing with Python.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
-	},
-	{
-		title: 'Associate Data Engineer',
-		issuer: 'DataCamp',
-		date: '2026',
-		description:
-			'Foundational data engineering track covering SQL, database design, data pipelines, and cloud storage fundamentals.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
-	},
-
 	// ── DataCamp — Science tracks ─────────────────────────────────
 	{
 		title: 'Data Scientist',
@@ -522,7 +524,7 @@ export const certificates = [
 		date: '2026',
 		description:
 			'Comprehensive data science track covering Python, statistical modeling, machine learning, and data storytelling.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/66e8954c2bb20241cd3ae36999eaae854aaeba4e',
 	},
 	{
 		title: 'Associate Data Scientist in Python',
@@ -530,7 +532,7 @@ export const certificates = [
 		date: '2026',
 		description:
 			'Data science track covering Python, data manipulation with Pandas, statistical analysis, machine learning with scikit-learn, and data visualization. Projects include Airbnb Market Trends, NYC School Test Results, and Students Mental Health analysis.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/403922b98320622a3ad116803fb57eb4fc82b938',
 	},
 	{
 		title: 'Data Analyst',
@@ -538,7 +540,33 @@ export const certificates = [
 		date: '2026',
 		description:
 			'Data analysis track covering exploratory data analysis, data cleaning, statistical thinking, and visualization with Python.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/4db2e36fdce7e1b03f5f2f2014f33f83c2494849',
+	},
+
+	// ── DataCamp — Engineering tracks ────────────────────────────
+	{
+		title: 'Professional Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Advanced data engineering track covering pipeline architecture, cloud data platforms, workflow orchestration, and production-grade data infrastructure.',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/f6708b3aa7074212d85d3b165bba22cb064530f3',
+	},
+	{
+		title: 'Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Data engineering track covering ETL pipelines, data warehousing, database management, and scalable data processing with Python.',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/6f3328031d3e6978628a41afb531fa5b3820801f',
+	},
+	{
+		title: 'Associate Data Engineer',
+		issuer: 'DataCamp',
+		date: '2026',
+		description:
+			'Foundational data engineering track covering SQL, database design, data pipelines, and cloud storage fundamentals.',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/5d2ed0c02a01857b5ba3da686a2947209798e187',
 	},
 	{
 		title: 'Python Data Fundamentals',
@@ -546,8 +574,31 @@ export const certificates = [
 		date: '2025',
 		description:
 			'Foundational Python track for data science: NumPy, Pandas, Matplotlib, and core data manipulation techniques.',
-		credentialUrl: 'https://www.datacamp.com/portfolio/idrissiradi',
+		credentialUrl: 'https://www.datacamp.com/completed/statement-of-accomplishment/track/58161f1b7d2ac44e9c4fe8685c9910375b99d5af',
 	},
+	// ── IBM — Credly badges  ─────────────────────────────────
+	{
+		title: 'Hadoop Foundations',
+		issuer: 'IBM / Credly',
+		date: '2025',
+		description: 'Foundational Hadoop certification covering HDFS architecture, MapReduce, YARN, and distributed data processing on the Hadoop ecosystem.',
+		credentialUrl: 'https://www.credly.com/badges/c81bb2cc-c22f-4483-a58b-5d2a7ff4d7ab',
+	},
+	{
+		title: 'Git',
+		issuer: 'IBM / Credly',
+		date: '2021',
+		description: 'Version control certification covering Git fundamentals, branching strategies, merging, and collaborative workflows.',
+		credentialUrl: 'https://www.credly.com/badges/3d43b48b-d04d-4b36-8d17-a8659cd4dbc3',
+	},
+	{
+		title: 'API & Web Development',
+		issuer: 'IBM / Credly',
+		date: '2021',
+		description: 'Certification covering RESTful API design, HTTP fundamentals, and web development practices.',
+		credentialUrl: 'https://www.credly.com/badges/434007b8-693a-4912-8e61-53fa0bee1c12',
+	},
+
 ];
 
 export const socialLinks = {

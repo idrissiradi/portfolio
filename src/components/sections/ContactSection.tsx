@@ -24,8 +24,11 @@ export const ContactSection = () => {
 
                     </h2>
                     <p className="text-muted-foreground text-base max-w-xl mx-auto mb-10">
-                        Looking for opportunities in Data Science, ML. Based in Marrakech — open to remote and relocation.
+                        Looking for opportunities in Data Science or ML Engineering. <br />
+                        Based in Marrakech — open to on-site, remote, and relocation. <br />
+                        Feel free to reach out for collaborations, questions, or just a friendly chat!
                     </p>
+
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
