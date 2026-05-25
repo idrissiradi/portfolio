@@ -20,7 +20,11 @@ export const HeroSection = () => {
             >
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
+<<<<<<< HEAD
                     <span className="text-sm text-foreground/80 font-mono">Available for Internship · May–June 2026</span>
+=======
+                    <span className="text-sm text-foreground/80 font-mono">Open to Work · On-site · Remote · Hybrid · Relocation</span>
+>>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
                 </div>
             </motion.div>
 
@@ -31,8 +35,8 @@ export const HeroSection = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="font-mono text-xs tracking-[0.25em] uppercase text-primary mb-6 text-center leading-relaxed"
             >
-                <span className="text-muted-foreground">&gt; </span>ML Engineer & Data Science student· Marrakech, Morocco.<br />
-                <span className="text-accent/90">open to remote and relocation.</span>
+                <span className="text-muted-foreground">&gt; </span>Data Science & ML Developer · Marrakech, Morocco.<br />
+                <span className="text-accent/90">open to on-site, remote and relocation.</span>
 
             </motion.p>
 

@@ -25,9 +25,9 @@ export const stackGroups = [
 			{ label: 'NumPy', active: true },
 			{ label: 'Matplotlib', active: true },
 			{ label: 'Seaborn', active: true },
-			{ label: 'TensorFlow', active: true },
-			{ label: 'PyTorch' },
-			{ label: 'NLP' },
+			{ label: 'PyTorch', active: true },
+			{ label: 'NLP', active: true },
+			{ label: 'Computer Vision', active: true },
 		],
 	},
 	{
@@ -75,11 +75,69 @@ export const navLinks = [
 export const projects = [
 	// ==================== DATA SCIENCE PROJECTS ====================
 	{
+		title: 'VisioMark — Multimodal AI Ad Creative Analyzer',
+		description:
+			'PFE project: an end-to-end multimodal AI system that analyzes advertising creatives and generates captions. Uses PyTorch EfficientNet-B0 for content type and mood classification, HuggingFace MiniLM for text encoding, Flan-T5-base for caption generation, and cosine similarity for visual-text alignment scoring. K-Means extracts dominant colors. Built without any external APIs — all models trained and served locally. FastAPI backend, trilingual React frontend (EN/FR/AR + RTL), fully containerized with Docker.',
+		image: '',
+		tech: [
+			'PyTorch',
+			'EfficientNet-B0',
+			'HuggingFace',
+			'Flan-T5',
+			'MiniLM',
+			'FastAPI',
+			'React',
+			'Docker',
+			'K-Means',
+		],
+		category: 'data-science',
+		status: 'live' as const,
+		metrics: [
+			{ value: 'EfficientNet-B0', key: 'Vision Model' },
+			{ value: 'Flan-T5', key: 'Caption Gen.' },
+			{ value: 'EN/FR/AR', key: 'Trilingual UI' },
+			{ value: 'No APIs', key: 'Fully Local' },
+		],
+		featured: true,
+		architecture: [
+			{ from: 'Ad Image', to: 'EfficientNet-B0', highlight: true },
+			{ from: 'EfficientNet-B0', to: 'Mood + Content Type', highlight: true },
+			{ from: 'Ad Copy', to: 'MiniLM Encoder', highlight: true },
+			{ from: 'MiniLM Encoder', to: 'Alignment Score (cosine)', highlight: true },
+			{ label: 'Flan-T5 → Caption Generation', accent: true },
+			{ label: 'FastAPI + Docker → React UI (EN/FR/AR)', accent: true },
+		],
+		link: 'https://github.com/idrissiradi/ad-creative-analyzer',
+	},
+	{
+		title: 'Sentiment Classifier — GloVe + LSTM on SST-2',
+		description:
+			'NLP pipeline for binary sentiment classification on the Stanford Sentiment Treebank (SST-2). Pre-trained GloVe-100d embeddings loaded as a frozen embedding layer, passed into a bidirectional LSTM with dropout regularization. Trained with Adam optimizer and binary cross-entropy loss. Achieved ~81.8% accuracy on the SST-2 validation set, matching reported benchmarks for non-transformer LSTM baselines on this dataset.',
+		image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&auto=format&fit=crop',
+		tech: [
+			'PyTorch',
+			'GloVe-100d',
+			'LSTM',
+			'NLP',
+			'SST-2',
+			'Python',
+			'NumPy',
+		],
+		category: 'data-science',
+		status: 'completed' as const,
+		metrics: [
+			{ value: '81.8%', key: 'Val. Accuracy' },
+			{ value: 'GloVe-100d', key: 'Embeddings' },
+			{ value: 'BiLSTM', key: 'Architecture' },
+		],
+		link: 'https://github.com/idrissiradi/glove-sentiment',
+	},
+	{
 		title: 'Fraud Detection System',
 		description:
 			'Binary classification pipeline on 6.3M+ financial transactions with severe class imbalance (0.3% fraud). Applied class_weight="balanced" to handle imbalance without oversampling. Built a full scikit-learn Pipeline with preprocessing (StandardScaler, OneHotEncoder) and Logistic Regression. Prioritized recall over precision to minimize missed fraud cases — a false negative is far more costly than a false positive in financial fraud. Deployed as an interactive Streamlit app for real-time transaction prediction.',
 
-		image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+		image: '',
 		tech: [
 			'Python',
 			'scikit-learn',
@@ -116,7 +174,7 @@ export const projects = [
 		description:
 			'End-to-end PySpark MLlib classification pipeline on a Hadoop/YARN distributed cluster. Full pipeline: data cleaning, StringIndexer → OneHotEncoder → Imputer → VectorAssembler, then three classifiers (Logistic Regression, Decision Tree, Random Forest) trained and evaluated on AUC-ROC, F1, and Accuracy. Models and predictions persisted to HDFS as Parquet.',
 		image: titanicMlImg,
-		tech: ['PySpark', 'Hadoop', 'YARN', 'MLlib', 'Python'],
+		tech: [ 'PySpark', 'Hadoop', 'YARN', 'MLlib', 'Python' ],
 		category: 'data-science',
 		status: 'completed' as const,
 		metrics: [
@@ -177,7 +235,7 @@ export const projects = [
 		description:
 			'Logistic regression with structured feature engineering from raw fields: title extraction from passenger names (Mr/Mrs/Miss/Master), family size construction, cabin deck encoding, age binning. Used sklearn Pipeline to prevent data leakage. Result: 81% local accuracy, 77% Kaggle public leaderboard score.',
 		image: titanicMlImg,
-		tech: ['scikit-learn', 'pandas', 'Pipeline', 'Kaggle'],
+		tech: [ 'scikit-learn', 'pandas', 'Pipeline', 'Kaggle' ],
 		category: 'data-science',
 		status: 'completed' as const,
 		metrics: [
@@ -227,7 +285,7 @@ export const projects = [
 		description:
 			'A multi-tenant reservation platform for restaurants, hotels, and event venues. Features real-time availability checking, automated booking confirmations, and a comprehensive admin dashboard for managing reservations across multiple locations.',
 		image: restaurantImg,
-		tech: ['Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js'],
+		tech: [ 'Django', 'Tailwind CSS', 'PostgreSQL', 'HTMX', 'Alpine.js' ],
 		category: 'web-development',
 		status: 'live' as const,
 	},
@@ -236,7 +294,7 @@ export const projects = [
 		description:
 			'A travel companion app that generates personalized trip itineraries based on user preferences, offers interactive destination guides, and integrates seamless booking for flights and accommodations.',
 		image: travelImg,
-		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
+		tech: [ 'Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js' ],
 		category: 'web-development',
 		status: 'live' as const,
 	},
@@ -245,7 +303,7 @@ export const projects = [
 		description:
 			'A comprehensive gym platform featuring personalized workout plans, live streaming fitness classes, progress tracking with analytics, and member scheduling with class reservations.',
 		image: fitnessImg,
-		tech: ['Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js'],
+		tech: [ 'Django', 'MySQL', 'Tailwind CSS', 'HTMX', 'Alpine.js' ],
 		category: 'web-development',
 		status: 'live' as const,
 	},
@@ -254,7 +312,7 @@ export const projects = [
 		description:
 			'An online ordering platform with custom pizza builder, real-time order tracking, secure payment processing, and Redis-powered session management for optimal cart performance.',
 		image: pizzaImg,
-		tech: ['Django', 'React', 'PostgreSQL', 'Redis'],
+		tech: [ 'Django', 'React', 'PostgreSQL', 'Redis' ],
 		category: 'web-development',
 		status: 'live' as const,
 	},
@@ -266,8 +324,8 @@ export const skillCategories = [
 		skills: [
 			'Python',
 			'scikit-learn',
-			'TensorFlow',
 			'PyTorch',
+			'HuggingFace',
 			'Pandas',
 			'NumPy',
 			'Matplotlib',
@@ -320,7 +378,7 @@ export const skillCategories = [
 	},
 	{
 		title: 'Database & Storage',
-		skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+		skills: [ 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis' ],
 	},
 ];
 
@@ -364,6 +422,7 @@ export const experiences = [
 		current: false,
 	},
 	{
+<<<<<<< HEAD
 	    title: 'IT Technician & Data Management',
 	    company: 'ONSSA Marrakech',
 	    period: 'Oct 2022 – Mar 2024',
@@ -373,6 +432,17 @@ export const experiences = [
 	        'Technical support, end-user training, data processing and Excel reporting.',
 	    tech: ['Excel', 'Windows', 'Microsoft Office', 'Technical Support'],
 	    current: false,
+=======
+		title: 'IT Technician & Data Management',
+		company: 'ONSSA Marrakech',
+		period: 'Oct 2022 – Mar 2024',
+		type: 'Full-time',
+		location: 'Marrakesh, Morocco',
+		description:
+			'Technical support, end-user training, data processing and Excel reporting.',
+		tech: [ 'Excel', 'Windows', 'Microsoft Office', 'Technical Support' ],
+		current: false,
+>>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
 	},
 	{
 		title: 'Web Developer Intern',
@@ -382,7 +452,7 @@ export const experiences = [
 		location: 'Marrakesh, Morocco',
 		description:
 			'Worked on full-stack development tasks using Node.js, Express.js, and React.js. Contributed to internal tools and client projects under supervision.',
-		tech: ['Node.js', 'Express.js', 'React.js', 'JavaScript'],
+		tech: [ 'Node.js', 'Express.js', 'React.js', 'JavaScript' ],
 		current: false,
 	},
 	{
@@ -393,7 +463,7 @@ export const experiences = [
 		location: 'Marrakesh, Morocco',
 		description:
 			'Built internal web platforms using Django, MySQL, and Tailwind CSS. Assisted in backend development, database modeling, and UI improvements.',
-		tech: ['Django', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Python'],
+		tech: [ 'Django', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Python' ],
 		current: false,
 	},
 ];
@@ -407,8 +477,7 @@ export const education = [
 			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
 		tags: [
 			'Deep Learning',
-			'Big Data Architecture',
-			'Data Warehouse',
+			'Big Data',
 			'Machine Learning',
 			'Data Science',
 		],
@@ -497,4 +566,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
+	cv: 'https://www.idradi.com/',
 };

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Send } from "lucide-react";
+import { FileDown, Github, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { socialLinks } from "@/constants/portfolio-data";
 import SectionTag from "../SectionTag";
@@ -19,13 +19,14 @@ export const ContactSection = () => {
                 >
                     <SectionTag label="Get in touch" />
                     <h2 className="font-display text-5xl md:text-7xl mb-2">
+<<<<<<< HEAD
                         Open to <span className="text-gradient-primary">Internship</span>
+=======
+                        Open to <span className="text-gradient-primary">Work</span>
+>>>>>>> a27be65 (feat: update portfolio content and improve project descriptions; modify file permissions and dependencies)
                     </h2>
-                    <p className="font-display text-3xl md:text-4xl text-muted-foreground mb-6">
-                        May – July 2026
-                    </p>
                     <p className="text-muted-foreground text-base max-w-xl mx-auto mb-10">
-                        Looking for opportunities in Data Science, ML Engineering or Data Engineering. Based in Marrakech — open to remote and relocation.
+                        Looking for opportunities in Data Science, ML. Based in Marrakech — open to remote and relocation.
                     </p>
 
                     <motion.div
@@ -65,6 +66,17 @@ export const ContactSection = () => {
                             <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
                                 <Github className="mr-2 h-4 w-4" />
                                 GitHub
+                            </a>
+                        </Button>
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            className="border-accent/50 text-accent hover:bg-accent/10 hover:border-accent font-mono text-xs tracking-widest uppercase"
+                            asChild
+                        >
+                            <a href={socialLinks.cv} target="_blank" rel="noopener noreferrer">
+                                <FileDown className="mr-2 h-4 w-4" />
+                                Download CV
                             </a>
                         </Button>
                     </motion.div>
