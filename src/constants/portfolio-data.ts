@@ -489,7 +489,7 @@ export const education = [
 	{
 		degree: "Bachelor's Degree in AI Engineering, Machine Learning & Big Data",
 		school: 'National School of Applied Sciences of Khouribga (ENSA Khouribga)',
-		period: 'Oct 2025 – Present',
+		period: 'Oct 2025 – Jun 2026',
 		description:
 			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
 		tags: [
@@ -498,7 +498,7 @@ export const education = [
 			'Machine Learning',
 			'Data Science',
 		],
-		current: true,
+		current: false,
 	},
 	{
 		degree: 'Higher Technician Diploma in Information Systems Development',
