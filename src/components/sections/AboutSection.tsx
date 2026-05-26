@@ -32,7 +32,7 @@ export const AboutSection = () => {
                         </p>
                         <p className="text-muted-foreground">
 
-                            Completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga. <span className="text-primary font-medium">urrently open to full-time opportunities.</span> Based in Marrakech, open to on-site, remote, or relocation.
+                            Completing a Licence Professionnelle in AI, Machine Learning & Big Data at ENSA Khouribga. <span className="text-primary font-medium">Currently open to full-time opportunities.</span> Based in Marrakech, open to on-site, remote, or relocation.
 
                         </p>
                         {/* Quick skills grid */}
