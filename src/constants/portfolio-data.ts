@@ -15,7 +15,7 @@ export const skills = [
 
 export const stackGroups = [
 	{
-		name: 'ML & Data Science',
+		name: 'ML / Deep learning & Data Science',
 		pills: [
 			{ label: 'Python', active: true },
 			{ label: 'scikit-learn', active: true },
