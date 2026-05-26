@@ -7,7 +7,7 @@ import fitnessImg from '../assets/images/fitness_management.avif';
 import pizzaImg from '../assets/images/pizza_ordering.avif';
 
 export const skills = [
-	{ icon: Brain, title: 'Machine Learning & Data Science', color: 'accent' },
+	{ icon: Brain, title: 'Machine Learning & Deep Learning', color: 'accent' },
 	{ icon: Code2, title: 'Full-Stack Engineering', color: 'primary' },
 	{ icon: BarChart3, title: 'Big Data & Data Engineering', color: 'accent' },
 	{ icon: Server, title: 'MLOps & API Deployment', color: 'primary' },
