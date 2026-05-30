@@ -12,7 +12,84 @@ const categoryMap: Record<string, string> = {
     "Web Development": "web-development",
 };
 
+interface ArchNode {
+    label?: string;
+    sublabel?: string;
+    accent?: boolean;
+    from?: string;
+    to?: string;
+    highlight?: boolean;
+}
 
+const ArchDiagram = ({ nodes }: { nodes: ArchNode[] }) => {
+    // Flatten all nodes into a single list of chips
+    const chips = nodes.flatMap((node) => {
+        if ('from' in node && node.from && node.to) {
+            return [
+                { label: node.from, sublabel: undefined },
+                { label: node.to, sublabel: undefined },
+            ];
+        }
+        return [ { label: node.label ?? '', sublabel: node.sublabel } ];
+    });
+
+    // Deduplicate consecutive identical labels
+    const deduped = chips.filter((chip, i) =>
+        i === 0 || chip.label !== chips[ i - 1 ].label
+    );
+
+    const chipClass = (i: number) =>
+        i === deduped.length - 1
+            ? 'border-accent/60 bg-accent/5'
+            : 'border-primary/40 bg-primary/5';
+
+    const textClass = (i: number) =>
+        i === deduped.length - 1 ? 'text-accent' : 'text-primary';
+
+    return (
+        <div className="bg-secondary/30 border border-border rounded-sm p-4 min-w-0 flex flex-col justify-center">
+            {/* D-style: scrollable strip on mobile */}
+            <div className="flex gap-2 overflow-x-scroll pb-1 md:hidden">
+                {deduped.map((chip, i) => (
+                    <div key={i} className="flex items-center gap-2 shrink-0">
+                        <div className={`border rounded-md px-3 py-2 min-w-20 text-center ${chipClass(i)}`}>
+                            {chip.sublabel && (
+                                <div className="font-mono text-[9px] tracking-widest uppercase text-muted-foreground mb-0.5">
+                                    {chip.sublabel}
+                                </div>
+                            )}
+                            <div className={`font-mono text-[11px] font-semibold leading-tight ${textClass(i)}`}>
+                                {chip.label}
+                            </div>
+                        </div>
+                        {i < deduped.length - 1 && (
+                            <span className="text-muted-foreground text-sm shrink-0">›</span>
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            {/* C-style: 2-col grid on md+ */}
+            <div className="hidden md:grid grid-cols-2 gap-2">
+                {deduped.map((chip, i) => (
+                    <div
+                        key={i}
+                        className={`border rounded-md px-3 py-2 text-center ${chipClass(i)}`}
+                    >
+                        {chip.sublabel && (
+                            <div className="font-mono text-[9px] tracking-widest uppercase text-muted-foreground mb-0.5">
+                                {chip.sublabel}
+                            </div>
+                        )}
+                        <div className={`font-mono text-xs font-semibold leading-tight ${textClass(i)}`}>
+                            {chip.label}
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
 
 export const ProjectsSection = () => {
     const [ activeCategory, setActiveCategory ] = useState("All");
@@ -20,6 +97,7 @@ export const ProjectsSection = () => {
     const filteredProjects = activeCategory === "All"
         ? projects
         : projects.filter(project => project.category === categoryMap[ activeCategory ]);
+
     return (
         <section id="projects" className="py-24 px-4 md:px-8 bg-card/30">
             <div className="max-w-6xl mx-auto">
@@ -31,7 +109,7 @@ export const ProjectsSection = () => {
                     transition={{ duration: 0.8 }}
                     className="mb-16"
                 >
-                    <h2 className="font-display text-5xl md:text-7xl mb-4">
+                    <h2 className="font-display text-5xl md:text-7xl mb-4 text-center md:text-left">
                         ML Projects &<br /><span className="text-gradient-primary">Data Systems</span>
                     </h2>
                 </motion.div>
@@ -71,26 +149,31 @@ export const ProjectsSection = () => {
                                 className="group"
                             >
                                 {project.featured ? (
-                                    /* Featured card with architecture diagram */
-                                    <div className="relative glass-card rounded-lg overflow-hidden border-l-[3px] border-l-primary">
-                                        <div className="grid lg:grid-cols-2 gap-6 p-6">
-                                            <div className="space-y-4">
-                                                {/* Status */}
+                                    /* ── FEATURED CARD ── */
+                                    <div className="relative glass-card rounded-lg overflow-hidden border-l-[3px] border-l-primary w-full min-w-0">
+                                        <div className="grid lg:grid-cols-2 gap-6 p-4 md:p-6">
+
+                                            {/* Left: text */}
+                                            <div className="space-y-4 min-w-0">
                                                 <div className="flex items-center gap-2 font-mono text-xs tracking-[0.15em] uppercase">
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'completed'
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${project.status === 'completed'
                                                         ? 'bg-accent shadow-[0_0_6px] shadow-accent'
-                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'
-                                                        }`} />
+                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'}`} />
                                                     <span className={project.status === 'completed' ? 'text-accent' : 'text-primary'}>
                                                         {project.status === 'completed' ? 'Complete' : 'Live'}
                                                     </span>
                                                 </div>
-                                                <h3 className="font-display text-2xl md:text-3xl text-foreground">{project.title}</h3>
-                                                <p className="text-secondary-foreground text-sm leading-relaxed">{project.description}</p>
 
-                                                {/* Model Metrics */}
+                                                <h3 className="font-display text-2xl md:text-3xl text-foreground wrap_wrap_break-words">
+                                                    {project.title}
+                                                </h3>
+
+                                                <p className="text-secondary-foreground text-sm leading-relaxed wrap_wrap_break-words">
+                                                    {project.description}
+                                                </p>
+
                                                 {project.metrics && (
-                                                    <div className="flex gap-4 p-3 bg-primary/5 border border-primary/10 rounded-sm">
+                                                    <div className="flex flex-wrap gap-3 p-3 bg-primary/5 border border-primary/10 rounded-sm">
                                                         {project.metrics.map((m) => (
                                                             <div key={m.key} className="flex flex-col">
                                                                 <span className="font-mono text-base font-bold text-primary">{m.value}</span>
@@ -109,43 +192,23 @@ export const ProjectsSection = () => {
                                                 </div>
 
                                                 {project.link && (
-                                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs text-primary hover:gap-3 transition-all">
+                                                    <a href={project.link} target="_blank" rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-2 font-mono text-xs text-primary hover:gap-3 transition-all">
                                                         View on GitHub <ArrowRight className="h-3 w-3" />
                                                     </a>
                                                 )}
                                             </div>
 
-                                            {/* Architecture Diagram */}
+                                            {/* Right: architecture diagram */}
                                             {project.architecture && (
-                                                <div className="bg-secondary/30 border border-border rounded-sm p-5 flex flex-col justify-center gap-2">
-                                                    {project.architecture.map((node, i) => (
-                                                        <div key={i} className="font-mono text-xs text-muted-foreground flex items-center gap-3">
-                                                            {'from' in node ? (
-                                                                <>
-                                                                    <span className={`px-2.5 py-1 border rounded-sm ${node.highlight ? 'border-primary text-primary' : 'border-border'} bg-secondary/50`}>
-                                                                        {node.from}
-                                                                    </span>
-                                                                    <span className="text-muted-foreground">──▶</span>
-                                                                    <span className={`px-2.5 py-1 border rounded-sm ${node.highlight ? 'border-primary text-primary' : 'border-border'} bg-secondary/50`}>
-                                                                        {node.to}
-                                                                    </span>
-                                                                </>
-                                                            ) : (
-                                                                <span className={`px-2.5 py-1 border rounded-sm ${node.accent ? 'border-accent text-accent' : 'border-border'} bg-secondary/50`}>
-                                                                    {node.label}
-                                                                </span>
-                                                            )}
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                                <ArchDiagram nodes={project.architecture} />
                                             )}
                                         </div>
                                     </div>
                                 ) : (
-                                    /* Regular project card */
-                                    <div className="relative glass-card rounded-lg overflow-hidden border-l-[3px] border-l-transparent hover:border-l-primary transition-all duration-300">
-                                        <div className={`grid lg:grid-cols-2 gap-6 items-center ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}>
-                                            {/* Image */}
+                                    /* ── REGULAR CARD ── */
+                                    <div className="relative glass-card rounded-lg overflow-hidden border-l-[3px] border-l-transparent hover:border-l-primary transition-all duration-300 w-full min-w-0">
+                                        <div className="grid lg:grid-cols-2 gap-0 lg:gap-6 items-center">
                                             <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                                                 <div className="aspect-video overflow-hidden">
                                                     <img
@@ -156,27 +219,25 @@ export const ProjectsSection = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Content */}
-                                            <div className={`space-y-4 p-6 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                                {/* Status */}
+                                            <div className={`space-y-4 p-4 md:p-6 min-w-0 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                                                 <div className="flex items-center gap-2 font-mono text-xs tracking-[0.15em] uppercase">
-                                                    <span className={`w-1.5 h-1.5 rounded-full ${project.status === 'completed'
+                                                    <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${project.status === 'completed'
                                                         ? 'bg-accent shadow-[0_0_6px] shadow-accent'
-                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'
-                                                        }`} />
+                                                        : 'bg-primary shadow-[0_0_6px] shadow-primary'}`} />
                                                     <span className={project.status === 'completed' ? 'text-accent' : 'text-primary'}>
                                                         {project.status === 'completed' ? 'Complete' : 'Live'}
                                                     </span>
                                                 </div>
 
-                                                <h3 className="font-display text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors">
+                                                <h3 className="font-display text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors wrap_wrap_wrap_break-words">
                                                     {project.title}
                                                 </h3>
-                                                <p className="text-secondary-foreground text-sm leading-relaxed">{project.description}</p>
+                                                <p className="text-secondary-foreground text-sm leading-relaxed wrap_wrap_break-words">
+                                                    {project.description}
+                                                </p>
 
-                                                {/* Model Metrics */}
                                                 {project.metrics && (
-                                                    <div className="flex gap-4 p-3 bg-primary/5 border border-primary/10 rounded-sm">
+                                                    <div className="flex flex-wrap gap-3 p-3 bg-primary/5 border border-primary/10 rounded-sm">
                                                         {project.metrics.map((m) => (
                                                             <div key={m.key} className="flex flex-col">
                                                                 <span className="font-mono text-base font-bold text-primary">{m.value}</span>
@@ -195,7 +256,8 @@ export const ProjectsSection = () => {
                                                 </div>
 
                                                 {project.link && (
-                                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs text-primary hover:gap-3 transition-all">
+                                                    <a href={project.link} target="_blank" rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-2 font-mono text-xs text-primary hover:gap-3 transition-all">
                                                         View on GitHub <ArrowRight className="h-3 w-3" />
                                                     </a>
                                                 )}
