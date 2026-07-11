@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('/src/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  src: url('/src/assets/fonts/JetBrainsMono-Medium.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -32,6 +32,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -65,6 +66,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-glow-primary: var(--glow-primary);
   --color-glow-accent: var(--glow-accent);
+
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
@@ -239,6 +241,36 @@
   --sidebar-ring: oklch(0.729 0.123 192.441);
 }
 
+/* Optional light theme */
+.light {
+  --background: #F5F1EA;
+  --foreground: #0B1414;
+  --card: #FFFFFF;
+  --card-foreground: #0B1414;
+  --popover: #FFFFFF;
+  --popover-foreground: #0B1414;
+  --primary: #0E9491;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EDE7DA;
+  --secondary-foreground: #2A2A28;
+  --muted: #F0EBE0;
+  --muted-foreground: #6B6B66;
+  --accent: #B33A2E;
+  --accent-foreground: #FFFFFF;
+  --border: #D4CFC1;
+  --input: #D4CFC1;
+  --ring: #0E9491;
+
+  --bg: #F5F1EA;
+  --surface: #FFFFFF;
+  --surface-2: #EDE7DA;
+  --ink: #0B1414;
+  --ink-2: #2A2A28;
+  --ink-3: #6B6B66;
+  --ink-4: #A6A39A;
+  --rule: #D4CFC1;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -246,11 +278,13 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
   }
 
   h1,
@@ -269,7 +303,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--primary) 6%, transparent) 1px, transparent 1px);
   background-size: 32px 32px;
   pointer-events: none;
   z-index: 0;
@@ -278,6 +312,7 @@ body::before {
 #root {
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -297,6 +332,16 @@ body::before {
     box-shadow: 0 0 40px oklch(0.745 0.151 64.042 / 0.3);
   }
 
+  .glow-hover {
+    transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  }
+
+  .glow-hover:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--primary) 45%, var(--border));
+    box-shadow: 0 14px 36px -24px var(--primary);
+  }
+
   .glass-card {
     @apply bg-card/80 backdrop-blur-xl border border-border/50;
   }
@@ -307,5 +352,11 @@ body::before {
   .cursor-none,
   .cursor-none * {
     cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-hover:hover {
+    transform: none;
   }
 }

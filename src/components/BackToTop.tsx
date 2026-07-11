@@ -21,9 +21,11 @@ export const BackToTop = () => {
     return (
         <Button
             onClick={scrollToTop}
-            aria-label="Open menu"
+            aria-label="Back to top"
+            aria-hidden={!isVisible}
+            tabIndex={isVisible ? 0 : -1}
             size="icon"
-            className={`fixed bottom-6 right-6 z-50 rounded-full transition-all duration-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+            className={`fixed bottom-6 right-6 z-50 rounded-full bg-primary text-primary-foreground transition-all duration-300 hover:bg-accent hover:text-accent-foreground ${isVisible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-16 opacity-0"
                 }`}
         >
             <ArrowUp className="w-5 h-5" />

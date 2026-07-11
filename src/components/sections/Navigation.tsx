@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { LiveClock } from "../LiveClock";
 import { navLinks } from "@/constants/portfolio-data";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navigation = () => {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -58,14 +59,17 @@ export const Navigation = () => {
                         ))}
                     </div>
 
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        className="md:hidden"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                    </Button>
+                    <div className="flex items-center gap-2">
+                        <ThemeToggle />
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="md:hidden"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                        </Button>
+                    </div>
                 </nav>
             </motion.header>
 

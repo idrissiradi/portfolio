@@ -1,88 +1,79 @@
-import { motion } from "framer-motion";
-import { FileDown, Github, Linkedin, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { socialLinks } from "@/constants/portfolio-data";
-import SectionTag from "../SectionTag";
+import { motion } from 'framer-motion';
+import { FileDown, Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
+import { socialLinks } from '@/constants/portfolio-data';
 
 export const ContactSection = () => {
-    return (
-        <section id="contact" className="py-24 px-4 md:px-8 bg-card/30 relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
+	return (
+		<section id='contact' className='px-4 py-16 sm:px-6 sm:py-20 lg:px-8'>
+			<div className='mx-auto max-w-[1100px]'>
+				<motion.div
+					initial={{ opacity: 0, y: 40 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: '-100px' }}
+					transition={{ duration: 0.8 }}
+					className='glass-card relative overflow-hidden rounded-3xl p-6 text-center sm:p-10 lg:p-14'>
+					<div className='pointer-events-none absolute -right-24 -top-24 h-72 w-72 animate-float rounded-full bg-primary/15 blur-3xl' />
+					<div className='pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 animate-float rounded-full bg-accent/10 blur-3xl [animation-delay:-3s]' />
 
-            <div className="max-w-4xl mx-auto relative">
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center"
-                >
-                    <SectionTag label="Get in touch" />
-                    <h2 className="font-display text-5xl md:text-7xl mb-2">
+					<div className='relative'>
+						<p className='mb-3 font-mono text-xs uppercase tracking-[0.2em] text-primary'>
+							Contact
+						</p>
+						<h2 className='mx-auto max-w-[16ch] font-sans text-3xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-[44px] lg:text-[56px]'>
+							Open to{' '}
+							<span className='text-gradient-primary'>Work</span>
+						</h2>
+						<p className='mx-auto mt-4 max-w-[56ch] text-[15px] leading-relaxed text-secondary-foreground sm:text-base'>
+							Looking for opportunities in Data Science or Machine
+							Learning. <br />
+							open to on-site, remote, hybrid, and relocation. The
+							fastest way to reach me is email.
+						</p>
 
-                        Open to <span className="text-gradient-primary">Work</span>
+						<div className='mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[12.5px] text-muted-foreground'>
+							<span className='inline-flex items-center gap-1.5'>
+								<MapPin className='h-3.5 w-3.5' /> Marrakech,
+								Morocco
+							</span>
+							<span className='text-muted-foreground/60'>·</span>
+							<span className='inline-flex items-center gap-1.5'>
+								<Mail className='h-3.5 w-3.5' />{' '}
+								{socialLinks.email}
+							</span>
+						</div>
 
-                    </h2>
-                    <p className="text-muted-foreground text-base max-w-xl mx-auto mb-10">
-                        Looking for opportunities in Data Science or ML Engineering. <br />
-                        Based in Marrakech — open to on-site, remote, and relocation. <br />
-                        Feel free to reach out for collaborations, questions, or just a friendly chat!
-                    </p>
-
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="flex flex-wrap gap-4 justify-center"
-                    >
-                        <Button
-                            size="lg"
-                            className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary group font-mono text-xs tracking-widest uppercase"
-                            asChild
-                        >
-                            <a href={`mailto:${socialLinks.email}`} className="flex items-center">
-                                <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                {socialLinks.email}
-                            </a>
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-border hover:border-primary/50 hover:text-primary font-mono text-xs tracking-widest uppercase"
-                            asChild
-                        >
-                            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                                <Linkedin className="mr-2 h-4 w-4" />
-                                LinkedIn
-                            </a>
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-border hover:border-primary/50 hover:text-primary font-mono text-xs tracking-widest uppercase"
-                            asChild
-                        >
-                            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
-                                <Github className="mr-2 h-4 w-4" />
-                                GitHub
-                            </a>
-                        </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-accent/50 text-accent hover:bg-accent/10 hover:border-accent font-mono text-xs tracking-widest uppercase"
-                            asChild
-                        >
-                            <a href={socialLinks.cv} target="_blank" rel="noopener noreferrer">
-                                <FileDown className="mr-2 h-4 w-4" />
-                                Download CV
-                            </a>
-                        </Button>
-                    </motion.div>
-                </motion.div>
-            </div>
-        </section>
-    );
+						<div className='mt-8 flex flex-wrap items-center justify-center gap-2.5'>
+							<a
+								href={`mailto:${socialLinks.email}`}
+								className='group inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 font-mono text-[13px] font-semibold uppercase tracking-wider text-primary-foreground shadow-[0_0_32px_color-mix(in_oklab,var(--primary)_30%,transparent)] transition-all hover:bg-primary/90'>
+								<Send className='h-4 w-4 transition-transform group-hover:translate-x-1' />{' '}
+								{socialLinks.email}
+							</a>
+							<a
+								href={socialLinks.linkedin}
+								target='_blank'
+								rel='noopener noreferrer'
+								className='inline-flex h-12 items-center gap-2 rounded-full border border-border px-5 font-mono text-[13px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary'>
+								<Linkedin className='h-4 w-4' /> LinkedIn
+							</a>
+							<a
+								href={socialLinks.github}
+								target='_blank'
+								rel='noopener noreferrer'
+								className='inline-flex h-12 items-center gap-2 rounded-full border border-border px-5 font-mono text-[13px] font-semibold uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary'>
+								<Github className='h-4 w-4' /> GitHub
+							</a>
+							<a
+								href={socialLinks.cv}
+								target='_blank'
+								rel='noopener noreferrer'
+								className='inline-flex h-12 items-center gap-2 rounded-full border border-accent/50 px-5 font-mono text-[13px] font-semibold uppercase tracking-wider text-accent transition-colors hover:border-accent hover:bg-accent hover:text-accent-foreground'>
+								<FileDown className='h-4 w-4' /> Download CV
+							</a>
+						</div>
+					</div>
+				</motion.div>
+			</div>
+		</section>
+	);
 };
