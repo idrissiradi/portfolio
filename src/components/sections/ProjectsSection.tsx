@@ -112,6 +112,7 @@ export const ProjectsSection = () => {
 														href={project.link}
 														target='_blank'
 														rel='noopener noreferrer'
+														aria-label={`View ${project.title} on GitHub`}
 														className='inline-flex items-center gap-1.5 font-mono text-xs font-semibold uppercase tracking-wider text-primary transition-colors hover:text-accent'>
 														View on GitHub{' '}
 														<ArrowRight className='h-3.5 w-3.5' />

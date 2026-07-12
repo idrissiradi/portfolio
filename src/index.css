@@ -161,7 +161,7 @@
   /* Muted elements - darker */
   --muted: oklch(0.35 0.012 264.052);
   /* Darker: was 0.419 */
-  --muted-foreground: oklch(0.598 0.009 264.052);
+  --muted-foreground: oklch(0.72 0.009 264.052);
 
   /* Accent: Warm amber glow - HSL 35 95% 55% -> OKLCH */
   --accent: oklch(0.745 0.151 64.042);
@@ -219,7 +219,7 @@
   --secondary: oklch(0.32 0.012 264.052);
   --secondary-foreground: oklch(0.87 0 0);
   --muted: oklch(0.35 0.012 264.052);
-  --muted-foreground: oklch(0.598 0.009 264.052);
+  --muted-foreground: oklch(0.72 0.009 264.052);
   --accent: oklch(0.745 0.151 64.042);
   --accent-foreground: oklch(0.15 0.015 264.052);
   --destructive: oklch(0.55 0.22 29.234);
