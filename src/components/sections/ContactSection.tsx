@@ -23,7 +23,7 @@ export const ContactSection = () => {
 							Open to{' '}
 							<span className='text-gradient-primary'>Work</span>
 						</h2>
-						<p className='mx-auto mt-4 max-w-[56ch] text-[15px] leading-relaxed text-secondary-foreground sm:text-base'>
+						<p className='mx-auto mt-4 max-w-[68ch] text-[15px] leading-relaxed text-secondary-foreground sm:text-base'>
 							Looking for opportunities in Data Science or Machine
 							Learning. <br />
 							open to on-site, remote, hybrid, and relocation. The
