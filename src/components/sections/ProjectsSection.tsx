@@ -88,7 +88,7 @@ export const ProjectsSection = () => {
 													</span>
 												</div>
 
-												<h3 className='mb-2 text-xl font-bold leading-tight tracking-tight text-foreground transition-colors group-hover:text-primary sm:text-2xl font-display'>
+												<h3 className='mb-2 text-xl leading-tight tracking-tight text-foreground transition-colors group-hover:text-primary sm:text-2xl font-display'>
 													{project.title}
 												</h3>
 												<p className='mb-5 text-[13.5px] leading-relaxed text-secondary-foreground'>
