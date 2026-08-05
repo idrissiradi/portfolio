@@ -1,9 +1,10 @@
-import Index from "./pages/Index";
+import Index from './pages/Index';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const App = () => (
-  <main>
-    <Index />
-  </main>
+	<ThemeProvider>
+		<Index />
+	</ThemeProvider>
 );
 
 export default App;
