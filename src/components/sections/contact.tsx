@@ -14,26 +14,31 @@ export function Contact() {
 			<div className='mt-6 flex flex-wrap gap-5 font-mono text-[13px]'>
 				<a
 					href={`mailto:${socialLinks.email}`}
+					target='_blank'
 					className='text-primary underline-offset-4 hover:underline'>
 					Email
 				</a>
 				<a
 					href={socialLinks.github}
+					target='_blank'
 					className='text-primary underline-offset-4 hover:underline'>
 					GitHub
 				</a>
 				<a
 					href={socialLinks.linkedin}
+					target='_blank'
 					className='text-primary underline-offset-4 hover:underline'>
 					LinkedIn
 				</a>
 				<a
 					href={socialLinks.x}
+					target='_blank'
 					className='text-primary underline-offset-4 hover:underline'>
 					X
 				</a>
 				<a
 					href={socialLinks.cv}
+					target='_blank'
 					className='text-primary underline-offset-4 hover:underline'>
 					Download CV
 				</a>
