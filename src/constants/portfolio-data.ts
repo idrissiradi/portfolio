@@ -463,7 +463,7 @@ export const certificates = [
 		date: '2026',
 		description:
 			'Professional PyTorch track — building, training, and evaluating deep learning models, with emphasis on real-world deep learning workflows.',
-		credentialUrl: 'https://www.deeplearning.ai/certificates/',
+		credentialUrl: 'https://coursera.org/share/511cfd1cff4e6f00dc2e2f8d4d6fbdf7',
 	},
 	// ── DataCamp — Science tracks ─────────────────────────────────
 	{
@@ -502,5 +502,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
-	cv: 'https://drive.google.com/file/d/1zg-chXL9FVpkIjhlgQe5gwL1NOOR7b0n/preview',
+	cv: 'https://drive.google.com/file/d/1QUDPuYCD0Y2Go0XERZYc9lYZOyLd-6GM/preview',
 };
