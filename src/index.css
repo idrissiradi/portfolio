@@ -89,7 +89,6 @@
     opacity: 0;
     transform: translateY(12px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -153,7 +152,7 @@
   --popover: oklch(0.98 0.01 85);
   --popover-foreground: oklch(0.22 0.02 85);
 
-  --primary: oklch(0.4 0.06 175);
+  --primary: oklch(0.52 0.1 175);
   --primary-foreground: oklch(0.98 0.01 85);
 
   --secondary: oklch(0.88 0.03 80);
@@ -167,22 +166,22 @@
 
   --border: oklch(0.75 0.02 80);
   --input: oklch(0.75 0.02 80);
-  --ring: oklch(0.4 0.06 175);
+  --ring: oklch(0.52 0.1 175);
 
   --chart-1: oklch(0.5 0.15 35);
-  --chart-2: oklch(0.4 0.06 175);
+  --chart-2: oklch(0.52 0.1 175);
   --chart-3: oklch(0.65 0.13 75);
   --chart-4: oklch(0.65 0.13 75);
   --chart-5: oklch(0.5 0.15 35);
 
   --sidebar: oklch(0.9 0.02 85);
   --sidebar-foreground: oklch(0.22 0.02 85);
-  --sidebar-primary: oklch(0.4 0.06 175);
+  --sidebar-primary: oklch(0.52 0.1 175);
   --sidebar-primary-foreground: oklch(0.98 0.01 85);
   --sidebar-accent: oklch(0.88 0.03 80);
   --sidebar-accent-foreground: oklch(0.22 0.02 85);
   --sidebar-border: oklch(0.75 0.02 80);
-  --sidebar-ring: oklch(0.4 0.06 175);
+  --sidebar-ring: oklch(0.52 0.1 175);
 }
 
 @layer base {
@@ -201,14 +200,14 @@
     overflow-x: hidden;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.02em;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
   }
 }
 
@@ -219,13 +218,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }

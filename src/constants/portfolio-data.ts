@@ -110,7 +110,7 @@ export const projects = [
 			{ value: 'GloVe-100d', key: 'Embeddings' },
 			{ value: 'BiLSTM', key: 'Architecture' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{ from: 'Raw Text', to: 'GloVe-100d Embeddings', highlight: true },
 			{
@@ -149,7 +149,7 @@ export const projects = [
 			{ value: '6.3M+', key: 'Transactions' },
 			{ value: '0.3%', key: 'Fraud Rate' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{ from: 'Raw Data', to: 'EDA & Cleaning', highlight: true },
 			{ from: 'EDA & Cleaning', to: 'sklearn Pipeline', highlight: true },
@@ -174,7 +174,7 @@ export const projects = [
 			{ value: 'YARN', key: 'Cluster' },
 			{ value: 'MLlib', key: 'Framework' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{ from: 'Raw CSV', to: 'PySpark Pipeline', highlight: true },
 			{
@@ -212,7 +212,7 @@ export const projects = [
 			{ value: '400K+', key: 'Records' },
 			{ value: '50+', key: 'Features' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{
 				from: 'Auction Records 400K+',
@@ -253,7 +253,7 @@ export const projects = [
 			{ value: '92%', key: 'Recall' },
 			{ value: '86.7%', key: 'F1 Score' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{
 				from: 'Clinical Features',
@@ -288,7 +288,7 @@ export const projects = [
 			{ value: '81%', key: 'Local Acc.' },
 			{ value: '77%', key: 'Kaggle Score' },
 		],
-		featured: true,
+		featured: false,
 		architecture: [
 			{
 				from: 'Raw Passenger Data',
@@ -427,11 +427,17 @@ export const experiences = [
 
 export const education = [
 	{
+		degree: "Master's Degree in Data Science and Artificial Intelligence (SDIA)",
+		school: 'ENSET Mohammedia - Hassan II University of Casablanca',
+		period: 'oct 2026 – Jun 2028',
+		tags: ['AI', 'Machine Learning', 'Data Science', 'Deep Learning'],
+		current: true,
+	},
+	{
 		degree: "Professional Bachelor's Degree in Artificial Intelligence, Machine Learning & Big Data",
 		school: 'National School of Applied Sciences of Khouribga (ENSA Khouribga) - Khouribga, Morocco',
 		period: 'Oct 2025 – Jun 2026',
-		description:
-			'Currently pursuing a degree focused on AI, machine learning algorithms, data analysis, and big data technologies.',
+
 		tags: ['Deep Learning', 'Big Data', 'Machine Learning', 'Data Science'],
 		current: false,
 	},
@@ -439,15 +445,13 @@ export const education = [
 		degree: 'Higher Technician Diploma in Information Systems Development',
 		school: 'BTS Center Hassan II - Marrakesh, Morocco',
 		period: '2017 – 2019',
-		description:
-			'Completed advanced technician certificate in development of information systems.',
+		current: false,
 	},
 	{
 		degree: 'High School Diploma in Physical Sciences',
 		school: 'Maghreb Al Arabi High School - Marrakesh, Morocco',
 		period: '2015 – 2016',
-		description:
-			'Completed secondary education with a focus on physical sciences.',
+		current: false,
 	},
 ];
 

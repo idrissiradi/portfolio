@@ -1,4 +1,4 @@
-import { contactInfo } from "@/lib/data";
+import { socialLinks } from "@/constants/portfolio-data";
 
 export function Hero() {
   return (
@@ -17,14 +17,17 @@ export function Hero() {
       </p>
 
       <div className="mt-6 flex flex-wrap gap-5 font-mono text-[13px]">
-        <a href={`mailto:${contactInfo.email}`} className="text-primary underline-offset-4 hover:underline">
+        <a href={`mailto:${socialLinks.email}`} className="text-primary underline-offset-4 hover:underline">
           Email
         </a>
-        <a href={contactInfo.github} className="text-primary underline-offset-4 hover:underline">
+        <a href={socialLinks.github} className="text-primary underline-offset-4 hover:underline">
           GitHub
         </a>
-        <a href={contactInfo.linkedin} className="text-primary underline-offset-4 hover:underline">
+        <a href={socialLinks.linkedin} className="text-primary underline-offset-4 hover:underline">
           LinkedIn
+        </a>
+        <a href={socialLinks.x} className="text-primary underline-offset-4 hover:underline">
+          X
         </a>
       </div>
     </section>
