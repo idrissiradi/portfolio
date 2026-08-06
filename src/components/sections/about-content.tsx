@@ -10,7 +10,7 @@ export function AboutContent() {
 				I recently completed a{' '}
 				<strong className='font-semibold text-foreground'>
 					Professional Bachelor's degree in Artificial Intelligence,
-					Machine Learning &amp; Big, Data
+					Machine Learning &amp; Big Data,
 				</strong>{' '}
 				after close to two years working as a full-stack developer. That
 				background shapes how I build now. I'm now pursuing a Master's
