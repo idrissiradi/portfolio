@@ -66,9 +66,9 @@ export const navLinks = [
 export const projects = [
 	// ==================== DATA SCIENCE PROJECTS ====================
 	{
-		title: 'VisioMark — Multimodal AI Ad Creative Analyzer',
+		title: 'VisioMark (Multimodal Ad Creative Analyzer)',
 		description:
-			'PFE project: an end-to-end multimodal AI system that analyzes advertising creatives and generates captions. Uses PyTorch EfficientNet-B0 for content type and mood classification, HuggingFace MiniLM for text encoding, Flan-T5-base for caption generation, and cosine similarity for visual-text alignment scoring. K-Means extracts dominant colors. Built without any external APIs — all models trained and served locally. FastAPI backend and React frontend.',
+			'Final Year Capstone Project: an end-to-end multimodal AI system that analyzes advertising creatives and generates captions. Uses PyTorch EfficientNet-B0 for content type and mood classification, HuggingFace MiniLM for text encoding, Flan-T5-base for caption generation, and cosine similarity for visual-text alignment scoring. K-Means extracts dominant colors. Built without any external APIs — all models trained and served locally. FastAPI backend and React frontend.',
 		tech: [
 			'PyTorch',
 			'EfficientNet-B0',
@@ -91,7 +91,7 @@ export const projects = [
 		link: 'https://github.com/idrissiradi/ad-creative-analyzer',
 	},
 	{
-		title: 'Sentiment Classifier — GloVe + LSTM on SST-2',
+		title: 'Sentiment Classifier (GloVe + Bidirectional LSTM)⁠',
 		description:
 			'NLP pipeline for binary sentiment classification on the Stanford Sentiment Treebank (SST-2). Pre-trained GloVe-100d embeddings loaded as a frozen embedding layer, passed into a bidirectional LSTM with dropout regularization. Trained with Adam optimizer and binary cross-entropy loss. Achieved ~81.8% accuracy on the SST-2 validation set, matching reported benchmarks for non-transformer LSTM baselines on this dataset.',
 		tech: [
@@ -359,7 +359,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed and maintained full-stack web applications using FastAPI (Python), Laravel (PHP), React.js, and MySQL.\nDesigned and implemented RESTful APIs consumed by web clients.\nPerformed code reviews, technical support, and quality assurance across projects.',
+			'Developed and maintained web applications using Laravel, FastAPI, React and MySQL.\nBuilt an invoice scanner using FastAPI, React and PaddleOCR with a two-person intern team, then integrated it into the Evoleo accounting software.\nParticipated in integrating a hotel check-in/check-out system with the accounting software.\nReviewed and tested interns work, provided technical follow-up and technical support.',
 		tech: [
 			'FastAPI',
 			'Laravel',
@@ -378,7 +378,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Built responsive web applications using Django, Tailwind CSS, JavaScript, and MySQL.\nDesigned and implemented RESTful APIs consumed by web clients.\nPerformed code reviews, technical support, and quality assurance across projects.',
+			'Developed a reservation application for riads and vehicles using Django, htmx, tailwind and MySQL.\nImplemented authentication, dashboards, financial statistics and invoice generation.',
 		tech: [
 			'Django',
 			'MySQL',
@@ -397,7 +397,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Configured and maintained workstations, printers, and Windows/Office environments.\nTrained end-users on internal tools and procedures.\nProcessed operational data and produced structured Excel reports for management.',
+			'Configured and maintained workstations, printers, and Windows/Office environments.\nProvided IT support and technical assistance while processing data and preparing Excel reports.',
 		tech: ['Excel', 'Windows', 'Microsoft Office', 'Technical Support'],
 		current: false,
 	},
@@ -502,5 +502,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
-	cv: 'https://drive.google.com/file/d/1k10nlTAQCUOBZlW-u6qPoDZeWcb1WLrO/preview',
+	cv: 'https://drive.google.com/file/d/11hAtPetzRy7ZzNSZTgq5gSg7KbTbEa32/preview',
 };
