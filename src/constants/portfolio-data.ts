@@ -502,5 +502,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
-	cv: 'https://drive.google.com/file/d/11hAtPetzRy7ZzNSZTgq5gSg7KbTbEa32/preview',
+cv: 'https://drive.google.com/file/d/1Es0vX-DUcJld_tt4058Tn5rklb8VFN12/preview',
 };
