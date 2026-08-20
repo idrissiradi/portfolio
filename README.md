@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio of a Data Scientist, Machine Learning Engineer, and Data Engineer.
+Personal portfolio of a Data Scientist.
 Live at [idradi.com](https://idradi.com)
 ---
 ## 🚀 Tech Stack
