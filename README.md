@@ -9,9 +9,11 @@ Live at [idradi.com](https://idradi.com)
 - **[React 19](https://react.dev/)** - UI library for building interactive interfaces
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript
 - **[Vite](https://vitejs.dev/)** - Next-generation frontend build tool
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[shadcn/ui](https://ui.shadcn.com/)** - Beautifully designed component library
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[next-themes](https://github.com/pacocoursey/next-themes)** - Light & dark mode theming
 - **[Lucide Icons](https://lucide.dev/)** - Beautiful & consistent icons
+- **[Netlify](https://www.netlify.com/)** - Hosting & deployment
 
 ## 🛠️ Getting Started
 
@@ -49,16 +51,22 @@ portfolio/
 ├── src/
 │   ├── components/     # React components
 │   │   ├── ui/         # shadcn/ui components
-│   │   └── sections/   # Page sections
+│   │   ├── sections/   # Page sections
+│   │   └── icons/      # Custom SVG icon components
+│   ├── constants/      # Portfolio data
 │   ├── lib/            # Utility functions
+│   ├── pages/          # Page components
+│   ├── assets/         # Fonts & static assets
 │   ├── App.tsx         # Main App component
 │   └── main.tsx        # Application entry point
 ├── public/             # Static assets
 ├── index.html          # HTML template
 ├── package.json        # Dependencies and scripts
 ├── tsconfig.json       # TypeScript configuration
-├── vite.config.ts      # Vite configuration
-└── tailwind.config.js  # Tailwind CSS configuration
+├── vite.config.ts      # Vite & Tailwind configuration
+├── eslint.config.js    # ESLint configuration
+├── components.json     # shadcn/ui configuration
+└── netlify.toml        # Netlify build & deploy configuration
 ```
 
 ## 🙏 Acknowledgments
