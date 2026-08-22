@@ -482,7 +482,8 @@ export const certificates = [
 		date: '2026',
 		description:
 			'Professional PyTorch track — building, training, and evaluating deep learning models, with emphasis on real-world deep learning workflows.',
-		credentialUrl: 'https://coursera.org/share/511cfd1cff4e6f00dc2e2f8d4d6fbdf7',
+		credentialUrl:
+			'https://coursera.org/share/511cfd1cff4e6f00dc2e2f8d4d6fbdf7',
 	},
 	// ── DataCamp — Science tracks ─────────────────────────────────
 	{
