@@ -353,6 +353,25 @@ export const skillCategories = [
 
 export const experiences = [
 	{
+		title: 'Freelance Full-Stack Developer',
+		company: 'Self-employed',
+		period: 'Jan 2026 – Jul 2026',
+		type: 'Freelance',
+		location: 'Marrakesh, Morocco',
+		description:
+			'Developed custom web applications for independent clients, from requirements analysis to deployment.\nBuilt business solutions for accounting, medical practice management and reservation systems.\nWorked directly with clients to translate business requirements into technical solutions and independently managed project scope and delivery.',
+		tech: [
+			'Django',
+			'FastAPI',
+			'Laravel',
+			'React.js',
+			'Python',
+			'PHP',
+			'SQL',
+		],
+		current: false,
+	},
+	{
 		title: 'Full Stack Developer',
 		company: 'Evoleo Maroc',
 		period: 'Nov 2024 – Oct 2025',
