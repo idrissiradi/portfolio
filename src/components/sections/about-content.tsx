@@ -2,9 +2,7 @@ export function AboutContent() {
 	return (
 		<div className='max-w-[600px] space-y-4 font-sans text-base leading-relaxed text-foreground/85'>
 			<p>
-				I'm a Data Science &amp; ML Developer based in Marrakech,
-				Morocco. Background in full-stack development, now focused on
-				machine learning, deep learning, NLP, and computer vision.
+				I'm a Data Science & ML Developer with a background in full-stack development and a focus on machine learning, deep learning, NLP, and computer vision.
 			</p>
 			<p>
 				I recently completed a{' '}
@@ -13,12 +11,10 @@ export function AboutContent() {
 					Machine Learning &amp; Big Data,
 				</strong>{' '}
 				after close to two years working as a full-stack developer. That
-				background shapes how I build now. I'm now pursuing a Master's
-				in SDIA (Data Science and Artificial Intelligence).
+				background shapes how I build now. I'm currently pursuing a Master's degree in Data Science and Artificial Intelligence (SDIA).
 				<br />
 				<strong className=' text-accent'>
-					Currently open to full-time opportunities — on-site, remote,
-					hybrid, or relocation.
+					Open to full-time opportunities: on-site, hybrid, remote, or relocation.
 				</strong>
 			</p>
 		</div>
