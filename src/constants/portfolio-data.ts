@@ -321,6 +321,7 @@ export const skillCategories = [
 			'NumPy',
 			'Matplotlib',
 			'Seaborn',
+			'XGBoost',
 		],
 	},
 	{
@@ -359,7 +360,7 @@ export const experiences = [
 		type: 'Freelance',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed custom web applications for independent clients, from requirements analysis to deployment.\nBuilt business solutions for accounting, medical practice management and reservation systems.\nWorked directly with clients to translate business requirements into technical solutions and independently managed project scope and delivery.',
+			'Developed custom web applications for independent clients, from requirements analysis to deployment.\nBuilt full-stack applications using Django, FastAPI, Laravel, React, and relational databases.\nWorked directly with clients to translate business requirements into technical solutions.',
 		tech: [
 			'Django',
 			'FastAPI',
@@ -378,7 +379,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed and maintained web applications using Laravel, FastAPI, React and MySQL.\nBuilt an invoice scanner using FastAPI, React and PaddleOCR with a two-person intern team, then integrated it into the Evoleo accounting software.\nParticipated in integrating a hotel check-in/check-out system with the accounting software.\nReviewed and tested interns work, provided technical follow-up and technical support.',
+			'Developed and maintained web applications using Laravel, FastAPI, React and MySQL.\nSupervised a team of two interns in developing an invoice scanner (FastAPI, React, PaddleOCR), and integrated into Evoleo accounting software.\nParticipated in integrating a hotel check-in/check-out system with the accounting software.\nTechnical mentoring of interns, code review, testing, support and follow-up.',
 		tech: [
 			'FastAPI',
 			'Laravel',
@@ -397,7 +398,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed a reservation application for riads and vehicles using Django, htmx, tailwind and MySQL.\nImplemented authentication, dashboards, financial statistics and invoice generation.',
+			'Developed and maintained web applications using Django, Python, and JavaScript.\nManaged databases and maintained existing application functionality.',
 		tech: [
 			'Django',
 			'MySQL',
@@ -522,5 +523,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
-	cv: 'https://drive.google.com/file/d/1hEz9edBbkIuFJWNGKRNHyX2-GQC42aTh/preview',
+	cv: 'https://drive.google.com/file/d/12Ve51_YTW9UWN270YDvryhpvlI-SmXn-/preview',
 };
