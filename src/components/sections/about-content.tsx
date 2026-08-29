@@ -3,19 +3,18 @@ export function AboutContent() {
 		<div className='max-w-[600px] space-y-4 font-sans text-base leading-relaxed text-foreground/85'>
 			<p>
 				I'm a Data Science & ML Developer with a background in
-				full-stack development and a focus on machine learning, deep
+				full-stack development and now a focus on machine learning, deep
 				learning, NLP, and computer vision.
 			</p>
 			<p>
-				I recently completed a{' '}
+				Currently completing a{' '}
 				<strong className='font-semibold text-foreground'>
-					Professional Bachelor's degree in Artificial Intelligence,
-					Machine Learning &amp; Big Data,
+					Master's in Data Science & AI (SDIA), after a Professional
+					Bachelor's in AI, Machine Learning & Big Data.
 				</strong>{' '}
-				after close to two years working as a full-stack developer. That
-				background shapes how I build now. I'm currently pursuing a
-				Master's degree in Data Science and Artificial Intelligence
-				(SDIA).
+				after close to 3 years in software and IT roles, including
+				full-stack development. That background shapes how I build
+				today.
 				<br />
 				<strong className=' text-accent'>
 					Open to full-time opportunities: on-site, hybrid, remote, or

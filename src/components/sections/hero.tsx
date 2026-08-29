@@ -14,9 +14,7 @@ export function Hero() {
 			<p className='mt-5 max-w-[560px] font-sans text-[17px] leading-relaxed text-foreground/85'>
 				Based in Marrakech, Morocco. I build ML systems designed to
 				leave the notebook. data pipelines, model training, and
-				containerized APIs that hold up outside a notebook. With a
-				background in full-stack development, now focused on machine
-				learning, deep learning, NLP, and computer vision.
+				containerized APIs that hold up outside a notebook.
 			</p>
 
 			<div className='mt-6 flex flex-wrap gap-5 font-mono text-[13px]'>
