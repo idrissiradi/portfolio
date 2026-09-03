@@ -242,7 +242,7 @@ export const experiences = [
 		type: 'Freelance',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed custom business web applications covering accounting, business management, real estate, and rental/reservations, each shipped in a few weeks to a month, using Django, FastAPI, Laravel, React, and SQL databases.\nDesigned a multi-client accounting platform with permission management, invoicing, reporting, statistics, and dashboards.\nDeveloped management and rental applications with dashboards for tracking clients, vehicles, and reservations.\nWorked directly with clients to translate their needs into technical solutions.',
+			'Developed custom business web applications for accounting, real estate, and rental/reservation management using Django, FastAPI, Laravel, React, and SQL databases.\nBuilt a multi-client accounting platform, with role-based permissions, invoicing, reporting, and dashboards, allowing accountants to manage clients remotely .\nDeveloped business management and rental/reservation applications that gave owners real-time visibility into purchases, sales, profits, and tax obligations, replacing manual bookkeeping and in-person follow-ups.\nWorked directly with clients to understand their workflows, translate requirements into technical solutions, and develop tailored applications.',
 		tech: [
 			'Django',
 			'FastAPI',
@@ -261,7 +261,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			"Led the development of an invoice scanner with two interns, using FastAPI, React, and PaddleOCR, to extract data from PDFs/images and identify recurring templates. Integrated the extracted data into the accounting software, with chart-of-accounts mapping and a configurable Excel export for its import into the system.\nIntegrated a hotel check-in/check-out system with a shared MySQL database, allowing it to connect to Evoleo's software to read check-in data directly.\nProvided technical mentoring for the interns: architecture, code review, testing, debugging, and technical support.",
+			'Led the development of an invoice scanner with FastAPI, React, and PaddleOCR, working with two interns to extract data from PDFs and images and identify recurring invoice templates.\nIntegrated extracted invoice data directly into the accounting software, including chart-of-accounts mapping and configurable Excel exports, removing a manual and error-prone data-entry step.\nIntegrated a hotel check-in/check-out system with a shared MySQL database, connecting operational data directly to Evoleo’s human resources software.\nProvided technical mentoring for the interns: code review, testing, support, and follow-up.',
 		tech: [
 			'FastAPI',
 			'Laravel',
@@ -280,7 +280,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Developed reservation and management web applications, primarily in the hospitality/restaurant and car rental sectors, using Django, Python, and JavaScript.\nDeveloped a riad/restaurant application for booking stays and tables, with management of rooms, meals, activities, and availability. Implemented itemized or consolidated invoicing and a dashboard for tracking profit, invoices, and clients.\nDeveloped a car rental application with check-in/check-out, availability tracking, client document management, and operational dashboards.',
+			'Developed reservation and business management applications for the hospitality, restaurant, and car rental sectors using Django, Python, and JavaScript.\nBuilt a riad and restaurant management application covering room and table reservations, meals, activities, availability, invoicing, and client management, with dashboards for monitoring revenue, invoices, and profit.\nDeveloped a car rental application with check-in/check-out, vehicle availability, client document management, and operational dashboards, helping staff manage daily rental operations from one system.',
 		tech: [
 			'Django',
 			'MySQL',
@@ -299,7 +299,7 @@ export const experiences = [
 		type: 'Full-time',
 		location: 'Marrakesh, Morocco',
 		description:
-			'Configured and maintained workstations, printers, and Windows/Office environments.\nProvided IT support and technical assistance while processing data and preparing Excel reports.',
+			'Provided IT support, resolving hardware, software, and network issues to minimize downtime.\nProcessed and structured operational datasets, preparing Excel reports.',
 		tech: ['Excel', 'Windows', 'Microsoft Office', 'Technical Support'],
 		current: false,
 	},
@@ -405,5 +405,5 @@ export const socialLinks = {
 	linkedin: 'https://www.linkedin.com/in/idrissi-radi-ahmed/',
 	x: 'https://x.com/idrissiradi',
 	email: 'idrissiradi@gmail.com',
-	cv: 'https://drive.google.com/file/d/1CC4LWRcHpF9lDYs70wR4cgcTQlGSn9eC/preview',
+	cv: 'https://drive.google.com/file/d/14EJj9YARLtFIsvl0LTdF7Y8rcTb_KLK8/preview',
 };
